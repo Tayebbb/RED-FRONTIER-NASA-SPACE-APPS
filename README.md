@@ -84,6 +84,15 @@ Mars rover modeling project with a preserved modular hybrid baseline and a separ
 
 The Perseverance model is a visual approximation, not an engineering-certified or exact flight-hardware replica. See the build report for source credits, measured details, and limitations.
 
+## Game integration status
+
+The locked facility is on `origin/main` and contains six streamed spaces from Briefing through Mission Control. The canonical playable rover is `assets/rover/RF01_Rover.glb`, already linked into the Engineering Hangar and loaded through `godot/facility/facility_streamer.gd`. The detailed `art/` Perseverance export is retained as a visual reference until it has an equivalent gameplay attachment contract.
+
+- [Game brief](docs/GAME_BRIEF.md)
+- [Rover integration record](docs/ROVER_INTEGRATION.md)
+- [Production inventory](docs/PRODUCTION_INVENTORY.md)
+- [Data and artifact sources](docs/DATA_SOURCES.md)
+
 ### Preserved Hybrid Baseline
 
 The original modular rover and its QA artifacts remain under `art/`. The named pre-QA Blender source is retained as a backup.

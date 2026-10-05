@@ -95,10 +95,21 @@ breadcrumb is `BLIT_PASS`, and the process exits.
 **Next step:** update the Intel graphics driver (the installed one is from Dec 2022), then re-run 10 traversals.
 If it persists, test on a second GPU, and try Godot's Compatibility renderer or D3D12 for Intel UHD.
 
+## Current integration status
+
+The Engineering Hangar already contains the canonical playable rover through the generated `RF_Hangar_lights.json` manifest:
+
+- Asset: `RF01_Rover.glb`
+- Position: `(-0.0164, 0.12, -42.8131)` in Godot coordinates
+- Rotation: approximately `-28` degrees around Y
+- Lifecycle: loaded and unloaded with the Hangar by `facility_streamer.gd`
+
+The detailed Perseverance build under `art/` is intentionally not substituted into the game yet. See `docs/ROVER_INTEGRATION.md` for the comparison and replacement gate.
+
 ## Next recommended work
 
-1. **Mars** (next production phase).
-2. Driver update and re-test of the caveat above.
-3. Hangar draw calls: merge per-decal materials into atlases. It's the slowest room (11–21 fps) and the main
+1. **Gameplay base:** player traversal, interaction prompts, mission state, Hangar station configuration, and launch lock.
+2. **Mars** (next production phase after the Hangar loop).
+3. Driver update and re-test of the caveat above.
+4. Hangar draw calls: merge per-decal materials into atlases. It's the slowest room (11–21 fps) and the main
    load-hitch source.
-4. Gameplay layer: station UI and interactions on the existing `INT_*` markers and room triggers.
