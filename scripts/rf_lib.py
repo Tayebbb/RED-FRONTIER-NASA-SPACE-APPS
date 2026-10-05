@@ -8,10 +8,10 @@ Conventions
   * Every object gets a meaningful name; nothing is left as Cube.001.
   * Walls are built OUTSIDE a room's footprint so interior dimensions are exact.
 """
-import bpy, bmesh, math
+import bpy, bmesh, math, os
 from mathutils import Vector
 
-ROOT = r"D:\RedFrontier"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # repo root (this file lives in scripts/)
 WALL_T = 0.25          # wall thickness
 SLAB_T = 0.30          # floor / ceiling slab thickness
 

@@ -92,6 +92,7 @@ def build_structure(L):
     for i, y in enumerate(COL_Y):
         for side, x in (('W', X0 + 0.32), ('E', X1 - 0.32)):
             if side == 'W' and 40.0 < y < 48.0: continue          # hangar door span: carried by the header beam
+            if side == 'E' and 51.5 < y < 53.6: continue          # Mission Control door (y 51.7..53.5): framed by its portal
             o = src if n == 0 else kit.instance(src, f'MOD_Column_{side}{i}', col, (x, y, 0))
             if n == 0: o.name = f'MOD_Column_{side}{i}'; o.location = (x, y, 0)
             n += 1
@@ -499,8 +500,10 @@ def build_cameras_extra():
     c = C('cams')
     rf.create_camera('CAM_Hangar_Station', (-2.6, 45.8, 1.75), (-6.3, 49.3, 1.3), c, lens=28)
 
-def main():
-    bb.main(save=False, hangar=False)
+def main(save=True, skip=()):
+    """Hangar near-final, the other rooms greybox. build_facility.py calls this with save=False and
+    skip=(Phase 5 rooms), then adds those rooms; run on its own it reproduces the locked Hangar file."""
+    bb.main(save=False, hangar=False, skip=skip)
     L = rm.build()
     build_shell(L); build_structure(L); build_crane(L); build_lights_fixtures(L)
     build_turntable(L); build_stations(L); build_mission_config(L); build_digital_twin(L)
@@ -508,9 +511,11 @@ def main():
     build_service_details(); build_floor_wear(); split_mission_path()          # final polish pass
     for o in bpy.data.objects:                       # scale figures stay in the file, out of beauty renders
         if o.name.startswith('REF_Human'): o.hide_render = True
-    out = os.path.join(rf.ROOT, 'blender', 'RF_Facility.blend')
-    rf.save(out)
-    print('HANGAR_OK objects=', len(bpy.data.objects), 'saved', out)
+    if save:
+        out = os.path.join(rf.ROOT, 'blender', 'RF_Facility.blend')
+        rf.save(out)
+        print('HANGAR_OK objects=', len(bpy.data.objects), 'saved', out)
+    return L
 
 if __name__ == '__main__':
     main()

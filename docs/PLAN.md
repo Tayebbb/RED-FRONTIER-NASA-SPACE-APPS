@@ -8,12 +8,15 @@ Source of truth for gameplay: the Red Frontier rover design brief artifact (Hang
 | Phase | Output | Status |
 |---|---|---|
 | 1 Inspection | assessment, this plan | done |
-| 2 Greybox | `blender/RF_Facility_Blockout.blend`, `renders/blockout/` | done, awaiting review |
-| 3 Modular kit | `build_modular_kit.py` → `blender/RF_Kit.blend`; greybox walls swapped for kit pieces | next |
-| 4 Hangar near-final | materials, trims, lighting, decals, screen style, prop language — established in the Hangar only | |
-| 5 Propagate | same system on Briefing, Mars Intel, Mission Control, corridors | |
-| 6 Polish | decals, cables, signs, floor detail, screen placeholders, subtle wear | |
-| 7 Game readiness | `validate_scene.py` + `export_gltf.py`, test import in Godot 4.7 | |
+| 2 Greybox | `blender/RF_Facility_Blockout.blend`, `renders/blockout_v4/` | done, layout locked |
+| 3 Modular kit | `build_modular_kit.py` → `blender/RF_Kit.blend` | done for every room; the corridors reuse it with no new pieces |
+| 4 Hangar near-final | materials, trims, lighting, decals, screen style, prop language — established in the Hangar only | done, LOCKED 2026-10-03 |
+| 5 Propagate | same system on Briefing, Mars Intel, Mission Control, corridors | done (2026-10-05): Mission Control, Mars Intelligence, Briefing (**LOCKED**), Corridors 01 + 02. Awaiting full-facility review |
+| 6 Polish | decals, cables, signs, floor detail, screen placeholders, subtle wear | done in every room and both corridors |
+| 7 Game readiness | `validate_scene.py` + `export_gltf.py`, test import in Godot 4.7 | **COMPLETE**: pipeline verified, room streaming, shared materials/textures, integrated-GPU preset. Runtime stability acceptable for development, with a known Intel UHD device-loss caveat. See `docs/GAME_READINESS.md` |
+
+**Entry point:** `build_facility.py` rebuilds `RF_Facility.blend`: the locked Hangar, every finished
+Phase 5 room (listed in its `ROOMS`), and greybox for the rest.
 
 ## 2. Folder structure (`D:\RedFrontier`)
 
@@ -122,7 +125,7 @@ normals, shared materials, linked duplicates for repeats (become instances in Go
 - **Godot:** bake-friendly, so the lights are mirrored as named empties for re-creation in Godot.
 
 ## 9. Material strategy
-- **One shared library**, `build_materials.py`: MAT_Wall_White, MAT_Wall_Grey,
+- **One shared library**, `rf_materials.py`: MAT_Wall_White, MAT_Wall_Grey,
   MAT_Structural_Graphite, MAT_Structural_Navy, MAT_Floor_Rubber, MAT_Floor_Metal,
   MAT_Brushed_Metal, MAT_Painted_Metal, MAT_Glass, MAT_Screen_Dark, MAT_Screen_Emissive,
   MAT_Orange_Accent, MAT_Warning_Yellow, MAT_Black_Rubber, MAT_Ceiling_White.
@@ -145,7 +148,19 @@ normals, shared materials, linked duplicates for repeats (become instances in Go
   duplicates, hidden objects and modifiers before `export_gltf.py`.
 
 ```
+python scripts/gen_textures.py mc                                    # Mission Control textures only (Hangar textures untouched)
+python scripts/gen_textures.py intel                                 # Mars Intelligence textures only
+python scripts/gen_textures.py brief                                 # Briefing textures only
+python scripts/gen_textures.py corridor                              # Corridor 01 map strip only
 blender -b --factory-startup --python scripts/build_rover_asset.py
 blender -b --factory-startup --python scripts/build_blockout.py
 blender -b blender/RF_Facility_Blockout.blend --python scripts/render_previews.py -- blockout
+blender -b --factory-startup --python scripts/build_facility.py      # Hangar (locked) + Phase 5 rooms + greybox rest
+blender -b blender/RF_Facility.blend --python scripts/validate_scene.py
+blender -b blender/RF_Facility.blend --python scripts/export_material_library.py   # every material + texture once, and RF_Route.json
+blender -b blender/RF_Facility.blend --python scripts/export_gltf.py -- MissionControl   # each room: geometry + material names only
+python scripts/godot_sync.py                                         # shared library, VRAM compression, room mapping, impostors
+RF_LIGHTSET=Launch_Mode blender -b blender/RF_Facility.blend --python scripts/render_cycles.py -- <tag> 1600 64 CAM_MissionControl_Hero
 ```
+- **Room ownership:** a Phase 5 builder tags everything it makes `rf_room=<Room>`. The export takes
+  a room's tagged objects plus untagged ones inside its exact footprint, so a shared wall exports once.

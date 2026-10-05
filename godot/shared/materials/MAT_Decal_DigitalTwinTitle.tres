@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_DigitalTwin.png" id="1_461xs"]
+
+[resource]
+resource_name = "MAT_Decal_DigitalTwinTitle"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_461xs")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

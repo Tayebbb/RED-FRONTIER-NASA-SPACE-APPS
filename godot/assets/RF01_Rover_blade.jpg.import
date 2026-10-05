@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0twcuhfhwr44"
-path="res://.godot/imported/RF01_Rover_blade.jpg-06bca87805b46663360d0b5d0fa4d3a9.ctex"
+path.bptc="res://.godot/imported/RF01_Rover_blade.jpg-06bca87805b46663360d0b5d0fa4d3a9.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "796fd5f7f67b0dff74938dcc3fa78818"
@@ -14,12 +15,12 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/RF01_Rover_blade.jpg"
-dest_files=["res://.godot/imported/RF01_Rover_blade.jpg-06bca87805b46663360d0b5d0fa4d3a9.ctex"]
+dest_files=["res://.godot/imported/RF01_Rover_blade.jpg-06bca87805b46663360d0b5d0fa4d3a9.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

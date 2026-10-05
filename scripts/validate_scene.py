@@ -25,7 +25,8 @@ for o in bpy.data.objects:
         ev = o.evaluated_get(dg); me = ev.to_mesh()
         tris[o.users_collection[0].name if o.users_collection else '-'] += sum(len(p.vertices) - 2 for p in me.polygons)
         ev.to_mesh_clear()
-    if o.hide_render and not o.name.startswith(('REF_', 'DBG_', 'TRIG_')):
+    in_lightset = any(c.name.startswith(('LIGHTSET_', 'LIGHTS_')) for c in o.users_collection)
+    if o.hide_render and not in_lightset and not o.name.startswith(('REF_', 'DBG_', 'TRIG_')):   # light sets toggle on purpose
         warnings.append(f'hidden from render but would export: {o.name}')
 for need in ('PLAYER_Start', 'INT_MissionConfig', 'INT_DigitalTwin', 'INT_LaunchConsole', 'INT_LandingSystem',
              'INT_Station_SCIENCE', 'INT_Station_POWER', 'INT_Station_MOBILITY', 'INT_Station_COMMS'):

@@ -1,0 +1,253 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cbib8ki22mu7h"
+path="res://.godot/imported/RF_MarsIntel.glb-c202c8bf8b99ade6efded29ac610de07.scn"
+
+[deps]
+
+source_file="res://assets/RF_MarsIntel.glb"
+dest_files=["res://.godot/imported/RF_MarsIntel.glb-c202c8bf8b99ade6efded29ac610de07.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=1
+materials/extract_format=0
+materials/extract_path="res://shared/materials"
+_subresources={
+"materials": {
+"MAT_Black_Rubber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Black_Rubber.tres",
+"use_external/path": "res://shared/materials/MAT_Black_Rubber.tres"
+},
+"MAT_Brushed_Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Brushed_Metal.tres",
+"use_external/path": "res://shared/materials/MAT_Brushed_Metal.tres"
+},
+"MAT_Ceiling_Acoustic": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Ceiling_Acoustic.tres",
+"use_external/path": "res://shared/materials/MAT_Ceiling_Acoustic.tres"
+},
+"MAT_Decal_Insignia": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Insignia.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Insignia.tres"
+},
+"MAT_Decal_Intel_HangarSign": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Intel_HangarSign.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Intel_HangarSign.tres"
+},
+"MAT_Decal_Intel_Title": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Intel_Title.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Intel_Title.tres"
+},
+"MAT_Decal_MarsTableScale": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_MarsTableScale.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_MarsTableScale.tres"
+},
+"MAT_Decal_SiteA": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_SiteA.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_SiteA.tres"
+},
+"MAT_Decal_SiteB": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_SiteB.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_SiteB.tres"
+},
+"MAT_Decal_SiteC": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_SiteC.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_SiteC.tres"
+},
+"MAT_Floor_Epoxy": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Floor_Epoxy.tres",
+"use_external/path": "res://shared/materials/MAT_Floor_Epoxy.tres"
+},
+"MAT_Light_Diffuser": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Light_Diffuser.tres",
+"use_external/path": "res://shared/materials/MAT_Light_Diffuser.tres"
+},
+"MAT_Light_Diffuser_Dim": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Light_Diffuser_Dim.tres",
+"use_external/path": "res://shared/materials/MAT_Light_Diffuser_Dim.tres"
+},
+"MAT_MarsTable_Terrain": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_MarsTable_Terrain.tres",
+"use_external/path": "res://shared/materials/MAT_MarsTable_Terrain.tres"
+},
+"MAT_Orange_Emissive": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Orange_Emissive.tres",
+"use_external/path": "res://shared/materials/MAT_Orange_Emissive.tres"
+},
+"MAT_Paint_Orange": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Paint_Orange.tres",
+"use_external/path": "res://shared/materials/MAT_Paint_Orange.tres"
+},
+"MAT_Painted_Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Painted_Metal.tres",
+"use_external/path": "res://shared/materials/MAT_Painted_Metal.tres"
+},
+"MAT_Screen_Dark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Dark.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Dark.tres"
+},
+"MAT_Screen_Intel_EnvAtlas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_EnvAtlas.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_EnvAtlas.tres"
+},
+"MAT_Screen_Intel_LandingSystem": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_LandingSystem.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_LandingSystem.tres"
+},
+"MAT_Screen_Intel_Map": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_Map.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_Map.tres"
+},
+"MAT_Screen_Intel_OpsAtlas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_OpsAtlas.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_OpsAtlas.tres"
+},
+"MAT_Screen_Intel_SiteA": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_SiteA.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_SiteA.tres"
+},
+"MAT_Screen_Intel_SiteB": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_SiteB.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_SiteB.tres"
+},
+"MAT_Screen_Intel_SiteC": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Intel_SiteC.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Intel_SiteC.tres"
+},
+"MAT_Site_A": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Site_A.tres",
+"use_external/path": "res://shared/materials/MAT_Site_A.tres"
+},
+"MAT_Site_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Site_B.tres",
+"use_external/path": "res://shared/materials/MAT_Site_B.tres"
+},
+"MAT_Site_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Site_C.tres",
+"use_external/path": "res://shared/materials/MAT_Site_C.tres"
+},
+"MAT_Status_Amber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Status_Amber.tres",
+"use_external/path": "res://shared/materials/MAT_Status_Amber.tres"
+},
+"MAT_Status_Cyan": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Status_Cyan.tres",
+"use_external/path": "res://shared/materials/MAT_Status_Cyan.tres"
+},
+"MAT_Structural_Graphite": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Structural_Graphite.tres",
+"use_external/path": "res://shared/materials/MAT_Structural_Graphite.tres"
+},
+"MAT_Wall_Backer": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Backer.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Backer.tres"
+},
+"MAT_Wall_Grey": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey.tres"
+},
+"MAT_Wall_Grey_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey_B.tres"
+},
+"MAT_Wall_Grey_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey_C.tres"
+},
+"MAT_Wall_Lower": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Lower.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Lower.tres"
+},
+"MAT_Wall_Media_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Media_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Media_B.tres"
+},
+"MAT_Wall_Media_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Media_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Media_C.tres"
+},
+"MAT_Wall_White": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White.tres"
+},
+"MAT_Wall_White_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White_B.tres"
+},
+"MAT_Wall_White_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White_C.tres"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
+gltf/texture_map_mode=1

@@ -91,23 +91,26 @@ def room(name, fp, col, wall_mat, openings, skip=()):
         if o.name.endswith('_Ceiling'): overhead(o)
 
 # ------------------------------------------------------------------ architecture
-def build_shells(hangar=True):
-    """Room shells. hangar=False leaves the Hangar to the kit-based builder."""
-    room('Briefing', BRIEF, C['brief'], M['wall'], {
-        'S': [dict(off=4.0, **DOOR2)],                       # facility entry
-        'N': [dict(off=6.75, **DOOR1)]})                     # exit -> C1 (x = 2.75)
-    room('Corridor01', C1, C['corr'], M['wall'], {}, skip=('N', 'S'))
-    room('MarsIntel', INTEL, C['intel'], M['wall'], {
-        'S': [dict(off=7.75, **DOOR1)],                      # from C1 (x = 2.75)
-        'N': [dict(off=5.0, **DOOR2)]})                      # exit -> C2 (x = 0)
-    room('Corridor02', C2, C['corr'], M['wall'], {}, skip=('N', 'S'))
+def build_shells(hangar=True, skip=()):
+    """Room shells. hangar=False / skip=(room, ...) leave those rooms to their near-final builders."""
+    if 'Briefing' not in skip:
+        room('Briefing', BRIEF, C['brief'], M['wall'], {
+            'S': [dict(off=4.0, **DOOR2)],                   # facility entry
+            'N': [dict(off=6.75, **DOOR1)]})                 # exit -> C1 (x = 2.75)
+    if 'Corridor01' not in skip: room('Corridor01', C1, C['corr'], M['wall'], {}, skip=('N', 'S'))
+    if 'MarsIntel' not in skip:
+        room('MarsIntel', INTEL, C['intel'], M['wall'], {
+            'S': [dict(off=7.75, **DOOR1)],                  # from C1 (x = 2.75)
+            'N': [dict(off=5.0, **DOOR2)]})                  # exit -> C2 (x = 0)
+    if 'Corridor02' not in skip: room('Corridor02', C2, C['corr'], M['wall'], {}, skip=('N', 'S'))
     if hangar:
         room('Hangar', HANG, C['hangar'], M['wall_cool'], {
             'S': [dict(off=9.0, **DOORH)],                                       # entry on rover axis
             'W': [dict(off=11.0, w=8.0, h=7.0)],                                 # MOD_HangarDoor (rover exit)
             'E': [dict(off=13.0, w=8.0, h=2.6, sill=1.0, glass=True),            # Mission Control glass wall
                   dict(off=19.6, **DOOR2)]})                                     # -> Mission Control
-    room('MissionControl', MC, C['mc'], M['navy'], {}, skip=('W',))
+    if 'MissionControl' not in skip:
+        room('MissionControl', MC, C['mc'], M['navy'], {}, skip=('W',))
 
 # ============================================================== 01 BRIEFING ROOM
 def build_briefing():
@@ -415,8 +418,9 @@ def build_mc():
     rf.create_marker('INT_LaunchConsole', (lc[0] - 1.0, cy, 0), C['game'], 'SINGLE_ARROW', 0.6)
 
 # ================================================================== CORRIDORS
-def build_corridors():
+def build_corridors(skip=()):
     for nm, fp, nxt in (('Corridor01', C1, 'MARS INTELLIGENCE'), ('Corridor02', C2, 'ENGINEERING HANGAR')):
+        if nm in skip: continue
         x0, x1, y0, y1, h = fp
         cx = (x0 + x1) / 2
         overhead(box(f'PROP_{nm}_CableTray', (0.35, y1 - y0, 0.08), (x1 - 0.35, (y0 + y1) / 2, h - 0.35), C['props'], M['struct']))
@@ -469,11 +473,14 @@ def build_cameras():
     rf.create_camera('CAM_Axo_Cutaway',         (-26.0, -6.0, 44.0), (6.0, 30.0, 0.0), c, lens=38)
     bpy.context.scene.camera = bpy.data.objects['CAM_Hangar_Entrance']
 
-def main(save=True, hangar=True):
-    setup(); build_shells(hangar)
-    build_briefing(); build_intel()
+def main(save=True, hangar=True, skip=()):
+    """skip: rooms built near-final by a Phase 5 script (their greybox is left out)."""
+    setup(); build_shells(hangar, skip)
+    if 'Briefing' not in skip: build_briefing()
+    if 'MarsIntel' not in skip: build_intel()
     if hangar: build_hangar()
-    build_mc(); build_corridors(); build_flow(); build_cameras()
+    if 'MissionControl' not in skip: build_mc()
+    build_corridors(skip); build_flow(); build_cameras()
 
     for o in bpy.data.objects:      # walls facing the cutaway camera
         if '_WallS_' in o.name or '_WallW_' in o.name or o.name == 'MOD_HangarDoor':

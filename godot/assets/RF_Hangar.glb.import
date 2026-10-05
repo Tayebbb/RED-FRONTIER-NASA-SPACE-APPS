@@ -36,10 +36,378 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=0
+materials/extract=1
 materials/extract_format=0
-materials/extract_path=""
-_subresources={}
+materials/extract_path="res://shared/materials"
+_subresources={
+"materials": {
+"MAT_Black_Rubber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Black_Rubber.tres",
+"use_external/path": "res://shared/materials/MAT_Black_Rubber.tres"
+},
+"MAT_Brushed_Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Brushed_Metal.tres",
+"use_external/path": "res://shared/materials/MAT_Brushed_Metal.tres"
+},
+"MAT_Ceiling_Dark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Ceiling_Dark.tres",
+"use_external/path": "res://shared/materials/MAT_Ceiling_Dark.tres"
+},
+"MAT_Decal_ColumnID_E0": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_E0.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_E0.tres"
+},
+"MAT_Decal_ColumnID_E1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_E1.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_E1.tres"
+},
+"MAT_Decal_ColumnID_E2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_E2.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_E2.tres"
+},
+"MAT_Decal_ColumnID_E3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_E3.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_E3.tres"
+},
+"MAT_Decal_ColumnID_W0": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_W0.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_W0.tres"
+},
+"MAT_Decal_ColumnID_W1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_W1.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_W1.tres"
+},
+"MAT_Decal_ColumnID_W3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_W3.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_W3.tres"
+},
+"MAT_Decal_ColumnID_W4": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ColumnID_W4.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ColumnID_W4.tres"
+},
+"MAT_Decal_DigitalTwinTitle": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_DigitalTwinTitle.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_DigitalTwinTitle.tres"
+},
+"MAT_Decal_FlightOps": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_FlightOps.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_FlightOps.tres"
+},
+"MAT_Decal_FloorWear": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_FloorWear.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_FloorWear.tres"
+},
+"MAT_Decal_HangarDoorFloor": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_HangarDoorFloor.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_HangarDoorFloor.tres"
+},
+"MAT_Decal_Hazard": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Hazard.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Hazard.tres"
+},
+"MAT_Decal_HazardRing": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_HazardRing.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_HazardRing.tres"
+},
+"MAT_Decal_Insignia": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Insignia.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Insignia.tres"
+},
+"MAT_Decal_MCSign": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_MCSign.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_MCSign.tres"
+},
+"MAT_Decal_MissionConfigTitle": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_MissionConfigTitle.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_MissionConfigTitle.tres"
+},
+"MAT_Decal_Scuffs": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Scuffs.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Scuffs.tres"
+},
+"MAT_Decal_ServiceAtlas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_ServiceAtlas.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_ServiceAtlas.tres"
+},
+"MAT_Decal_Station_COMMS": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_COMMS.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_COMMS.tres"
+},
+"MAT_Decal_Station_COMMS_Sub": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_COMMS_Sub.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_COMMS_Sub.tres"
+},
+"MAT_Decal_Station_MOBILITY": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_MOBILITY.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_MOBILITY.tres"
+},
+"MAT_Decal_Station_MOBILITY_Sub": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_MOBILITY_Sub.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_MOBILITY_Sub.tres"
+},
+"MAT_Decal_Station_POWER": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_POWER.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_POWER.tres"
+},
+"MAT_Decal_Station_POWER_Sub": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_POWER_Sub.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_POWER_Sub.tres"
+},
+"MAT_Decal_Station_SCIENCE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_SCIENCE.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_SCIENCE.tres"
+},
+"MAT_Decal_Station_SCIENCE_Sub": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Station_SCIENCE_Sub.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Station_SCIENCE_Sub.tres"
+},
+"MAT_Decal_Step01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step01.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step01.tres"
+},
+"MAT_Decal_Step02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step02.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step02.tres"
+},
+"MAT_Decal_Step03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step03.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step03.tres"
+},
+"MAT_Decal_Step04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step04.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step04.tres"
+},
+"MAT_Decal_Step05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step05.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step05.tres"
+},
+"MAT_Decal_Step06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Step06.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Step06.tres"
+},
+"MAT_Decal_TurntableRing": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_TurntableRing.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_TurntableRing.tres"
+},
+"MAT_Decal_WorkBay": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_WorkBay.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_WorkBay.tres"
+},
+"MAT_Floor_Epoxy": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Floor_Epoxy.tres",
+"use_external/path": "res://shared/materials/MAT_Floor_Epoxy.tres"
+},
+"MAT_Floor_Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Floor_Metal.tres",
+"use_external/path": "res://shared/materials/MAT_Floor_Metal.tres"
+},
+"MAT_Floor_Rubber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Floor_Rubber.tres",
+"use_external/path": "res://shared/materials/MAT_Floor_Rubber.tres"
+},
+"MAT_Glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Glass.tres",
+"use_external/path": "res://shared/materials/MAT_Glass.tres"
+},
+"MAT_LED_Cool": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_LED_Cool.tres",
+"use_external/path": "res://shared/materials/MAT_LED_Cool.tres"
+},
+"MAT_Light_Diffuser": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Light_Diffuser.tres",
+"use_external/path": "res://shared/materials/MAT_Light_Diffuser.tres"
+},
+"MAT_Orange_Accent": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Orange_Accent.tres",
+"use_external/path": "res://shared/materials/MAT_Orange_Accent.tres"
+},
+"MAT_Orange_Emissive": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Orange_Emissive.tres",
+"use_external/path": "res://shared/materials/MAT_Orange_Emissive.tres"
+},
+"MAT_Paint_Graphite": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Paint_Graphite.tres",
+"use_external/path": "res://shared/materials/MAT_Paint_Graphite.tres"
+},
+"MAT_Paint_Orange": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Paint_Orange.tres",
+"use_external/path": "res://shared/materials/MAT_Paint_Orange.tres"
+},
+"MAT_Painted_Deck": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Painted_Deck.tres",
+"use_external/path": "res://shared/materials/MAT_Painted_Deck.tres"
+},
+"MAT_Painted_Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Painted_Metal.tres",
+"use_external/path": "res://shared/materials/MAT_Painted_Metal.tres"
+},
+"MAT_Painted_Metal_Dark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Painted_Metal_Dark.tres",
+"use_external/path": "res://shared/materials/MAT_Painted_Metal_Dark.tres"
+},
+"MAT_Screen_Dark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Dark.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Dark.tres"
+},
+"MAT_Screen_DigitalTwin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_DigitalTwin.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_DigitalTwin.tres"
+},
+"MAT_Screen_DigitalTwinConsole": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_DigitalTwinConsole.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_DigitalTwinConsole.tres"
+},
+"MAT_Screen_MissionConfig": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_MissionConfig.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_MissionConfig.tres"
+},
+"MAT_Screen_Station_COMMS": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_COMMS.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_COMMS.tres"
+},
+"MAT_Screen_Station_COMMS_Aux": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_COMMS_Aux.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_COMMS_Aux.tres"
+},
+"MAT_Screen_Station_MOBILITY": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_MOBILITY.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_MOBILITY.tres"
+},
+"MAT_Screen_Station_MOBILITY_Aux": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_MOBILITY_Aux.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_MOBILITY_Aux.tres"
+},
+"MAT_Screen_Station_POWER": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_POWER.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_POWER.tres"
+},
+"MAT_Screen_Station_SCIENCE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Station_SCIENCE.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Station_SCIENCE.tres"
+},
+"MAT_Status_Amber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Status_Amber.tres",
+"use_external/path": "res://shared/materials/MAT_Status_Amber.tres"
+},
+"MAT_Status_Cyan": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Status_Cyan.tres",
+"use_external/path": "res://shared/materials/MAT_Status_Cyan.tres"
+},
+"MAT_Structural_Graphite": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Structural_Graphite.tres",
+"use_external/path": "res://shared/materials/MAT_Structural_Graphite.tres"
+},
+"MAT_Wall_Backer": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Backer.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Backer.tres"
+},
+"MAT_Wall_Grey": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey.tres"
+},
+"MAT_Wall_Grey_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey_B.tres"
+},
+"MAT_Wall_Grey_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Grey_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Grey_C.tres"
+},
+"MAT_Wall_Lower": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Lower.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Lower.tres"
+},
+"MAT_Wall_White": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White.tres"
+},
+"MAT_Wall_White_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White_B.tres"
+},
+"MAT_Wall_White_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_White_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_White_C.tres"
+},
+"MAT_Warning_Yellow": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Warning_Yellow.tres",
+"use_external/path": "res://shared/materials/MAT_Warning_Yellow.tres"
+}
+}
+}
 gltf/naming_version=2
-gltf/embedded_image_handling=1
+gltf/embedded_image_handling=0
 gltf/texture_map_mode=1

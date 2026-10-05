@@ -15,3 +15,5 @@ window/size/viewport_height=900
 [rendering]
 
 renderer/rendering_method="forward_plus"
+occlusion_culling/use_occlusion_culling=true
+reflections/reflection_atlas/reflection_count=8

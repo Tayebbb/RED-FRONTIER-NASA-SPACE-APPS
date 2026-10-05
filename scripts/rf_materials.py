@@ -8,7 +8,7 @@ Palette: 70% neutral light / 20% dark structure / <=10% orange + functional acce
 import bpy, os
 from rf_lib import hex_rgb
 
-TEX = r"D:\RedFrontier\textures"
+TEX = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "textures")
 
 def _img(path, non_color=False):
     name = os.path.basename(path)
@@ -101,6 +101,18 @@ def build():
     add('led_cool',    'MAT_LED_Cool', '#FFFFFF', 0.4, emit='#DCEBFF', emit_strength=5.0)
     add('status_cyan', 'MAT_Status_Cyan', '#000000', 0.3, emit='#74B6FF', emit_strength=6.0)
     add('status_amber','MAT_Status_Amber', '#000000', 0.3, emit='#FFB43A', emit_strength=6.0)
+    # Phase 5 - Mission Control (appended; nothing above changes, so the locked Hangar is unaffected)
+    add('floor_access','MAT_Floor_Access', base='surfaces/T_Floor_Access_BaseColor.png', rough_tex='surfaces/T_Floor_Access_Roughness.png',
+        normal='surfaces/T_Floor_Access_Normal.png', normal_strength=0.5)
+    add('ceiling_acoustic', 'MAT_Ceiling_Acoustic', '#4A4D52', 0.95)
+    add('media_a',     'MAT_Wall_Media', '#2B2E33', 0.70)         # media wall: the Hangar panel module in graphite
+    add('media_b',     'MAT_Wall_Media_B', '#282B30', 0.78)
+    add('media_c',     'MAT_Wall_Media_C', '#2E3136', 0.64)
+    add('diffuser_dim','MAT_Light_Diffuser_Dim', '#FFFFFF', 0.4, emit='#FFE9D2', emit_strength=1.6)
+    add('beacon',      'MAT_Beacon_Amber', '#E3A928', 0.25, emit='#FFB43A', emit_strength=0.05)   # ~off; non-zero so glTF keeps the emissive
+    # Phase 5 - Mars Intelligence
+    add('mars_terrain','MAT_MarsTable_Terrain', '#000000', 0.85, base='surfaces/T_MarsTable_BaseColor.png',
+        emit_tex='surfaces/T_MarsTable_BaseColor.png', emit_strength=0.25)      # relief model, faintly projection-lit
     return L
 
 def screen(name, image, strength=2.2):

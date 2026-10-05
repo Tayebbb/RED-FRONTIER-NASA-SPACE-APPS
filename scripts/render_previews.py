@@ -11,7 +11,7 @@ import bpy, sys, os
 argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 tag = argv[0] if argv else 'blockout'
 only = set(argv[1:])
-ROOT = r"D:\RedFrontier"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 out_dir = os.path.join(ROOT, 'renders', tag); os.makedirs(out_dir, exist_ok=True)
 
 sc = bpy.context.scene

@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f3oktgr12uli"
-path="res://.godot/imported/RF01_Rover_sample_handling_door.jpg-fe089462a700719b6fc6f967e69e3b82.ctex"
+path.bptc="res://.godot/imported/RF01_Rover_sample_handling_door.jpg-fe089462a700719b6fc6f967e69e3b82.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "c5366ef6d164f31b1c544e1453cfff2a"
@@ -14,12 +15,12 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/RF01_Rover_sample_handling_door.jpg"
-dest_files=["res://.godot/imported/RF01_Rover_sample_handling_door.jpg-fe089462a700719b6fc6f967e69e3b82.ctex"]
+dest_files=["res://.godot/imported/RF01_Rover_sample_handling_door.jpg-fe089462a700719b6fc6f967e69e3b82.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

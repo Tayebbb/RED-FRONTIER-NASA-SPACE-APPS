@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk8km41r4pgbx"
-path="res://.godot/imported/RF01_Rover_arm_graphics.jpg-2c0cf7a4d9ec7aed48587222c739a813.ctex"
+path.bptc="res://.godot/imported/RF01_Rover_arm_graphics.jpg-2c0cf7a4d9ec7aed48587222c739a813.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "dafde5e9b64b57ab12a227655ed3ddef"
@@ -14,12 +15,12 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/RF01_Rover_arm_graphics.jpg"
-dest_files=["res://.godot/imported/RF01_Rover_arm_graphics.jpg-2c0cf7a4d9ec7aed48587222c739a813.ctex"]
+dest_files=["res://.godot/imported/RF01_Rover_arm_graphics.jpg-2c0cf7a4d9ec7aed48587222c739a813.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

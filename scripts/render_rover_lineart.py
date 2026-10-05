@@ -1,7 +1,7 @@
 """render_rover_lineart.py - clay render of the locked rover for the Digital Twin screen content.
 Run: blender -b assets/rover/RF01_Rover.blend --python scripts/render_rover_lineart.py
 Then gen_textures.py turns it into cyan line art."""
-import bpy, math
+import bpy, math, os
 from mathutils import Vector
 sc = bpy.context.scene
 sc.render.engine = 'BLENDER_WORKBENCH'
@@ -18,6 +18,6 @@ az, el, tgt = math.radians(-35), math.radians(14), Vector((0, -0.3, 1.05))
 cam.location = tgt + Vector((math.sin(az) * -10, -math.cos(az) * 10, math.tan(el) * 10))
 cam.rotation_euler = (tgt - cam.location).to_track_quat('-Z', 'Y').to_euler()
 sc.camera = cam
-sc.render.filepath = r"D:\RedFrontier\textures\screens\rover_clay.png"
+sc.render.filepath = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "textures", "screens", "rover_clay.png")
 bpy.ops.render.render(write_still=True)
 print('LINEART_RENDERED')

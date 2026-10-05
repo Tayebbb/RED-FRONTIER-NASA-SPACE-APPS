@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_RoofDeck_Normal.png" id="1_rjj1d"]
+
+[resource]
+resource_name = "MAT_Ceiling_Dark"
+cull_mode = 2
+albedo_color = Color(0.14117648, 0.15294117, 0.17254902, 1)
+roughness = 0.85
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("1_rjj1d")

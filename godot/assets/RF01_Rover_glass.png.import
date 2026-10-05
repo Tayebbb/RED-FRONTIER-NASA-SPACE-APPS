@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddlq8nei4ue1s"
-path="res://.godot/imported/RF01_Rover_glass.png-99f605a0d8447d085423454fdb1357ef.ctex"
+path.bptc="res://.godot/imported/RF01_Rover_glass.png-99f605a0d8447d085423454fdb1357ef.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "d4e2eae00a7b58b7629ad45db40f72aa"
@@ -14,12 +15,12 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/RF01_Rover_glass.png"
-dest_files=["res://.godot/imported/RF01_Rover_glass.png-99f605a0d8447d085423454fdb1357ef.ctex"]
+dest_files=["res://.godot/imported/RF01_Rover_glass.png-99f605a0d8447d085423454fdb1357ef.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

@@ -1,0 +1,174 @@
+{
+ "room": "MarsIntel",
+ "lights": [
+  {
+   "name": "LGT_Intel_Console",
+   "type": "AREA",
+   "pos": [
+    1.2,
+    3.9,
+    -17.6
+   ],
+   "dir": [
+    -0.3449,
+    -0.848,
+    -0.4024
+   ],
+   "watts": 90.0,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 50.0,
+   "size": [
+    0.800000011920929,
+    0.800000011920929
+   ]
+  },
+  {
+   "name": "LGT_Intel_Line_E",
+   "type": "AREA",
+   "pos": [
+    3.4,
+    3.96,
+    -22.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 170.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    9.0
+   ]
+  },
+  {
+   "name": "LGT_Intel_Line_W",
+   "type": "AREA",
+   "pos": [
+    -3.0,
+    3.96,
+    -22.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 110.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    9.0
+   ]
+  },
+  {
+   "name": "LGT_Intel_Table",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    3.24,
+    -22.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 190.0,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    3.799999952316284,
+    2.200000047683716
+   ]
+  }
+ ],
+ "rover": null,
+ "footprint": {
+  "x": [
+   -5.0,
+   5.0
+  ],
+  "z": [
+   -28.0,
+   -16.0
+  ],
+  "h": 4.5
+ },
+ "materials": [
+  "MAT_Black_Rubber",
+  "MAT_Brushed_Metal",
+  "MAT_Ceiling_Acoustic",
+  "MAT_Decal_Insignia",
+  "MAT_Decal_Intel_HangarSign",
+  "MAT_Decal_Intel_Title",
+  "MAT_Decal_MarsTableScale",
+  "MAT_Decal_SiteA",
+  "MAT_Decal_SiteB",
+  "MAT_Decal_SiteC",
+  "MAT_Floor_Epoxy",
+  "MAT_Light_Diffuser",
+  "MAT_Light_Diffuser_Dim",
+  "MAT_MarsTable_Terrain",
+  "MAT_Orange_Emissive",
+  "MAT_Paint_Orange",
+  "MAT_Painted_Metal",
+  "MAT_Screen_Dark",
+  "MAT_Screen_Intel_EnvAtlas",
+  "MAT_Screen_Intel_LandingSystem",
+  "MAT_Screen_Intel_Map",
+  "MAT_Screen_Intel_OpsAtlas",
+  "MAT_Screen_Intel_SiteA",
+  "MAT_Screen_Intel_SiteB",
+  "MAT_Screen_Intel_SiteC",
+  "MAT_Site_A",
+  "MAT_Site_B",
+  "MAT_Site_C",
+  "MAT_Status_Amber",
+  "MAT_Status_Cyan",
+  "MAT_Structural_Graphite",
+  "MAT_Wall_Backer",
+  "MAT_Wall_Grey",
+  "MAT_Wall_Grey_B",
+  "MAT_Wall_Grey_C",
+  "MAT_Wall_Lower",
+  "MAT_Wall_Media_B",
+  "MAT_Wall_Media_C",
+  "MAT_Wall_White",
+  "MAT_Wall_White_B",
+  "MAT_Wall_White_C"
+ ],
+ "emission_sets": {
+  "MAT_Light_Diffuser_Dim": {
+   "Day_Operational": 1.6,
+   "Launch_Mode": 1.1
+  }
+ }
+}

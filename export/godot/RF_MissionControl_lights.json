@@ -1,0 +1,364 @@
+{
+ "room": "MissionControl",
+ "lights": [
+  {
+   "name": "LGT_MC_Back",
+   "type": "AREA",
+   "pos": [
+    11.4,
+    4.44,
+    -47.75
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 120.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": true,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    7.0
+   ]
+  },
+  {
+   "name": "LGT_MC_Back_LM",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 84.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    7.0
+   ]
+  },
+  {
+   "name": "LGT_MC_Beacon0_LM",
+   "type": "POINT",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 25.0,
+   "color": [
+    1.0,
+    0.4564110338687897,
+    0.0423114113509655
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "LGT_MC_Beacon1_LM",
+   "type": "POINT",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 25.0,
+   "color": [
+    1.0,
+    0.4564110338687897,
+    0.0423114113509655
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "LGT_MC_Launch_Key",
+   "type": "AREA",
+   "pos": [
+    19.6,
+    4.7,
+    -46.35
+   ],
+   "dir": [
+    0.254,
+    -0.9165,
+    -0.3092
+   ],
+   "watts": 85.0,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Day_Operational",
+   "switch": true,
+   "spread_deg": 45.0,
+   "size": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "LGT_MC_Launch_Key_LM",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 106.25,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 45.0,
+   "size": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "LGT_MC_Linear_N",
+   "type": "AREA",
+   "pos": [
+    17.3,
+    4.44,
+    -50.15
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 230.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": true,
+   "spread_deg": 180.0,
+   "size": [
+    7.0,
+    0.20000000298023224
+   ]
+  },
+  {
+   "name": "LGT_MC_Linear_N_LM",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 161.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    7.0,
+    0.20000000298023224
+   ]
+  },
+  {
+   "name": "LGT_MC_Linear_S",
+   "type": "AREA",
+   "pos": [
+    17.3,
+    4.44,
+    -45.35
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 230.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": true,
+   "spread_deg": 180.0,
+   "size": [
+    7.0,
+    0.20000000298023224
+   ]
+  },
+  {
+   "name": "LGT_MC_Linear_S_LM",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 161.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Launch_Mode",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    7.0,
+    0.20000000298023224
+   ]
+  }
+ ],
+ "rover": null,
+ "footprint": {
+  "x": [
+   9.25,
+   24.25
+  ],
+  "z": [
+   -53.75,
+   -41.75
+  ],
+  "h": 5.0
+ },
+ "materials": [
+  "MAT_Beacon_Amber",
+  "MAT_Black_Rubber",
+  "MAT_Brushed_Metal",
+  "MAT_Ceiling_Acoustic",
+  "MAT_Decal_Insignia",
+  "MAT_Decal_LaunchAuthority",
+  "MAT_Decal_MC_HangarSign",
+  "MAT_Decal_MC_Title",
+  "MAT_Decal_ServiceAtlas",
+  "MAT_Floor_Access",
+  "MAT_Floor_Metal",
+  "MAT_Light_Diffuser",
+  "MAT_Light_Diffuser_Dim",
+  "MAT_Orange_Emissive",
+  "MAT_Paint_Orange",
+  "MAT_Painted_Metal",
+  "MAT_Painted_Metal_Dark",
+  "MAT_Screen_Dark",
+  "MAT_Screen_LaunchConsole",
+  "MAT_Screen_MC_GoNoGo",
+  "MAT_Screen_MC_Landing",
+  "MAT_Screen_MC_OpsAtlas",
+  "MAT_Screen_MC_Readiness",
+  "MAT_Screen_MC_RoverBuild",
+  "MAT_Screen_MissionControlWall",
+  "MAT_Status_Amber",
+  "MAT_Status_Cyan",
+  "MAT_Structural_Graphite",
+  "MAT_Wall_Backer",
+  "MAT_Wall_Grey",
+  "MAT_Wall_Grey_B",
+  "MAT_Wall_Grey_C",
+  "MAT_Wall_Lower",
+  "MAT_Wall_White",
+  "MAT_Wall_White_B",
+  "MAT_Wall_White_C",
+  "MAT_Warning_Yellow"
+ ],
+ "emission_sets": {
+  "MAT_Screen_MC_Readiness": {
+   "Day_Operational": 1.5,
+   "Launch_Mode": 2.025
+  },
+  "MAT_Light_Diffuser_Dim": {
+   "Day_Operational": 1.6,
+   "Launch_Mode": 1.1
+  },
+  "MAT_Screen_MC_GoNoGo": {
+   "Day_Operational": 1.5,
+   "Launch_Mode": 2.025
+  },
+  "MAT_Screen_MissionControlWall": {
+   "Day_Operational": 1.8,
+   "Launch_Mode": 2.43
+  },
+  "MAT_Screen_MC_Landing": {
+   "Day_Operational": 1.4,
+   "Launch_Mode": 1.89
+  },
+  "MAT_Beacon_Amber": {
+   "Day_Operational": 0.05,
+   "Launch_Mode": 9.0
+  },
+  "MAT_Screen_MC_RoverBuild": {
+   "Day_Operational": 1.4,
+   "Launch_Mode": 1.89
+  },
+  "MAT_Screen_MC_OpsAtlas": {
+   "Day_Operational": 1.2,
+   "Launch_Mode": 1.62
+  },
+  "MAT_Screen_LaunchConsole": {
+   "Day_Operational": 1.5,
+   "Launch_Mode": 2.025
+  }
+ }
+}

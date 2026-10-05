@@ -20,6 +20,9 @@
     0.8713670969009399,
     1.0
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 70.0,
    "size": [
     4.0,
     2.0
@@ -44,6 +47,9 @@
     0.9046611785888672,
     0.8069522380828857
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 60.0,
    "size": [
     2.5999999046325684,
     2.5999999046325684
@@ -68,6 +74,9 @@
     0.8069522380828857,
     1.0
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 85.0,
    "size": [
     3.0,
     1.0
@@ -92,6 +101,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -116,6 +128,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -140,6 +155,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -164,6 +182,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -188,6 +209,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -212,6 +236,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -236,6 +263,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -260,6 +290,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -284,6 +317,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -308,6 +344,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -332,6 +371,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -356,6 +398,9 @@
     0.8796223998069763,
     0.7454041838645935
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     2.299999952316284,
     0.30000001192092896
@@ -380,6 +425,9 @@
     0.8148465752601624,
     0.6307571530342102
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     1.7999999523162842,
     0.20000000298023224
@@ -404,6 +452,9 @@
     0.8148465752601624,
     0.6307571530342102
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     1.7999999523162842,
     0.20000000298023224
@@ -428,6 +479,9 @@
     0.8148465752601624,
     0.6307571530342102
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     1.7999999523162842,
     0.20000000298023224
@@ -452,6 +506,9 @@
     0.8148465752601624,
     0.6307571530342102
    ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
    "size": [
     1.7999999523162842,
     0.20000000298023224
@@ -466,5 +523,92 @@
   ],
   "rot_y_deg": -28.000000209988553,
   "asset": "RF01_Rover.glb"
- }
+ },
+ "footprint": {
+  "x": [
+   -9.0,
+   9.0
+  ],
+  "z": [
+   -55.0,
+   -33.0
+  ],
+  "h": 10.0
+ },
+ "materials": [
+  "MAT_Black_Rubber",
+  "MAT_Brushed_Metal",
+  "MAT_Ceiling_Dark",
+  "MAT_Decal_ColumnID_E0",
+  "MAT_Decal_ColumnID_E1",
+  "MAT_Decal_ColumnID_E2",
+  "MAT_Decal_ColumnID_E3",
+  "MAT_Decal_ColumnID_W0",
+  "MAT_Decal_ColumnID_W1",
+  "MAT_Decal_ColumnID_W3",
+  "MAT_Decal_ColumnID_W4",
+  "MAT_Decal_DigitalTwinTitle",
+  "MAT_Decal_FlightOps",
+  "MAT_Decal_FloorWear",
+  "MAT_Decal_HangarDoorFloor",
+  "MAT_Decal_Hazard",
+  "MAT_Decal_HazardRing",
+  "MAT_Decal_Insignia",
+  "MAT_Decal_MCSign",
+  "MAT_Decal_MissionConfigTitle",
+  "MAT_Decal_Scuffs",
+  "MAT_Decal_ServiceAtlas",
+  "MAT_Decal_Station_COMMS",
+  "MAT_Decal_Station_COMMS_Sub",
+  "MAT_Decal_Station_MOBILITY",
+  "MAT_Decal_Station_MOBILITY_Sub",
+  "MAT_Decal_Station_POWER",
+  "MAT_Decal_Station_POWER_Sub",
+  "MAT_Decal_Station_SCIENCE",
+  "MAT_Decal_Station_SCIENCE_Sub",
+  "MAT_Decal_Step01",
+  "MAT_Decal_Step02",
+  "MAT_Decal_Step03",
+  "MAT_Decal_Step04",
+  "MAT_Decal_Step05",
+  "MAT_Decal_Step06",
+  "MAT_Decal_TurntableRing",
+  "MAT_Decal_WorkBay",
+  "MAT_Floor_Epoxy",
+  "MAT_Floor_Metal",
+  "MAT_Floor_Rubber",
+  "MAT_Glass",
+  "MAT_LED_Cool",
+  "MAT_Light_Diffuser",
+  "MAT_Orange_Accent",
+  "MAT_Orange_Emissive",
+  "MAT_Paint_Graphite",
+  "MAT_Paint_Orange",
+  "MAT_Painted_Deck",
+  "MAT_Painted_Metal",
+  "MAT_Painted_Metal_Dark",
+  "MAT_Screen_Dark",
+  "MAT_Screen_DigitalTwin",
+  "MAT_Screen_DigitalTwinConsole",
+  "MAT_Screen_MissionConfig",
+  "MAT_Screen_Station_COMMS",
+  "MAT_Screen_Station_COMMS_Aux",
+  "MAT_Screen_Station_MOBILITY",
+  "MAT_Screen_Station_MOBILITY_Aux",
+  "MAT_Screen_Station_POWER",
+  "MAT_Screen_Station_SCIENCE",
+  "MAT_Status_Amber",
+  "MAT_Status_Cyan",
+  "MAT_Structural_Graphite",
+  "MAT_Wall_Backer",
+  "MAT_Wall_Grey",
+  "MAT_Wall_Grey_B",
+  "MAT_Wall_Grey_C",
+  "MAT_Wall_Lower",
+  "MAT_Wall_White",
+  "MAT_Wall_White_B",
+  "MAT_Wall_White_C",
+  "MAT_Warning_Yellow"
+ ],
+ "emission_sets": {}
 }

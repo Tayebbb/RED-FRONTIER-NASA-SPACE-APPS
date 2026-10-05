@@ -2,11 +2,12 @@
 render_cycles.py - beauty renders of facility cameras (Cycles, CPU).
 
 Run:  blender -b blender/RF_Facility.blend --python scripts/render_cycles.py -- <tag> <width> <samples> CAM_a [CAM_b ...]
+Env:  RF_LIGHTSET=Launch_Mode renders the launch light set; RF_EXPOSURE shifts exposure.
 """
 import bpy, sys, os, time
 argv = sys.argv[sys.argv.index('--') + 1:]
 tag, width, samples, cams = argv[0], int(argv[1]), int(argv[2]), argv[3:]
-out_dir = os.path.join(r"D:\RedFrontier\renders", tag); os.makedirs(out_dir, exist_ok=True)
+out_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "renders", tag); os.makedirs(out_dir, exist_ok=True)
 sc = bpy.context.scene
 sc.render.engine = 'CYCLES'
 cy = sc.cycles
@@ -21,6 +22,9 @@ except Exception: pass
 sc.view_settings.exposure = float(os.environ.get('RF_EXPOSURE', '0'))
 for o in bpy.data.objects:
     if o.get('rf_plan_only'): o.hide_render = True
+sys.path.insert(0, os.path.dirname(__file__))
+import rf_lightsets
+rf_lightsets.apply(os.environ.get('RF_LIGHTSET', 'Day_Operational'))        # RF_LIGHTSET=Launch_Mode for the launch look
 for name in cams:
     cam = bpy.data.objects[name]; sc.camera = cam
     sc.render.filepath = os.path.join(out_dir, name + '.png')

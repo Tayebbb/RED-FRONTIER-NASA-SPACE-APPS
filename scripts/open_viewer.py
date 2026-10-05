@@ -2,15 +2,17 @@
 open_viewer.py - opens the facility in Blender ready to look at (no editing needed).
 
 Starts in the Hangar entrance camera with Material Preview shading, overlays (empties,
-light gizmos, grid) hidden. Number keys 1-4 in the 3D view switch between the four
-approved Hangar cameras; 0 returns to free navigation.
+light gizmos, grid) hidden. Number keys 1-4 (Hangar), 5-8 (Mission Control) and 9 (Mars Intelligence) in the 3D view switch
+between the approved cameras; 0 returns to free navigation.
 
 Used by Open_Hangar_In_Blender.bat:
   blender RF_Facility.blend --python scripts/open_viewer.py
 """
 import bpy
 
-CAMS = ['CAM_Hangar_Entrance', 'CAM_Hangar_Wide', 'CAM_Hangar_Rover', 'CAM_Hangar_Station']
+CAMS = ['CAM_Hangar_Entrance', 'CAM_Hangar_Wide', 'CAM_Hangar_Rover', 'CAM_Hangar_Station',
+        'CAM_MissionControl_Hero', 'CAM_MissionControl_Entry', 'CAM_MissionControl_Launch', 'CAM_MissionControl_Glass',
+        'CAM_MarsIntel_Hero']
 
 def view3d_areas():
     for win in bpy.context.window_manager.windows:
@@ -49,7 +51,7 @@ def setup():
         sp.lens = 30
     look_through(CAMS[0])
     km = bpy.context.window_manager.keyconfigs.addon.keymaps.new(name='3D View', space_type='VIEW_3D')
-    for i, key in enumerate(('ZERO', 'ONE', 'TWO', 'THREE', 'FOUR')):
+    for i, key in enumerate(('ZERO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE')):
         km.keymap_items.new('rf.camera', key, 'PRESS').properties.index = i
     print('RF_VIEWER_READY')
     return None

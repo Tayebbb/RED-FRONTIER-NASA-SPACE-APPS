@@ -115,7 +115,11 @@ def cladding(name, length, height, L, col, lower=3.0, openings=(), tile_low=1.1,
     mb = MB(); gap = 0.014; d = 0.035
     def blocked(x0, x1, z0, z1):
         return any(x0 < ox1 and x1 > ox0 and z0 < oz1 and z1 > oz0 for ox0, ox1, oz0, oz1 in openings)
-    mb.box((length, 0.012, height), (length / 2, -0.006, height / 2), L['backer'])
+    xs = sorted({0.0, length, *[min(max(v, 0.0), length) for o in openings for v in (o[0], o[1])]})
+    for a, b in zip(xs, xs[1:]):                                   # backer sheet, open where the wall is open
+        cuts = [(o[2], o[3]) for o in openings if o[0] < (a + b) / 2 < o[1]]
+        for z0, z1 in _spans(0, height, cuts):
+            mb.box((b - a, 0.012, z1 - z0), ((a + b) / 2, -0.006, (z0 + z1) / 2), L['backer'])
     # kick plate
     for x0, x1 in _spans(0, length, [(o[0], o[1]) for o in openings if o[2] < 0.2]):
         mb.box((x1 - x0, 0.06, 0.2), ((x0 + x1) / 2, -0.03, 0.1), L['graphite'])
@@ -274,3 +278,73 @@ def hatch(name, L, col, w=0.9, d=0.55):
     for sx in (-1, 1):
         for sy in (-1, 1): mb.cyl(0.012, 0.004, (sx * (w / 2 - 0.05), sy * (d / 2 - 0.05), 0.011), L['brushed'], segs=10)
     return mb.build(name, col, bevel=0.0)
+
+# ============================================================ PHASE 5: MISSION CONTROL
+def desk_monitors(length=3.4, dpt=0.85, h=0.74, positions=(-0.85, 0.85)):
+    """Monitor layout shared by operator_desk and the screen quads placed on it:
+    (lx, ly, z, rz_deg) of each screen centre, already 2 cm in front of its bezel."""
+    out = []
+    for px in positions:
+        for side, rz in ((-1, 10.0), (1, -10.0)):                 # pair turned in toward the operator
+            r = math.radians(rz); bx, by = px + side * 0.33, dpt / 2 - 0.2
+            out.append((bx + math.sin(r) * 0.02, by - math.cos(r) * 0.02, h + 0.36, rz))
+    return out
+
+def operator_desk(name, L, col, length=3.4, dpt=0.85, h=0.74, positions=(-0.85, 0.85)):
+    """Mission Control desk run, front faces -Y. Not interactable, so no orange: graphite top,
+    satin pedestals, rear monitor spine, two 16:9 monitors and a keyboard per position."""
+    mb = MB(); knee = 0.9
+    edges = sorted({-length / 2, length / 2, *[p + s * knee / 2 for p in positions for s in (-1, 1)]})
+    for a, b in zip(edges, edges[1:]):                             # pedestals between the knee spaces
+        if any(abs((a + b) / 2 - p) < 1e-6 for p in positions) or b - a < 0.1: continue
+        mb.box((b - a - 0.04, dpt - 0.15, 0.08), ((a + b) / 2, 0.06, 0.04), L['backer'])
+        mb.box((b - a, dpt - 0.05, h - 0.12), ((a + b) / 2, 0.025, 0.08 + (h - 0.12) / 2), L['painted'])
+    mb.box((length - 0.04, 0.03, h - 0.3), (0, dpt / 2 - 0.05, 0.25 + (h - 0.3) / 2), L['painted'])   # modesty panel
+    mb.box((length + 0.02, dpt, 0.04), (0, 0, h - 0.02), L['graphite'])                                # worktop
+    mb.box((length + 0.02, 0.012, 0.02), (0, -dpt / 2 - 0.004, h - 0.03), L['brushed'])                # front edge
+    mb.box((length - 0.1, 0.1, 0.12), (0, dpt / 2 - 0.1, h + 0.06), L['graphite'])                     # monitor spine
+    for (lx, ly, z, rz) in desk_monitors(length, dpt, h, positions):
+        r = math.radians(rz); bx, by = lx - math.sin(r) * 0.02, ly + math.cos(r) * 0.02
+        mb.box((0.64, 0.035, 0.4), (bx, by, z), L['graphite'], rot=(0, 0, r))                         # bezel
+        mb.box((0.06, 0.05, 0.2), (bx - math.sin(r) * 0.04, by + math.cos(r) * 0.04, h + 0.12), L['graphite'], rot=(0, 0, r))
+    for px in positions:
+        mb.box((0.44, 0.14, 0.018), (px, -dpt / 2 + 0.2, h + 0.009), L['rubber'])                     # keyboard
+        mb.cyl(0.008, 0.01, (px + 0.5, dpt / 2 - 0.152, h + 0.09), L['status_cyan'], segs=10, axis='Y')
+    return mb.build(name, col, bevel=0.005)
+
+def task_chair(name, L, col):
+    """Operator chair, occupant faces -Y. Five-star base on casters, graphite frame, black upholstery."""
+    mb = MB()
+    for k in range(5):
+        a = 2 * math.pi * k / 5 + math.pi / 2
+        tip = (math.cos(a) * 0.32, math.sin(a) * 0.32)
+        mb.beam((0, 0, 0.09), (tip[0], tip[1], 0.07), 0.05, 0.03, L['graphite'])
+        mb.cyl(0.028, 0.03, (tip[0], tip[1], 0.03), L['rubber'], segs=10, axis='X')
+    mb.cyl(0.03, 0.34, (0, 0, 0.26), L['brushed'], segs=14)                                  # gas column
+    mb.box((0.5, 0.48, 0.08), (0, 0, 0.47), L['rubber'])                                     # seat
+    mb.box((0.42, 0.4, 0.03), (0, 0, 0.42), L['graphite'])
+    mb.beam((0, 0.2, 0.44), (0, 0.27, 0.72), 0.06, 0.03, L['graphite'])                      # back spine
+    mb.box((0.46, 0.06, 0.55), (0, 0.29, 0.84), L['rubber'], rot=(math.radians(-8), 0, 0))   # backrest
+    for sx in (-1, 1):
+        mb.box((0.03, 0.04, 0.2), (sx * 0.24, 0.02, 0.58), L['graphite'])
+        mb.box((0.06, 0.28, 0.03), (sx * 0.24, -0.01, 0.69), L['graphite'])                  # armrests
+    return mb.build(name, col, bevel=0.004)
+
+def warning_beacon(name, L, col):
+    """Wall-bracket amber beacon (yellow = hazard). Lens is dark by day, lit in LIGHTSET_Launch_Mode.
+    Origin on the wall line, faces -Y."""
+    mb = MB()
+    mb.box((0.14, 0.2, 0.03), (0, -0.1, 0.015), L['graphite'])                                # bracket shelf
+    mb.box((0.1, 0.02, 0.12), (0, -0.01, -0.04), L['graphite'])                               # wall plate
+    mb.cyl(0.08, 0.05, (0, -0.12, 0.055), L['graphite'], segs=24)                             # base
+    mb.cyl(0.065, 0.15, (0, -0.12, 0.155), L['beacon'], segs=24)                              # lens
+    mb.cyl(0.04, 0.02, (0, -0.12, 0.24), L['graphite'], segs=16)
+    return mb.build(name, col, bevel=0.003)
+
+def linear_light(name, length, L, col, drop=0.5, mat=None):
+    """Suspended linear fixture along X: slim graphite housing, diffuser underneath, two rods."""
+    mb = MB()
+    mb.box((length, 0.12, 0.07), (0, 0, 0.035), L['graphite'])
+    mb.box((length - 0.04, 0.09, 0.008), (0, 0, -0.003), mat or L['diffuser_dim'])
+    for sx in (-1, 1): mb.cyl(0.006, drop, (sx * (length / 2 - 0.4), 0, 0.07 + drop / 2), L['graphite'], segs=8)
+    return mb.build(name, col, bevel=0.003)

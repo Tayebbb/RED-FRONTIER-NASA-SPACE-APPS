@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sa32m8cau8mt"
-path="res://.godot/imported/RF01_Rover_mars_2020_05_n.png-47d849577fe7157d506157fd89b9dc70.ctex"
+path.bptc="res://.godot/imported/RF01_Rover_mars_2020_05_n.png-47d849577fe7157d506157fd89b9dc70.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "6beadf671eee88fb51dc5956c0a2f997"
@@ -14,17 +15,17 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/RF01_Rover_mars_2020_05_n.png"
-dest_files=["res://.godot/imported/RF01_Rover_mars_2020_05_n.png-47d849577fe7157d506157fd89b9dc70.ctex"]
+dest_files=["res://.godot/imported/RF01_Rover_mars_2020_05_n.png-47d849577fe7157d506157fd89b9dc70.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

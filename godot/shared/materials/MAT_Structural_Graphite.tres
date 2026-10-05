@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MAT_Structural_Graphite"
+cull_mode = 2
+albedo_color = Color(0.17254902, 0.18431373, 0.20392159, 1)
+roughness = 0.42
