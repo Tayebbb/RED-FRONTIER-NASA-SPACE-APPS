@@ -1,0 +1,163 @@
+{
+ "room": "Briefing",
+ "lights": [
+  {
+   "name": "LGT_Brief_Board",
+   "type": "AREA",
+   "pos": [
+    1.6,
+    3.6,
+    -5.0
+   ],
+   "dir": [
+    0.7682,
+    -0.6402,
+    -0.0
+   ],
+   "watts": 70.0,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 40.0,
+   "size": [
+    0.800000011920929,
+    0.800000011920929
+   ]
+  },
+  {
+   "name": "LGT_Brief_Line_E",
+   "type": "AREA",
+   "pos": [
+    1.6,
+    3.53,
+    -5.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 130.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    7.0
+   ]
+  },
+  {
+   "name": "LGT_Brief_Line_W",
+   "type": "AREA",
+   "pos": [
+    -2.4,
+    3.53,
+    -5.0
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 130.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    7.0
+   ]
+  },
+  {
+   "name": "LGT_Brief_Table",
+   "type": "AREA",
+   "pos": [
+    0.4,
+    3.7,
+    -4.6
+   ],
+   "dir": [
+    -0.2679,
+    -0.8574,
+    -0.4394
+   ],
+   "watts": 80.0,
+   "color": [
+    1.0,
+    0.8796223998069763,
+    0.7605245113372803
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 50.0,
+   "size": [
+    1.2000000476837158,
+    1.2000000476837158
+   ]
+  }
+ ],
+ "rover": null,
+ "footprint": {
+  "x": [
+   -4.0,
+   4.0
+  ],
+  "z": [
+   -10.0,
+   -0.0
+  ],
+  "h": 4.0
+ },
+ "materials": [
+  "MAT_Black_Rubber",
+  "MAT_Brushed_Metal",
+  "MAT_Ceiling_Acoustic",
+  "MAT_Decal_Brief_ExitSign",
+  "MAT_Decal_Brief_Program",
+  "MAT_Decal_Brief_ProgramSub",
+  "MAT_Decal_Brief_Title",
+  "MAT_Decal_Insignia",
+  "MAT_Floor_Epoxy",
+  "MAT_Light_Diffuser",
+  "MAT_Light_Diffuser_Dim",
+  "MAT_Orange_Emissive",
+  "MAT_Paint_Orange",
+  "MAT_Painted_Metal",
+  "MAT_Screen_Brief_ContextAtlas",
+  "MAT_Screen_BriefingDisplay",
+  "MAT_Screen_BriefingTable",
+  "MAT_Screen_Dark",
+  "MAT_Status_Amber",
+  "MAT_Status_Cyan",
+  "MAT_Structural_Graphite",
+  "MAT_Wall_Backer",
+  "MAT_Wall_Grey",
+  "MAT_Wall_Grey_B",
+  "MAT_Wall_Grey_C",
+  "MAT_Wall_Lower",
+  "MAT_Wall_Media_C",
+  "MAT_Wall_White",
+  "MAT_Wall_White_B",
+  "MAT_Wall_White_C"
+ ],
+ "emission_sets": {
+  "MAT_Light_Diffuser_Dim": {
+   "Day_Operational": 1.6,
+   "Launch_Mode": 1.1
+  }
+ }
+}

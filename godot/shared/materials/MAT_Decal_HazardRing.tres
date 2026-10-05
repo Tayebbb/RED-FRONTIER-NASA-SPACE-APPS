@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Hazard.png" id="1_m0wl0"]
+
+[resource]
+resource_name = "MAT_Decal_HazardRing"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_m0wl0")
+roughness = 0.55
+metadata/_gltf_primary_texture_coord = 0

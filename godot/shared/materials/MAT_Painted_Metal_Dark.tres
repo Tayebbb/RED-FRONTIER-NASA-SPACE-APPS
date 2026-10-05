@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MAT_Painted_Metal_Dark"
+cull_mode = 2
+albedo_color = Color(0.3372549, 0.35686275, 0.38431373, 1)
+roughness = 0.48

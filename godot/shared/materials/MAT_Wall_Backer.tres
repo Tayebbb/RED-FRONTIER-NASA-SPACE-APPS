@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MAT_Wall_Backer"
+cull_mode = 2
+albedo_color = Color(0.08627452, 0.09411765, 0.10588236, 1)
+roughness = 0.8

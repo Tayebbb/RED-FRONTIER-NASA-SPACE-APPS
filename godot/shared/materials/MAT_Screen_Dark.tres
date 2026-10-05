@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MAT_Screen_Dark"
+cull_mode = 2
+albedo_color = Color(0.039215688, 0.050980397, 0.06666668, 1)
+roughness = 0.12
