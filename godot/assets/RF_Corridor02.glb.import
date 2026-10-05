@@ -1,0 +1,118 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dwc06c0j4x3bj"
+path="res://.godot/imported/RF_Corridor02.glb-96bebdb47b283e48fd75a2d071bef209.scn"
+
+[deps]
+
+source_file="res://assets/RF_Corridor02.glb"
+dest_files=["res://.godot/imported/RF_Corridor02.glb-96bebdb47b283e48fd75a2d071bef209.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=1
+materials/extract_format=0
+materials/extract_path="res://shared/materials"
+_subresources={
+"materials": {
+"MAT_Ceiling_Acoustic": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Ceiling_Acoustic.tres",
+"use_external/path": "res://shared/materials/MAT_Ceiling_Acoustic.tres"
+},
+"MAT_Decal_Corridor02_HangarSign": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Corridor02_HangarSign.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Corridor02_HangarSign.tres"
+},
+"MAT_Decal_Corridor02_WorkBay": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Decal_Corridor02_WorkBay.tres",
+"use_external/path": "res://shared/materials/MAT_Decal_Corridor02_WorkBay.tres"
+},
+"MAT_Floor_Epoxy": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Floor_Epoxy.tres",
+"use_external/path": "res://shared/materials/MAT_Floor_Epoxy.tres"
+},
+"MAT_Light_Diffuser": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Light_Diffuser.tres",
+"use_external/path": "res://shared/materials/MAT_Light_Diffuser.tres"
+},
+"MAT_Light_Diffuser_Dim": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Light_Diffuser_Dim.tres",
+"use_external/path": "res://shared/materials/MAT_Light_Diffuser_Dim.tres"
+},
+"MAT_Paint_Orange": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Paint_Orange.tres",
+"use_external/path": "res://shared/materials/MAT_Paint_Orange.tres"
+},
+"MAT_Screen_Corridor02_RF01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Corridor02_RF01.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Corridor02_RF01.tres"
+},
+"MAT_Screen_Dark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Screen_Dark.tres",
+"use_external/path": "res://shared/materials/MAT_Screen_Dark.tres"
+},
+"MAT_Structural_Graphite": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Structural_Graphite.tres",
+"use_external/path": "res://shared/materials/MAT_Structural_Graphite.tres"
+},
+"MAT_Wall_Backer": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Backer.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Backer.tres"
+},
+"MAT_Wall_Media": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Media.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Media.tres"
+},
+"MAT_Wall_Media_B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Media_B.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Media_B.tres"
+},
+"MAT_Wall_Media_C": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://shared/materials/MAT_Wall_Media_C.tres",
+"use_external/path": "res://shared/materials/MAT_Wall_Media_C.tres"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
+gltf/texture_map_mode=1

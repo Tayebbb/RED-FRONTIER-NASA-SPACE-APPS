@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MAT_Wall_White_B"
+cull_mode = 2
+albedo_color = Color(0.88235295, 0.87058824, 0.83921564, 1)
+roughness = 0.6

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Brushed_Roughness.png" id="1_csh1m"]
+
+[resource]
+resource_name = "MAT_Brushed_Metal"
+cull_mode = 2
+albedo_color = Color(0.6627451, 0.6784314, 0.69803923, 1)
+metallic = 1.0
+metallic_texture = ExtResource("1_csh1m")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("1_csh1m")
+roughness_texture_channel = 1

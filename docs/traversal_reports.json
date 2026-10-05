@@ -1,0 +1,2937 @@
+{
+ "note": "Final configuration (warm-up off), Intel UHD, integrated-GPU preset; runs with the window rendering normally.",
+ "runs": [
+  {
+   "draw_calls_avg": 135.0,
+   "draw_calls_max": 1260,
+   "duration_s": 74.7,
+   "events": [
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 94
+     },
+     "event": "load",
+     "instance_ms": 4.4,
+     "resident": [
+      "Briefing"
+     ],
+     "room": "Briefing",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 31
+     },
+     "event": "load",
+     "instance_ms": 8.8,
+     "resident": [
+      "Briefing",
+      "Corridor01"
+     ],
+     "room": "Corridor01",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 149
+     },
+     "event": "load",
+     "instance_ms": 162.3,
+     "resident": [
+      "Briefing",
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "MarsIntel",
+     "t": 8.4
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "Briefing",
+     "t": 11.1
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 25
+     },
+     "event": "load",
+     "instance_ms": 169.7,
+     "resident": [
+      "Corridor01",
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor02",
+     "t": 11.31
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor01",
+     "t": 22.34
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 661
+     },
+     "event": "load",
+     "instance_ms": 1188.7,
+     "resident": [
+      "MarsIntel",
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "Hangar",
+     "t": 23.87
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "MarsIntel",
+     "t": 25.3
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 166
+     },
+     "event": "load",
+     "instance_ms": 625.6,
+     "resident": [
+      "Corridor02",
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 26.65
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "Corridor02",
+     "t": 60.8
+    },
+    {
+     "audit": {},
+     "event": "launch_mode_on",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 72.72
+    }
+   ],
+   "fps_avg": 24.8,
+   "fps_min": 11,
+   "gpu": "Intel(R) UHD Graphics",
+   "hitches": [
+    {
+     "event": "load",
+     "room": "Briefing",
+     "t": 0.0,
+     "worst_frame_ms": 150.0
+    },
+    {
+     "event": "load",
+     "room": "Corridor01",
+     "t": 0.0,
+     "worst_frame_ms": 150.0
+    },
+    {
+     "event": "load",
+     "room": "MarsIntel",
+     "t": 8.4,
+     "worst_frame_ms": 35.7
+    },
+    {
+     "event": "unload",
+     "room": "Briefing",
+     "t": 11.1,
+     "worst_frame_ms": 53.1
+    },
+    {
+     "event": "load",
+     "room": "Corridor02",
+     "t": 11.31,
+     "worst_frame_ms": 53.1
+    },
+    {
+     "event": "unload",
+     "room": "Corridor01",
+     "t": 22.34,
+     "worst_frame_ms": 143.3
+    },
+    {
+     "event": "load",
+     "room": "Hangar",
+     "t": 23.87,
+     "worst_frame_ms": 138.3
+    },
+    {
+     "event": "unload",
+     "room": "MarsIntel",
+     "t": 25.3,
+     "worst_frame_ms": 113.0
+    },
+    {
+     "event": "load",
+     "room": "MissionControl",
+     "t": 26.65,
+     "worst_frame_ms": 142.8
+    },
+    {
+     "event": "unload",
+     "room": "Corridor02",
+     "t": 60.8,
+     "worst_frame_ms": 129.8
+    }
+   ],
+   "missing_materials": 0,
+   "non_shared_materials": 0,
+   "per_second": [
+    {
+     "draw": 108,
+     "fps": 25,
+     "room": "Briefing",
+     "t": 1.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 93,
+     "fps": 39,
+     "room": "Briefing",
+     "t": 2.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 63,
+     "fps": 41,
+     "room": "Briefing",
+     "t": 3.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 46,
+     "fps": 33,
+     "room": "Briefing",
+     "t": 4.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 55,
+     "fps": 39,
+     "room": "Briefing",
+     "t": 5.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 58,
+     "fps": 44,
+     "room": "Briefing",
+     "t": 6.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 41,
+     "fps": 45,
+     "room": "Briefing",
+     "t": 7.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 32,
+     "fps": 42,
+     "room": "Corridor01",
+     "t": 8.1,
+     "vram_mb": 307.0
+    },
+    {
+     "draw": 115,
+     "fps": 43,
+     "room": "Corridor01",
+     "t": 9.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 120,
+     "fps": 41,
+     "room": "Corridor01",
+     "t": 10.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 127,
+     "fps": 36,
+     "room": "MarsIntel",
+     "t": 11.1,
+     "vram_mb": 349.0
+    },
+    {
+     "draw": 118,
+     "fps": 33,
+     "room": "MarsIntel",
+     "t": 12.1,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 58,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 13.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 97,
+     "fps": 31,
+     "room": "MarsIntel",
+     "t": 14.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 44,
+     "fps": 33,
+     "room": "MarsIntel",
+     "t": 15.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 87,
+     "fps": 34,
+     "room": "MarsIntel",
+     "t": 16.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 84,
+     "fps": 32,
+     "room": "MarsIntel",
+     "t": 17.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 35,
+     "room": "MarsIntel",
+     "t": 18.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 69,
+     "fps": 33,
+     "room": "MarsIntel",
+     "t": 19.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 59,
+     "fps": 38,
+     "room": "MarsIntel",
+     "t": 20.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 51,
+     "fps": 40,
+     "room": "MarsIntel",
+     "t": 21.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 28,
+     "fps": 46,
+     "room": "MarsIntel",
+     "t": 22.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 25,
+     "fps": 48,
+     "room": "Corridor02",
+     "t": 23.3,
+     "vram_mb": 464.0
+    },
+    {
+     "draw": 667,
+     "fps": 25,
+     "room": "Corridor02",
+     "t": 24.3,
+     "vram_mb": 1035.0
+    },
+    {
+     "draw": 631,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 25.4,
+     "vram_mb": 1040.0
+    },
+    {
+     "draw": 1260,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 26.4,
+     "vram_mb": 1004.0
+    },
+    {
+     "draw": 591,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 27.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 290,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 28.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 180,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 29.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 93,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 30.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 251,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 31.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 227,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 32.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 124,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 33.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 104,
+     "fps": 21,
+     "room": "Hangar",
+     "t": 34.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 87,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 35.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 692,
+     "fps": 21,
+     "room": "Hangar",
+     "t": 36.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 370,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 37.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 277,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 38.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 184,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 39.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 136,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 40.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 120,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 41.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 103,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 42.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 350,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 43.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 465,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 44.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 381,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 46.0,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 290,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 47.0,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 270,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 48.1,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 253,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 49.1,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 238,
+     "fps": 11,
+     "room": "Hangar",
+     "t": 50.1,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 145,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 51.1,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 131,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 52.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 119,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 53.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 113,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 54.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 225,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 55.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 210,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 56.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 175,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 57.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 148,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 58.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 112,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 59.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 155,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 60.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 130,
+     "fps": 19,
+     "room": "MissionControl",
+     "t": 61.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 118,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 62.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 104,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 63.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 75,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 64.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 176,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 65.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 196,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 66.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 156,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 67.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 61,
+     "fps": 22,
+     "room": "MissionControl",
+     "t": 68.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 48,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 69.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 19,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 70.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 19,
+     "fps": 26,
+     "room": "MissionControl",
+     "t": 71.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 19,
+     "fps": 27,
+     "room": "MissionControl",
+     "t": 72.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 19,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 73.9,
+     "vram_mb": 1036.0
+    }
+   ],
+   "preset": "integrated GPU",
+   "ram_peak_mb": 122.0,
+   "resident_max": 3,
+   "texture_peak_mb": 850.0,
+   "vram_peak_mb": 1040.0
+  },
+  {
+   "draw_calls_avg": 134.0,
+   "draw_calls_max": 1272,
+   "duration_s": 74.7,
+   "events": [
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 94
+     },
+     "event": "load",
+     "instance_ms": 9.2,
+     "resident": [
+      "Briefing"
+     ],
+     "room": "Briefing",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 31
+     },
+     "event": "load",
+     "instance_ms": 12.8,
+     "resident": [
+      "Briefing",
+      "Corridor01"
+     ],
+     "room": "Corridor01",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 149
+     },
+     "event": "load",
+     "instance_ms": 140.7,
+     "resident": [
+      "Briefing",
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "MarsIntel",
+     "t": 7.99
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "Briefing",
+     "t": 11.13
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 25
+     },
+     "event": "load",
+     "instance_ms": 201.4,
+     "resident": [
+      "Corridor01",
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor02",
+     "t": 11.37
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor01",
+     "t": 22.33
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 661
+     },
+     "event": "load",
+     "instance_ms": 1216.6,
+     "resident": [
+      "MarsIntel",
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "Hangar",
+     "t": 24.0
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "MarsIntel",
+     "t": 25.32
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 166
+     },
+     "event": "load",
+     "instance_ms": 603.4,
+     "resident": [
+      "Corridor02",
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 26.34
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "Corridor02",
+     "t": 60.86
+    },
+    {
+     "audit": {},
+     "event": "launch_mode_on",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 72.72
+    }
+   ],
+   "fps_avg": 23.1,
+   "fps_min": 11,
+   "gpu": "Intel(R) UHD Graphics",
+   "hitches": [
+    {
+     "event": "load",
+     "room": "Briefing",
+     "t": 0.0,
+     "worst_frame_ms": 149.4
+    },
+    {
+     "event": "load",
+     "room": "Corridor01",
+     "t": 0.0,
+     "worst_frame_ms": 149.4
+    },
+    {
+     "event": "load",
+     "room": "MarsIntel",
+     "t": 7.99,
+     "worst_frame_ms": 32.2
+    },
+    {
+     "event": "unload",
+     "room": "Briefing",
+     "t": 11.13,
+     "worst_frame_ms": 60.6
+    },
+    {
+     "event": "load",
+     "room": "Corridor02",
+     "t": 11.37,
+     "worst_frame_ms": 73.9
+    },
+    {
+     "event": "unload",
+     "room": "Corridor01",
+     "t": 22.33,
+     "worst_frame_ms": 35.1
+    },
+    {
+     "event": "load",
+     "room": "Hangar",
+     "t": 24.0,
+     "worst_frame_ms": 144.3
+    },
+    {
+     "event": "unload",
+     "room": "MarsIntel",
+     "t": 25.32,
+     "worst_frame_ms": 104.7
+    },
+    {
+     "event": "load",
+     "room": "MissionControl",
+     "t": 26.34,
+     "worst_frame_ms": 109.9
+    },
+    {
+     "event": "unload",
+     "room": "Corridor02",
+     "t": 60.86,
+     "worst_frame_ms": 82.3
+    }
+   ],
+   "missing_materials": 0,
+   "non_shared_materials": 0,
+   "per_second": [
+    {
+     "draw": 109,
+     "fps": 20,
+     "room": "Briefing",
+     "t": 1.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 93,
+     "fps": 31,
+     "room": "Briefing",
+     "t": 2.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 63,
+     "fps": 29,
+     "room": "Briefing",
+     "t": 3.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 46,
+     "fps": 31,
+     "room": "Briefing",
+     "t": 4.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 58,
+     "fps": 31,
+     "room": "Briefing",
+     "t": 5.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 58,
+     "fps": 36,
+     "room": "Briefing",
+     "t": 6.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 41,
+     "fps": 38,
+     "room": "Briefing",
+     "t": 7.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 113,
+     "fps": 50,
+     "room": "Corridor01",
+     "t": 8.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 115,
+     "fps": 39,
+     "room": "Corridor01",
+     "t": 9.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 120,
+     "fps": 34,
+     "room": "Corridor01",
+     "t": 10.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 127,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 11.2,
+     "vram_mb": 349.0
+    },
+    {
+     "draw": 101,
+     "fps": 27,
+     "room": "MarsIntel",
+     "t": 12.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 96,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 13.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 91,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 14.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 44,
+     "fps": 24,
+     "room": "MarsIntel",
+     "t": 15.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 87,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 16.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 84,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 17.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 18.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 69,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 19.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 59,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 20.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 45,
+     "fps": 33,
+     "room": "MarsIntel",
+     "t": 21.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 28,
+     "fps": 44,
+     "room": "MarsIntel",
+     "t": 22.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 25,
+     "fps": 47,
+     "room": "Corridor02",
+     "t": 23.3,
+     "vram_mb": 463.0
+    },
+    {
+     "draw": 649,
+     "fps": 28,
+     "room": "Corridor02",
+     "t": 24.4,
+     "vram_mb": 1035.0
+    },
+    {
+     "draw": 640,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 25.4,
+     "vram_mb": 1040.0
+    },
+    {
+     "draw": 1253,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 26.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 590,
+     "fps": 11,
+     "room": "Hangar",
+     "t": 27.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 288,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 28.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 167,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 29.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 93,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 30.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 281,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 31.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 224,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 32.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 748,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 33.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 104,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 34.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 87,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 35.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 74,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 36.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 370,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 37.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 277,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 38.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 184,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 39.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 136,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 40.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 120,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 41.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 103,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 42.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 330,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 43.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 473,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 44.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 383,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 45.9,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 290,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 47.0,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 270,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 48.0,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 253,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 49.1,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 238,
+     "fps": 11,
+     "room": "Hangar",
+     "t": 50.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 145,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 51.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 131,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 52.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 119,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 53.2,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 113,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 54.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 225,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 55.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 204,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 56.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 177,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 57.3,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 148,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 58.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 110,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 59.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 778,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 60.4,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 130,
+     "fps": 21,
+     "room": "MissionControl",
+     "t": 61.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 118,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 62.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 104,
+     "fps": 21,
+     "room": "MissionControl",
+     "t": 63.5,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 75,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 64.6,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 174,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 65.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 196,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 66.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 152,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 67.7,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 61,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 68.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 48,
+     "fps": 28,
+     "room": "MissionControl",
+     "t": 69.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 17,
+     "fps": 28,
+     "room": "MissionControl",
+     "t": 70.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 17,
+     "fps": 28,
+     "room": "MissionControl",
+     "t": 71.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 17,
+     "fps": 29,
+     "room": "MissionControl",
+     "t": 72.8,
+     "vram_mb": 1036.0
+    },
+    {
+     "draw": 17,
+     "fps": 27,
+     "room": "MissionControl",
+     "t": 73.8,
+     "vram_mb": 1036.0
+    }
+   ],
+   "preset": "integrated GPU",
+   "ram_peak_mb": 122.0,
+   "resident_max": 3,
+   "texture_peak_mb": 850.0,
+   "vram_peak_mb": 1040.0
+  },
+  {
+   "draw_calls_avg": 135.0,
+   "draw_calls_max": 1284,
+   "duration_s": 74.7,
+   "events": [
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 94
+     },
+     "event": "load",
+     "instance_ms": 6.8,
+     "resident": [
+      "Briefing"
+     ],
+     "room": "Briefing",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 31
+     },
+     "event": "load",
+     "instance_ms": 14.5,
+     "resident": [
+      "Briefing",
+      "Corridor01"
+     ],
+     "room": "Corridor01",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 149
+     },
+     "event": "load",
+     "instance_ms": 117.6,
+     "resident": [
+      "Briefing",
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "MarsIntel",
+     "t": 7.89
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "Briefing",
+     "t": 11.12
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 25
+     },
+     "event": "load",
+     "instance_ms": 238.7,
+     "resident": [
+      "Corridor01",
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor02",
+     "t": 11.42
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor01",
+     "t": 22.34
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 661
+     },
+     "event": "load",
+     "instance_ms": 1046.4,
+     "resident": [
+      "MarsIntel",
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "Hangar",
+     "t": 24.11
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "MarsIntel",
+     "t": 25.31
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 166
+     },
+     "event": "load",
+     "instance_ms": 685.8,
+     "resident": [
+      "Corridor02",
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 26.32
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "Corridor02",
+     "t": 60.81
+    },
+    {
+     "audit": {},
+     "event": "launch_mode_on",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 72.71
+    }
+   ],
+   "fps_avg": 23.5,
+   "fps_min": 12,
+   "gpu": "Intel(R) UHD Graphics",
+   "hitches": [
+    {
+     "event": "load",
+     "room": "Briefing",
+     "t": 0.0,
+     "worst_frame_ms": 150.0
+    },
+    {
+     "event": "load",
+     "room": "Corridor01",
+     "t": 0.0,
+     "worst_frame_ms": 150.0
+    },
+    {
+     "event": "load",
+     "room": "MarsIntel",
+     "t": 7.89,
+     "worst_frame_ms": 31.4
+    },
+    {
+     "event": "unload",
+     "room": "Briefing",
+     "t": 11.12,
+     "worst_frame_ms": 78.5
+    },
+    {
+     "event": "load",
+     "room": "Corridor02",
+     "t": 11.42,
+     "worst_frame_ms": 84.2
+    },
+    {
+     "event": "unload",
+     "room": "Corridor01",
+     "t": 22.34,
+     "worst_frame_ms": 143.3
+    },
+    {
+     "event": "load",
+     "room": "Hangar",
+     "t": 24.11,
+     "worst_frame_ms": 138.9
+    },
+    {
+     "event": "unload",
+     "room": "MarsIntel",
+     "t": 25.31,
+     "worst_frame_ms": 136.8
+    },
+    {
+     "event": "load",
+     "room": "MissionControl",
+     "t": 26.32,
+     "worst_frame_ms": 143.8
+    },
+    {
+     "event": "unload",
+     "room": "Corridor02",
+     "t": 60.81,
+     "worst_frame_ms": 105.3
+    }
+   ],
+   "missing_materials": 0,
+   "non_shared_materials": 0,
+   "per_second": [
+    {
+     "draw": 109,
+     "fps": 22,
+     "room": "Briefing",
+     "t": 1.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 93,
+     "fps": 34,
+     "room": "Briefing",
+     "t": 2.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 63,
+     "fps": 32,
+     "room": "Briefing",
+     "t": 3.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 46,
+     "fps": 30,
+     "room": "Briefing",
+     "t": 4.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 56,
+     "fps": 29,
+     "room": "Briefing",
+     "t": 5.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 58,
+     "fps": 34,
+     "room": "Briefing",
+     "t": 6.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 41,
+     "fps": 41,
+     "room": "Briefing",
+     "t": 7.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 113,
+     "fps": 52,
+     "room": "Corridor01",
+     "t": 8.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 115,
+     "fps": 40,
+     "room": "Corridor01",
+     "t": 9.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 118,
+     "fps": 33,
+     "room": "Corridor01",
+     "t": 10.2,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 127,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 11.2,
+     "vram_mb": 349.0
+    },
+    {
+     "draw": 100,
+     "fps": 25,
+     "room": "MarsIntel",
+     "t": 12.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 85,
+     "fps": 31,
+     "room": "MarsIntel",
+     "t": 13.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 87,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 14.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 44,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 15.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 85,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 16.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 82,
+     "fps": 27,
+     "room": "MarsIntel",
+     "t": 17.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 26,
+     "room": "MarsIntel",
+     "t": 18.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 31,
+     "room": "MarsIntel",
+     "t": 19.4,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 59,
+     "fps": 31,
+     "room": "MarsIntel",
+     "t": 20.4,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 45,
+     "fps": 38,
+     "room": "MarsIntel",
+     "t": 21.4,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 28,
+     "fps": 47,
+     "room": "Corridor02",
+     "t": 22.4,
+     "vram_mb": 315.0
+    },
+    {
+     "draw": 22,
+     "fps": 27,
+     "room": "Corridor02",
+     "t": 23.4,
+     "vram_mb": 473.0
+    },
+    {
+     "draw": 656,
+     "fps": 31,
+     "room": "Corridor02",
+     "t": 24.5,
+     "vram_mb": 1051.0
+    },
+    {
+     "draw": 1109,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 25.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 629,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 26.7,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 525,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 27.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 241,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 28.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 123,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 29.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 89,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 30.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 291,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 31.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 153,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 32.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 115,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 33.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 94,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 34.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 85,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 36.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 188,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 37.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 395,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 38.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 258,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 39.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 161,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 40.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 134,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 41.1,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 120,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 42.1,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 97,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 43.1,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 429,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 44.2,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 463,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 45.2,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 338,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 46.2,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 285,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 47.3,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 268,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 48.3,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 240,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 49.4,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 44,
+     "fps": 13,
+     "room": "Hangar",
+     "t": 50.4,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 143,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 51.4,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 125,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 52.5,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 119,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 53.5,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 27,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 54.6,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 221,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 55.6,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 202,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 56.6,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 170,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 57.6,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 157,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 58.7,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 116,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 59.7,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 144,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 60.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 124,
+     "fps": 22,
+     "room": "MissionControl",
+     "t": 61.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 114,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 62.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 85,
+     "fps": 22,
+     "room": "MissionControl",
+     "t": 63.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 64,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 64.8,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 184,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 65.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 193,
+     "fps": 22,
+     "room": "MissionControl",
+     "t": 66.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 125,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 67.9,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 67,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 69.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 25,
+     "fps": 26,
+     "room": "MissionControl",
+     "t": 70.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 17,
+     "fps": 26,
+     "room": "MissionControl",
+     "t": 71.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 17,
+     "fps": 27,
+     "room": "MissionControl",
+     "t": 72.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 17,
+     "fps": 27,
+     "room": "MissionControl",
+     "t": 73.0,
+     "vram_mb": 1052.0
+    },
+    {
+     "draw": 17,
+     "fps": 28,
+     "room": "MissionControl",
+     "t": 74.1,
+     "vram_mb": 1052.0
+    }
+   ],
+   "preset": "integrated GPU",
+   "ram_peak_mb": 123.0,
+   "resident_max": 3,
+   "texture_peak_mb": 857.0,
+   "vram_peak_mb": 1063.0
+  },
+  {
+   "draw_calls_avg": 137.0,
+   "draw_calls_max": 1297,
+   "duration_s": 74.7,
+   "events": [
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 94
+     },
+     "event": "load",
+     "instance_ms": 7.8,
+     "resident": [
+      "Briefing"
+     ],
+     "room": "Briefing",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 31
+     },
+     "event": "load",
+     "instance_ms": 12.6,
+     "resident": [
+      "Briefing",
+      "Corridor01"
+     ],
+     "room": "Corridor01",
+     "t": 0.0
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 149
+     },
+     "event": "load",
+     "instance_ms": 132.6,
+     "resident": [
+      "Briefing",
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "MarsIntel",
+     "t": 7.86
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor01",
+      "MarsIntel"
+     ],
+     "room": "Briefing",
+     "t": 11.12
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 25
+     },
+     "event": "load",
+     "instance_ms": 205.0,
+     "resident": [
+      "Corridor01",
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor02",
+     "t": 11.35
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "MarsIntel",
+      "Corridor02"
+     ],
+     "room": "Corridor01",
+     "t": 22.35
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 661
+     },
+     "event": "load",
+     "instance_ms": 697.8,
+     "resident": [
+      "MarsIntel",
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "Hangar",
+     "t": 23.61
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Corridor02",
+      "Hangar"
+     ],
+     "room": "MarsIntel",
+     "t": 25.32
+    },
+    {
+     "audit": {
+      "local": 0,
+      "missing": 0,
+      "surfaces": 166
+     },
+     "event": "load",
+     "instance_ms": 750.6,
+     "resident": [
+      "Corridor02",
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 26.28
+    },
+    {
+     "audit": {},
+     "event": "unload",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "Corridor02",
+     "t": 60.84
+    },
+    {
+     "audit": {},
+     "event": "launch_mode_on",
+     "instance_ms": 0.0,
+     "resident": [
+      "Hangar",
+      "MissionControl"
+     ],
+     "room": "MissionControl",
+     "t": 72.72
+    }
+   ],
+   "fps_avg": 23.1,
+   "fps_min": 12,
+   "gpu": "Intel(R) UHD Graphics",
+   "hitches": [
+    {
+     "event": "load",
+     "room": "Briefing",
+     "t": 0.0,
+     "worst_frame_ms": 147.5
+    },
+    {
+     "event": "load",
+     "room": "Corridor01",
+     "t": 0.0,
+     "worst_frame_ms": 147.5
+    },
+    {
+     "event": "load",
+     "room": "MarsIntel",
+     "t": 7.86,
+     "worst_frame_ms": 33.4
+    },
+    {
+     "event": "unload",
+     "room": "Briefing",
+     "t": 11.12,
+     "worst_frame_ms": 67.5
+    },
+    {
+     "event": "load",
+     "room": "Corridor02",
+     "t": 11.35,
+     "worst_frame_ms": 67.5
+    },
+    {
+     "event": "unload",
+     "room": "Corridor01",
+     "t": 22.35,
+     "worst_frame_ms": 134.0
+    },
+    {
+     "event": "load",
+     "room": "Hangar",
+     "t": 23.61,
+     "worst_frame_ms": 145.6
+    },
+    {
+     "event": "unload",
+     "room": "MarsIntel",
+     "t": 25.32,
+     "worst_frame_ms": 113.4
+    },
+    {
+     "event": "load",
+     "room": "MissionControl",
+     "t": 26.28,
+     "worst_frame_ms": 133.0
+    },
+    {
+     "event": "unload",
+     "room": "Corridor02",
+     "t": 60.84,
+     "worst_frame_ms": 86.6
+    }
+   ],
+   "missing_materials": 0,
+   "non_shared_materials": 0,
+   "per_second": [
+    {
+     "draw": 108,
+     "fps": 24,
+     "room": "Briefing",
+     "t": 1.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 93,
+     "fps": 36,
+     "room": "Briefing",
+     "t": 2.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 63,
+     "fps": 32,
+     "room": "Briefing",
+     "t": 3.0,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 46,
+     "fps": 31,
+     "room": "Briefing",
+     "t": 4.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 56,
+     "fps": 30,
+     "room": "Briefing",
+     "t": 5.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 58,
+     "fps": 36,
+     "room": "Briefing",
+     "t": 6.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 41,
+     "fps": 39,
+     "room": "Briefing",
+     "t": 7.1,
+     "vram_mb": 286.0
+    },
+    {
+     "draw": 113,
+     "fps": 48,
+     "room": "Corridor01",
+     "t": 8.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 115,
+     "fps": 38,
+     "room": "Corridor01",
+     "t": 9.1,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 118,
+     "fps": 31,
+     "room": "Corridor01",
+     "t": 10.2,
+     "vram_mb": 345.0
+    },
+    {
+     "draw": 127,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 11.2,
+     "vram_mb": 315.0
+    },
+    {
+     "draw": 100,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 12.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 83,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 13.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 96,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 14.2,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 44,
+     "fps": 28,
+     "room": "MarsIntel",
+     "t": 15.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 85,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 16.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 82,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 17.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 18.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 70,
+     "fps": 30,
+     "room": "MarsIntel",
+     "t": 19.3,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 59,
+     "fps": 29,
+     "room": "MarsIntel",
+     "t": 20.4,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 45,
+     "fps": 33,
+     "room": "MarsIntel",
+     "t": 21.4,
+     "vram_mb": 305.0
+    },
+    {
+     "draw": 28,
+     "fps": 45,
+     "room": "Corridor02",
+     "t": 22.4,
+     "vram_mb": 306.0
+    },
+    {
+     "draw": 1109,
+     "fps": 44,
+     "room": "Corridor02",
+     "t": 23.5,
+     "vram_mb": 1017.0
+    },
+    {
+     "draw": 662,
+     "fps": 14,
+     "room": "Corridor02",
+     "t": 24.5,
+     "vram_mb": 1019.0
+    },
+    {
+     "draw": 1110,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 25.5,
+     "vram_mb": 1009.0
+    },
+    {
+     "draw": 629,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 26.6,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 544,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 27.6,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 245,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 28.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 132,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 29.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 65,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 30.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 308,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 31.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 174,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 32.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 115,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 33.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 96,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 34.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 85,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 35.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 185,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 36.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 396,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 37.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 261,
+     "fps": 15,
+     "room": "Hangar",
+     "t": 39.0,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 171,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 40.0,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 134,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 41.0,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 120,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 42.1,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 97,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 43.1,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 413,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 44.1,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 463,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 45.2,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 364,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 46.2,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 288,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 47.2,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 268,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 48.2,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 250,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 49.3,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 78,
+     "fps": 12,
+     "room": "Hangar",
+     "t": 50.3,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 141,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 51.3,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 125,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 52.4,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 119,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 53.4,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 27,
+     "fps": 20,
+     "room": "Hangar",
+     "t": 54.5,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 226,
+     "fps": 17,
+     "room": "Hangar",
+     "t": 55.5,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 201,
+     "fps": 14,
+     "room": "Hangar",
+     "t": 56.5,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 170,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 57.6,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 161,
+     "fps": 16,
+     "room": "Hangar",
+     "t": 58.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 116,
+     "fps": 18,
+     "room": "Hangar",
+     "t": 59.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 145,
+     "fps": 19,
+     "room": "Hangar",
+     "t": 60.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 130,
+     "fps": 20,
+     "room": "MissionControl",
+     "t": 61.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 117,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 62.7,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 89,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 63.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 66,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 64.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 179,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 65.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 196,
+     "fps": 21,
+     "room": "MissionControl",
+     "t": 66.8,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 138,
+     "fps": 23,
+     "room": "MissionControl",
+     "t": 67.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 67,
+     "fps": 22,
+     "room": "MissionControl",
+     "t": 68.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 32,
+     "fps": 27,
+     "room": "MissionControl",
+     "t": 69.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 17,
+     "fps": 25,
+     "room": "MissionControl",
+     "t": 70.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 17,
+     "fps": 24,
+     "room": "MissionControl",
+     "t": 71.9,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 17,
+     "fps": 28,
+     "room": "MissionControl",
+     "t": 73.0,
+     "vram_mb": 1020.0
+    },
+    {
+     "draw": 17,
+     "fps": 30,
+     "room": "MissionControl",
+     "t": 74.0,
+     "vram_mb": 1020.0
+    }
+   ],
+   "preset": "integrated GPU",
+   "ram_peak_mb": 122.0,
+   "resident_max": 3,
+   "texture_peak_mb": 857.0,
+   "vram_peak_mb": 1031.0
+  }
+ ]
+}

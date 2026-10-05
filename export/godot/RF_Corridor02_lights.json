@@ -1,0 +1,66 @@
+{
+ "room": "Corridor02",
+ "lights": [
+  {
+   "name": "LGT_Corridor02_Line",
+   "type": "AREA",
+   "pos": [
+    0.0,
+    2.98,
+    -30.5
+   ],
+   "dir": [
+    0.0,
+    -1.0,
+    -0.0
+   ],
+   "watts": 55.0,
+   "color": [
+    1.0,
+    0.7912979125976562,
+    0.6038273572921753
+   ],
+   "set": "Day_Operational",
+   "switch": false,
+   "spread_deg": 180.0,
+   "size": [
+    0.20000000298023224,
+    3.299999952316284
+   ]
+  }
+ ],
+ "rover": null,
+ "footprint": {
+  "x": [
+   -1.5,
+   1.5
+  ],
+  "z": [
+   -32.75,
+   -28.25
+  ],
+  "h": 3.2
+ },
+ "materials": [
+  "MAT_Ceiling_Acoustic",
+  "MAT_Decal_Corridor02_HangarSign",
+  "MAT_Decal_Corridor02_WorkBay",
+  "MAT_Floor_Epoxy",
+  "MAT_Light_Diffuser",
+  "MAT_Light_Diffuser_Dim",
+  "MAT_Paint_Orange",
+  "MAT_Screen_Corridor02_RF01",
+  "MAT_Screen_Dark",
+  "MAT_Structural_Graphite",
+  "MAT_Wall_Backer",
+  "MAT_Wall_Media",
+  "MAT_Wall_Media_B",
+  "MAT_Wall_Media_C"
+ ],
+ "emission_sets": {
+  "MAT_Light_Diffuser_Dim": {
+   "Day_Operational": 1.6,
+   "Launch_Mode": 1.1
+  }
+ }
+}
