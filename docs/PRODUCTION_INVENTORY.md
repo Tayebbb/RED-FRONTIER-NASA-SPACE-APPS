@@ -13,7 +13,7 @@ This is the reduced working inventory. It replaces the long-form planning HTML a
 ### Rover
 
 - Canonical game asset: `assets/rover/RF01_Rover.glb`.
-- Source asset: `assets/rover/source/rover-q.glb`.
+- Source asset: `art/export/rover/perseverance/perseverance_rover.glb`.
 - Detailed reference build: `art/export/rover/perseverance/perseverance_rover.glb`.
 - Future configuration variants: power, battery, shielding, antenna, wheels, and instruments.
 
@@ -69,4 +69,3 @@ This is the reduced working inventory. It replaces the long-form planning HTML a
 4. Add site selection and Digital Twin.
 5. Add Mars gameplay and outcome scoring.
 6. Optimize the Hangar and validate the release renderer.
-

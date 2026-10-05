@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4bmfo2sa3rbt"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Mobility.png" id="1_ja05m"]
+[ext_resource type="Texture2D" uid="uid://dwpw7snt8wwcq" path="res://shared/RF_MaterialLibrary_T_Screen_Mobility.png" id="1_ja05m"]
 
 [resource]
 resource_name = "MAT_Screen_Station_MOBILITY"

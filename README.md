@@ -7,9 +7,8 @@ it lands, and launches it. This repository holds two parts:
   built in Blender and run in Godot 4.7.
 - **Rover modelling** (`art/`): a reference-guided Perseverance build and the preserved modular hybrid baseline.
 
-> **Two rover sources.** The facility uses the locked rover in `assets/rover/` (`RF01_Rover.blend`, with
-> `RF01_Rover.glb` for Godot). `art/` holds the Perseverance build (`perseverance_detailed.blend`,
-> `perseverance_rover.glb`). Which one is canonical for the game is still to be decided.
+> **Canonical rover source.** The facility uses a generated wrapper in `assets/rover/`
+> (`RF01_Rover.blend`, with `RF01_Rover.glb` for Godot) built from the canonical Perseverance export in `art/`.
 
 ## Facility environments (complete, locked)
 
@@ -45,9 +44,9 @@ Viewer keys: 1–9 and Tab cameras, 0 / right mouse free fly, L Launch Mode, F q
 
 - **Modular Blender environment kit:** `scripts/rf_kit.py`, with the catalog in `blender/RF_Kit.blend`. The rooms
   share one material library, `scripts/rf_materials.py`.
-- **Linked, locked Perseverance rover:** `assets/rover/RF01_Rover.blend` is linked into the facility and never
+- **Linked Perseverance rover wrapper:** `assets/rover/RF01_Rover.blend` is linked into the facility and never
   edited or scaled there.
-- **Godot-compatible rover export:** `assets/rover/RF01_Rover.glb` is an unquantized copy, because Godot can't
+- **Godot-compatible rover export:** `assets/rover/RF01_Rover.glb` is an unquantized export, because Godot can't
   import `KHR_mesh_quantization`.
 - **Shared facility materials:**
   - Rooms export geometry only.
@@ -86,7 +85,7 @@ The Perseverance model is a visual approximation, not an engineering-certified o
 
 ## Game integration status
 
-The locked facility is on `origin/main` and contains six streamed spaces from Briefing through Mission Control. The canonical playable rover is `assets/rover/RF01_Rover.glb`, already linked into the Engineering Hangar and loaded through `godot/facility/facility_streamer.gd`. The detailed `art/` Perseverance export is retained as a visual reference until it has an equivalent gameplay attachment contract.
+The locked facility is on `origin/main` and contains six streamed spaces from Briefing through Mission Control. The canonical playable rover is the detailed Perseverance export from `art/export/rover/perseverance/perseverance_rover.glb`, wrapped at `assets/rover/RF01_Rover.glb` and loaded through `godot/facility/facility_streamer.gd`.
 
 - [Game brief](docs/GAME_BRIEF.md)
 - [Rover integration record](docs/ROVER_INTEGRATION.md)

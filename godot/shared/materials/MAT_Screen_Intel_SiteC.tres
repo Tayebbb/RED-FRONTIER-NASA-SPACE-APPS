@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3os1jsxklqc"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_SiteC.png" id="1_jn6ch"]
+[ext_resource type="Texture2D" uid="uid://b1j07ax0hcnbi" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_SiteC.png" id="1_jn6ch"]
 
 [resource]
 resource_name = "MAT_Screen_Intel_SiteC"

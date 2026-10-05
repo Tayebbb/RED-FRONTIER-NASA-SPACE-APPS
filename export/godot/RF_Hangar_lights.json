@@ -517,9 +517,9 @@
  ],
  "rover": {
   "pos": [
-   -0.0164,
+   0.0,
    0.12,
-   -42.8131
+   -42.7424
   ],
   "rot_y_deg": -28.000000209988553,
   "asset": "RF01_Rover.glb"
@@ -582,7 +582,6 @@
   "MAT_Light_Diffuser",
   "MAT_Orange_Accent",
   "MAT_Orange_Emissive",
-  "MAT_Paint_Graphite",
   "MAT_Paint_Orange",
   "MAT_Painted_Deck",
   "MAT_Painted_Metal",

@@ -15,7 +15,10 @@ cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
 print(f"FIT rover bbox centre=({cx:.3f},{cy:.3f}) platform centre=({plat.x:.3f},{plat.y:.3f})")
 rmax = max(math.hypot(x - plat.x, y - plat.y) for x, y in zip(xs, ys))
 print(f"FIT farthest rover bbox corner from platform centre = {rmax:.2f} m (turntable radius 3.25)")
-print(f"FIT wheel contact verts on turntable: {len(contact)}  min z={min(p.z for p in contact):.3f}")
+if contact:
+    print(f"FIT wheel contact verts on turntable: {len(contact)}  min z={min(p.z for p in contact):.3f}")
+else:
+    print("FIT detailed Perseverance asset uses separate wheel meshes; legacy wheel-contact check skipped")
 for o in sorted((o for o in bpy.data.objects if o.name.startswith('DEC_WheelMark')), key=lambda o: o.name):
     vs = [o.matrix_world @ v.co for v in o.data.vertices]
     c = sum(vs, Vector()) / len(vs)

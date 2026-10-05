@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2nt3xf81orxg"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Hazard.png" id="1_m0wl0"]
+[ext_resource type="Texture2D" uid="uid://cwmo3574wths4" path="res://shared/RF_MaterialLibrary_T_Decal_Hazard.png" id="1_m0wl0"]
 
 [resource]
 resource_name = "MAT_Decal_HazardRing"

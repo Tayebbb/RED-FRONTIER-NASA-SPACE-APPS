@@ -1,4 +1,4 @@
-"""export_rover_glb.py - unquantized GLB of the LOCKED rover for Godot (which lacks KHR_mesh_quantization).
+"""export_rover_glb.py - unquantized GLB of the detailed rover for Godot.
 Same geometry, names and hierarchy as the source; only the vertex encoding changes (floats).
 Run: blender -b assets/rover/RF01_Rover.blend --python scripts/export_rover_glb.py"""
 import bpy, os

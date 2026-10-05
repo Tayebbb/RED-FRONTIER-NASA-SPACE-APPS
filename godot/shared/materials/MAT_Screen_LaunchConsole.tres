@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ra6ufr77ryi6"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Launch.png" id="1_cqd15"]
+[ext_resource type="Texture2D" uid="uid://cng7nxn2j42lk" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Launch.png" id="1_cqd15"]
 
 [resource]
 resource_name = "MAT_Screen_LaunchConsole"

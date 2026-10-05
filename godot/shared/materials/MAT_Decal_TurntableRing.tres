@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgsx0v2ni6sot"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_TurntableRing.png" id="1_r24u4"]
+[ext_resource type="Texture2D" uid="uid://ph75tyn4mvi7" path="res://shared/RF_MaterialLibrary_T_Decal_TurntableRing.png" id="1_r24u4"]
 
 [resource]
 resource_name = "MAT_Decal_TurntableRing"

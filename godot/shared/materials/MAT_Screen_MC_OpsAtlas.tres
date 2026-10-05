@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cd3cxx620l1le"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_MC_OpsAtlas.png" id="1_3rsoq"]
+[ext_resource type="Texture2D" uid="uid://bmicyc3gshr5p" path="res://shared/RF_MaterialLibrary_T_Screen_MC_OpsAtlas.png" id="1_3rsoq"]
 
 [resource]
 resource_name = "MAT_Screen_MC_OpsAtlas"

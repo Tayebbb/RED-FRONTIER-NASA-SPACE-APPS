@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ujsu8m05fxjx"]
 
 [resource]
 resource_name = "MAT_Paint_Orange"

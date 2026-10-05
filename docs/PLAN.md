@@ -23,7 +23,7 @@ Phase 5 room (listed in its `ROOMS`), and greybox for the rest.
 ```
 scripts/      rf_lib.py (helpers) + one build script per phase; all rebuild from empty
 blender/      RF_Facility_Blockout.blend, later RF_Kit.blend, RF_Facility.blend
-assets/rover/ RF01_Rover.blend (LOCKED, linked) + source/rover-q.glb
+assets/rover/ RF01_Rover.blend (generated linked wrapper) + art/export/rover/perseverance/perseverance_rover.glb
 renders/      <phase>/CAM_*.png
 export/godot/ per-room .glb + kit .glb
 docs/         this plan

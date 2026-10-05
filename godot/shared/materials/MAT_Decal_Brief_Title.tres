@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://htj3qunrsk8d"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Briefing.png" id="1_n83wr"]
+[ext_resource type="Texture2D" uid="uid://j1ve60b5ybil" path="res://shared/RF_MaterialLibrary_T_Decal_Briefing.png" id="1_n83wr"]
 
 [resource]
 resource_name = "MAT_Decal_Brief_Title"

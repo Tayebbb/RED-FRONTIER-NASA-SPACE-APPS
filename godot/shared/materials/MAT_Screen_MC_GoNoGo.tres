@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kshbwdnh18t2"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_MC_GoNoGo.png" id="1_e2vg2"]
+[ext_resource type="Texture2D" uid="uid://dvs1foppwuaav" path="res://shared/RF_MaterialLibrary_T_Screen_MC_GoNoGo.png" id="1_e2vg2"]
 
 [resource]
 resource_name = "MAT_Screen_MC_GoNoGo"

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmu83qm6wccae"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Landing.png" id="1_7xstd"]
+[ext_resource type="Texture2D" uid="uid://bdn7g0dyjxkv3" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Landing.png" id="1_7xstd"]
 
 [resource]
 resource_name = "MAT_Screen_MC_Landing"

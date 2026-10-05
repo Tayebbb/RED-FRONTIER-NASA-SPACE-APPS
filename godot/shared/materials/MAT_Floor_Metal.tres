@@ -1,7 +1,7 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ctafhy1d4ll1j"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Grate_BaseColor.png" id="1_07hyw"]
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Grate_Normal.png" id="2_moaax"]
+[ext_resource type="Texture2D" uid="uid://cl1w8s0gji67u" path="res://shared/RF_MaterialLibrary_T_Grate_BaseColor.png" id="1_07hyw"]
+[ext_resource type="Texture2D" uid="uid://c82hkei4h5kce" path="res://shared/RF_MaterialLibrary_T_Grate_Normal.png" id="2_moaax"]
 
 [resource]
 resource_name = "MAT_Floor_Metal"

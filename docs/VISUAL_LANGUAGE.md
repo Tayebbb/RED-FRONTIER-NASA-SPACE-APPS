@@ -127,7 +127,7 @@ AgX view transform, Medium High Contrast look. Mission Control adds LIGHTSET_Lau
 | Gameplay markers | cameras, interaction points and room trigger arrive as nodes |
 
 **Known requirements:**
-- The rover must ship as `RF01_Rover.glb` (unquantized). Godot 4.7 cannot import `KHR_mesh_quantization` (`rover-q.glb`).
+- The rover must ship as `RF01_Rover.glb` (unquantized). Godot 4.7 cannot import `KHR_mesh_quantization`; the canonical source is the detailed Perseverance export in `art/`.
 - Godot has no area lights. `RF_Hangar_lights.json` carries the light rig to rebuild in-engine.
 
 **Performance on Intel UHD (Forward+, 1600×900):**

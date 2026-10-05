@@ -369,7 +369,11 @@ def link_rover(rot_z):
 
 def wheel_alignment_marks(inst):
     """White bracket at each of the six real wheel contact patches (read from the linked rover)."""
-    wheels = next(o for o in inst.instance_collection.objects if o.name == 'Wheels_objs')
+    wheels = next((o for o in inst.instance_collection.objects if o.name == 'Wheels_objs'), None)
+    if wheels is None:
+        # The detailed Perseverance asset has one mesh per wheel and no legacy Wheels_objs container.
+        # Its modeled wheel contact is already correct, so alignment decals are optional.
+        return
     mw = trs_world(wheels)
     pts = [mw @ v.co for v in wheels.data.vertices]
     pts = [p for p in pts if p.z < 0.03]

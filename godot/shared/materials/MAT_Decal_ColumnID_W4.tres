@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://qfoput4ejw8n"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_ColumnH5.png" id="1_vqaus"]
+[ext_resource type="Texture2D" uid="uid://dcdyp8uitvifd" path="res://shared/RF_MaterialLibrary_T_Decal_ColumnH5.png" id="1_vqaus"]
 
 [resource]
 resource_name = "MAT_Decal_ColumnID_W4"

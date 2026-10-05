@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://223516lpiaml"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_LandingSystem.png" id="1_8024h"]
+[ext_resource type="Texture2D" uid="uid://bj1m8f8g5sgb" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_LandingSystem.png" id="1_8024h"]
 
 [resource]
 resource_name = "MAT_Screen_Intel_LandingSystem"

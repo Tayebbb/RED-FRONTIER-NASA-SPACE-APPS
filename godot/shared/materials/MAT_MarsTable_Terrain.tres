@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://deny5cy1nd6ny"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_MarsTable_BaseColor.png" id="1_q3k27"]
+[ext_resource type="Texture2D" uid="uid://cnhlal5h0fomt" path="res://shared/RF_MaterialLibrary_T_MarsTable_BaseColor.png" id="1_q3k27"]
 
 [resource]
 resource_name = "MAT_MarsTable_Terrain"

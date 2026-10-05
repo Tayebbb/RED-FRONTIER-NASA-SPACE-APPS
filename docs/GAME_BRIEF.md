@@ -29,9 +29,7 @@ The room geometry is locked and streamed as a route. The Hangar is the main rove
 
 ## Rover decision
 
-The game uses `assets/rover/RF01_Rover.glb` as the canonical playable rover because it is already linked into the facility, exported with the expected hierarchy, and loaded by the Hangar manifest.
-
-The detailed model in `art/export/rover/perseverance/perseverance_rover.glb` remains a separate visual reference and future replacement candidate. It is not substituted into the facility until an equivalent attachment, placement, and configuration contract exists.
+The detailed Perseverance model in `art/export/rover/perseverance/perseverance_rover.glb` is the canonical playable rover. It is exported through the existing `assets/rover/RF01_Rover.glb` runtime path so the Hangar manifest and room streaming continue to work.
 
 ## Recommended MVP scope
 
@@ -69,4 +67,3 @@ Rocket cinematics, scientist NPCs, solar and thermal hazard systems, save games,
 - Launch lock and scene handoff.
 - Mars scene, driving, hazard, scoring, and outcome flow.
 - Performance retest on an updated driver or alternate renderer.
-

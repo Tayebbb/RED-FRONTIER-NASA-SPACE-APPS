@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cy3arc2pgdplx"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Corridor01_Strip.png" id="1_7xcd5"]
+[ext_resource type="Texture2D" uid="uid://cdjffkhjged5m" path="res://shared/RF_MaterialLibrary_T_Screen_Corridor01_Strip.png" id="1_7xcd5"]
 
 [resource]
 resource_name = "MAT_Screen_Corridor01_Strip"

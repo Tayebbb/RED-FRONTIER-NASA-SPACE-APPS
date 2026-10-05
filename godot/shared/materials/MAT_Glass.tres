@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://boa1w8nann88l"]
 
 [resource]
 resource_name = "MAT_Glass"

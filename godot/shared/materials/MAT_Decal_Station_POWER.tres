@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://iwp0iaysy4vg"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_POWER.png" id="1_phaur"]
+[ext_resource type="Texture2D" uid="uid://b2lqj35eyer20" path="res://shared/RF_MaterialLibrary_T_Decal_POWER.png" id="1_phaur"]
 
 [resource]
 resource_name = "MAT_Decal_Station_POWER"

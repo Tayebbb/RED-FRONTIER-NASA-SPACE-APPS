@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://biy7gdy0478ds"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Science.png" id="1_50v62"]
+[ext_resource type="Texture2D" uid="uid://bus1cufayo4lj" path="res://shared/RF_MaterialLibrary_T_Screen_Science.png" id="1_50v62"]
 
 [resource]
 resource_name = "MAT_Screen_Station_SCIENCE"

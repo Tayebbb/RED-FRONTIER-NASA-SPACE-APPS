@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ceikfplenr0xg"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_LaunchAuthority.png" id="1_5dyhn"]
+[ext_resource type="Texture2D" uid="uid://cdrjy7osdp4o6" path="res://shared/RF_MaterialLibrary_T_Decal_LaunchAuthority.png" id="1_5dyhn"]
 
 [resource]
 resource_name = "MAT_Decal_LaunchAuthority"

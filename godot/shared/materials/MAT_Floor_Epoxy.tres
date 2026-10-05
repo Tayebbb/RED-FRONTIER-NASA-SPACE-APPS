@@ -1,8 +1,8 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dblryn68874sp"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_BaseColor.png" id="1_wcwc5"]
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_Roughness.png" id="2_5iimf"]
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_Normal.png" id="3_dldsb"]
+[ext_resource type="Texture2D" uid="uid://b3beopfpg87xv" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_BaseColor.png" id="1_wcwc5"]
+[ext_resource type="Texture2D" uid="uid://dxb5sel2ysv3j" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_Roughness.png" id="2_5iimf"]
+[ext_resource type="Texture2D" uid="uid://d3gd83mcjlxba" path="res://shared/RF_MaterialLibrary_T_Floor_Epoxy_Normal.png" id="3_dldsb"]
 
 [resource]
 resource_name = "MAT_Floor_Epoxy"

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cc5m8xunb636r"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Comms.png" id="1_6dglc"]
+[ext_resource type="Texture2D" uid="uid://bdl83mfusg8uc" path="res://shared/RF_MaterialLibrary_T_Screen_Comms.png" id="1_6dglc"]
 
 [resource]
 resource_name = "MAT_Screen_Station_COMMS_Aux"

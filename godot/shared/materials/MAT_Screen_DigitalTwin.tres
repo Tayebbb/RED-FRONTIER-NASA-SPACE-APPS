@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cipbe5s6wcqts"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_DigitalTwin.png" id="1_1yjxi"]
+[ext_resource type="Texture2D" uid="uid://dyguq1fq51a0p" path="res://shared/RF_MaterialLibrary_T_Screen_DigitalTwin.png" id="1_1yjxi"]
 
 [resource]
 resource_name = "MAT_Screen_DigitalTwin"

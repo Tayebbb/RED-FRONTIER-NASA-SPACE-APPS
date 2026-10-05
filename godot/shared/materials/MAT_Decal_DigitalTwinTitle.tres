@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfpmeympr12jl"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_DigitalTwin.png" id="1_461xs"]
+[ext_resource type="Texture2D" uid="uid://bsgxyqwssu515" path="res://shared/RF_MaterialLibrary_T_Decal_DigitalTwin.png" id="1_461xs"]
 
 [resource]
 resource_name = "MAT_Decal_DigitalTwinTitle"

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hds0g7yfug2p"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Hazard.png" id="1_eb2ek"]
+[ext_resource type="Texture2D" uid="uid://cwmo3574wths4" path="res://shared/RF_MaterialLibrary_T_Decal_Hazard.png" id="1_eb2ek"]
 
 [resource]
 resource_name = "MAT_Decal_HangarDoorFloor"

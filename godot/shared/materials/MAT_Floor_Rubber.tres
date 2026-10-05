@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d343gm1p2f5rv"]
 
 [resource]
 resource_name = "MAT_Floor_Rubber"

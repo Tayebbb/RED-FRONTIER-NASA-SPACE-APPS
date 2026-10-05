@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://byl6t1tup524m"]
 
 [resource]
 resource_name = "MAT_LED_Cool"

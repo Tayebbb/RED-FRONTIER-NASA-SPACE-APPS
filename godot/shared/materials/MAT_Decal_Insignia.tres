@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bekf0qiil4iwb"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Insignia.png" id="1_djvs7"]
+[ext_resource type="Texture2D" uid="uid://dhyfnffwlauo" path="res://shared/RF_MaterialLibrary_T_Decal_Insignia.png" id="1_djvs7"]
 
 [resource]
 resource_name = "MAT_Decal_Insignia"

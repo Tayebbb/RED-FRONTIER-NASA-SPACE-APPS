@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://comm18lnxgjav"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_RoofDeck_Normal.png" id="1_rjj1d"]
+[ext_resource type="Texture2D" uid="uid://ewivxharnrk4" path="res://shared/RF_MaterialLibrary_T_RoofDeck_Normal.png" id="1_rjj1d"]
 
 [resource]
 resource_name = "MAT_Ceiling_Dark"

@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8336mccusff3"]
 
 [resource]
 resource_name = "MAT_Light_Diffuser"

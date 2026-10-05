@@ -4,7 +4,7 @@
 
 | Property | `RF01_Rover` playable asset | Detailed Perseverance asset |
 |---|---:|---:|
-| Source | `assets/rover/source/rover-q.glb` | `art/source/rover/perseverance_detailed.blend` |
+| Source | `art/export/rover/perseverance/perseverance_rover.glb` | `art/source/rover/perseverance_detailed.blend` |
 | Godot export | `assets/rover/RF01_Rover.glb` | `art/export/rover/perseverance/perseverance_rover.glb` |
 | GLB size | 12,096,576 bytes | 2,189,724 bytes |
 | Nodes | 78 | 27 |
@@ -12,10 +12,10 @@
 | Materials | 48 | 8 |
 | Embedded images | 23 | 23 |
 | Animations | 0 | 0 |
-| Gameplay contract | Existing linked asset and Hangar manifest | No facility socket/configuration contract |
-| Intended use | Canonical in-game rover | Visual fidelity/reference candidate |
+| Gameplay contract | Existing linked asset and Hangar manifest | Wrapped through the existing RF01 asset path |
+| Intended use | Legacy comparison | Canonical in-game rover source |
 
-The detailed asset has strong Perseverance-specific modeling and a smaller export, but replacing the facility asset immediately would remove the existing hierarchy and integration assumptions. The RF01 asset is therefore canonical for the playable base.
+The detailed asset has the intended Perseverance-specific modeling. It is now wrapped and exported through the existing RF01 asset path, preserving the facility hierarchy and Hangar streaming assumptions while making the art model canonical.
 
 ## Existing integration
 
@@ -24,7 +24,7 @@ The facility builder links `assets/rover/RF01_Rover.blend` into the Hangar as th
 The generated manifest records:
 
 - Asset: `RF01_Rover.glb`
-- Godot position: `(-0.0164, 0.12, -42.8131)`
+- Godot position: `(0.0, 0.12, -42.7424)`
 - Y rotation: approximately `-28` degrees
 - Hangar footprint: `x=-9..9`, `z=-55..-33`
 
@@ -47,15 +47,14 @@ node art/qa/verify_perseverance_export.cjs
 node art/qa/verify_exports.cjs
 ```
 
-These validate the detailed and legacy art deliverables independently; they do not imply that the detailed model is the current game asset.
+The detailed export gate validates the canonical source model; the legacy gate validates the preserved modular archive.
 
-## Replacement gate
+## Canonical asset contract
 
-The detailed asset may become canonical only after it has:
+The detailed asset is canonical. Future changes must preserve:
 
-1. A documented transform and placement contract.
-2. Equivalent named attachment points for station configuration.
-3. A verified Hangar fit and visual inspection.
+1. The documented transform and placement contract.
+2. The `assets/rover/RF01_Rover.glb` runtime path.
+3. Verified Hangar fit and visual inspection.
 4. A Godot import and streaming pass.
-5. A decision to update the facility source rather than silently diverge two rover definitions.
-
+5. Explicit compatibility between any future configuration system and the detailed model's static sockets.

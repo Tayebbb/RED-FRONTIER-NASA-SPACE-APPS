@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cc75ifbew75bc"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Dec_COMMS.png" id="1_mue1l"]
+[ext_resource type="Texture2D" uid="uid://hupnknf4o20r" path="res://shared/RF_MaterialLibrary_T_Decal_Dec_COMMS.png" id="1_mue1l"]
 
 [resource]
 resource_name = "MAT_Decal_Station_COMMS_Sub"

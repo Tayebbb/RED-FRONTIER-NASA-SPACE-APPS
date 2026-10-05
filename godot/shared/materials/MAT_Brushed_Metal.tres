@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i8f0k886vuwr"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Brushed_Roughness.png" id="1_csh1m"]
+[ext_resource type="Texture2D" uid="uid://b63vipqjbuiq1" path="res://shared/RF_MaterialLibrary_T_Brushed_Roughness.png" id="1_csh1m"]
 
 [resource]
 resource_name = "MAT_Brushed_Metal"

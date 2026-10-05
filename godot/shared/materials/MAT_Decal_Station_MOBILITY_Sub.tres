@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i056ow1nr03l"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Dec_MOBILITY.png" id="1_6kqoj"]
+[ext_resource type="Texture2D" uid="uid://dodfhdr4833ux" path="res://shared/RF_MaterialLibrary_T_Decal_Dec_MOBILITY.png" id="1_6kqoj"]
 
 [resource]
 resource_name = "MAT_Decal_Station_MOBILITY_Sub"

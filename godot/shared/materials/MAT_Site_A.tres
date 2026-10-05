@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://u8lw0etv4mnc"]
 
 [resource]
 resource_name = "MAT_Site_A"

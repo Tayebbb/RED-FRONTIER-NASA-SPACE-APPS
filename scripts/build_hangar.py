@@ -179,7 +179,10 @@ def build_turntable(L):
 def wheel_brackets(inst, L):
     """Graphite painted L-corners around each real wheel contact patch (from the linked rover)."""
     paint = rm.pbr('MAT_Paint_Graphite', '#24272B', 0.55)            # dark brackets read on the lit deck
-    wheels = next(o for o in inst.instance_collection.objects if o.name == 'Wheels_objs')
+    wheels = next((o for o in inst.instance_collection.objects if o.name == 'Wheels_objs'), None)
+    if wheels is None:
+        # The detailed Perseverance export has six separate wheel meshes with modeled contact points.
+        return
     mw = bb.trs_world(wheels)
     pts = [mw @ v.co for v in wheels.data.vertices]; pts = [p for p in pts if p.z < 0.03]
     m = Matrix.Translation(inst.location) @ inst.rotation_euler.to_matrix().to_4x4()

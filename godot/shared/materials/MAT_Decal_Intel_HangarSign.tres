@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dy1oytxpkfom6"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_EngineeringHangar.png" id="1_07q6u"]
+[ext_resource type="Texture2D" uid="uid://cesld6piikyw7" path="res://shared/RF_MaterialLibrary_T_Decal_EngineeringHangar.png" id="1_07q6u"]
 
 [resource]
 resource_name = "MAT_Decal_Intel_HangarSign"

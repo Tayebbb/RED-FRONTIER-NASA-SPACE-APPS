@@ -100,11 +100,11 @@ If it persists, test on a second GPU, and try Godot's Compatibility renderer or 
 The Engineering Hangar already contains the canonical playable rover through the generated `RF_Hangar_lights.json` manifest:
 
 - Asset: `RF01_Rover.glb`
-- Position: `(-0.0164, 0.12, -42.8131)` in Godot coordinates
+- Position: `(0.0, 0.12, -42.7424)` in Godot coordinates
 - Rotation: approximately `-28` degrees around Y
 - Lifecycle: loaded and unloaded with the Hangar by `facility_streamer.gd`
 
-The detailed Perseverance build under `art/` is intentionally not substituted into the game yet. See `docs/ROVER_INTEGRATION.md` for the comparison and replacement gate.
+The detailed Perseverance build under `art/` is now the canonical rover source and is exported through the existing `RF01_Rover.glb` runtime path. See `docs/ROVER_INTEGRATION.md` for the source and placement contract.
 
 ## Next recommended work
 

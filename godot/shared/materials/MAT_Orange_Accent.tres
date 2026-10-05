@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpn337a0p318"]
 
 [resource]
 resource_name = "MAT_Orange_Accent"

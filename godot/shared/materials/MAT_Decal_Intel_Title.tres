@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dk1h64pahd8un"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_MarsIntel.png" id="1_5tryk"]
+[ext_resource type="Texture2D" uid="uid://c46gg4qvblocf" path="res://shared/RF_MaterialLibrary_T_Decal_MarsIntel.png" id="1_5tryk"]
 
 [resource]
 resource_name = "MAT_Decal_Intel_Title"

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vlfhimhwp61v"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Brief_Table.png" id="1_upcdk"]
+[ext_resource type="Texture2D" uid="uid://c231wqm6slvh1" path="res://shared/RF_MaterialLibrary_T_Screen_Brief_Table.png" id="1_upcdk"]
 
 [resource]
 resource_name = "MAT_Screen_BriefingTable"

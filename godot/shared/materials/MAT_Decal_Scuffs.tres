@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://nhoc3igtj4cr"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Scuffs.png" id="1_7u3ji"]
+[ext_resource type="Texture2D" uid="uid://cw7e702rrlmco" path="res://shared/RF_MaterialLibrary_T_Decal_Scuffs.png" id="1_7u3ji"]
 
 [resource]
 resource_name = "MAT_Decal_Scuffs"

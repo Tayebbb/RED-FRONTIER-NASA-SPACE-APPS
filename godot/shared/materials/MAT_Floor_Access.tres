@@ -1,8 +1,8 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0kxv545372x1"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Access_BaseColor.png" id="1_docvu"]
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Access_Roughness.png" id="2_ig42n"]
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Floor_Access_Normal.png" id="3_eehkh"]
+[ext_resource type="Texture2D" uid="uid://da38dbb8uweey" path="res://shared/RF_MaterialLibrary_T_Floor_Access_BaseColor.png" id="1_docvu"]
+[ext_resource type="Texture2D" uid="uid://ctrxyf2ool2c8" path="res://shared/RF_MaterialLibrary_T_Floor_Access_Roughness.png" id="2_ig42n"]
+[ext_resource type="Texture2D" uid="uid://y54h7yt4sm8x" path="res://shared/RF_MaterialLibrary_T_Floor_Access_Normal.png" id="3_eehkh"]
 
 [resource]
 resource_name = "MAT_Floor_Access"

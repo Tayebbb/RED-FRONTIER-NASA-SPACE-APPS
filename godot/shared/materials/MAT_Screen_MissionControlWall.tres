@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7fspv34a46aq"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Main.png" id="1_8q8pg"]
+[ext_resource type="Texture2D" uid="uid://bs6hc4il6uu8l" path="res://shared/RF_MaterialLibrary_T_Screen_MC_Main.png" id="1_8q8pg"]
 
 [resource]
 resource_name = "MAT_Screen_MissionControlWall"

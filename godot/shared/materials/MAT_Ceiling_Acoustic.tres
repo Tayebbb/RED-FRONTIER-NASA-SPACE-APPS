@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kt2685hkct5q"]
 
 [resource]
 resource_name = "MAT_Ceiling_Acoustic"

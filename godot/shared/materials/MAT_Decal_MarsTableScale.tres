@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://gu848gqrq63k"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_MarsTableScale.png" id="1_wx13a"]
+[ext_resource type="Texture2D" uid="uid://b68pps4wqeglb" path="res://shared/RF_MaterialLibrary_T_Decal_MarsTableScale.png" id="1_wx13a"]
 
 [resource]
 resource_name = "MAT_Decal_MarsTableScale"

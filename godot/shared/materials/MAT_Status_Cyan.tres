@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcha85xvf78h0"]
 
 [resource]
 resource_name = "MAT_Status_Cyan"

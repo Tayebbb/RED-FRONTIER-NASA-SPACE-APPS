@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dweconve180cw"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Decal_Program.png" id="1_7p3du"]
+[ext_resource type="Texture2D" uid="uid://bl6mc2fdn5bxw" path="res://shared/RF_MaterialLibrary_T_Decal_Program.png" id="1_7p3du"]
 
 [resource]
 resource_name = "MAT_Decal_Brief_Program"

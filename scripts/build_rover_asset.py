@@ -1,8 +1,7 @@
 """
-build_rover_asset.py - wrap the LOCKED Perseverance model as a linkable asset.
+build_rover_asset.py - wrap the detailed Perseverance model as a linkable asset.
 
-Imports assets/rover/source/rover-q.glb untouched (names, hierarchy, materials and
-geometry exactly as the game ships them) into collection 'RF01_Rover' and saves
+Imports the approved art export untouched into collection 'RF01_Rover' and saves
 assets/rover/RF01_Rover.blend. Facility scenes LINK this collection, so the rover
 cannot be edited from inside an environment file.
 
@@ -13,7 +12,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 import rf_lib as rf
 
 rf.reset_scene()
-bpy.ops.import_scene.gltf(filepath=os.path.join(rf.ROOT, 'assets', 'rover', 'source', 'rover-q.glb'))
+bpy.ops.import_scene.gltf(filepath=os.path.join(
+    rf.ROOT, 'art', 'export', 'rover', 'perseverance', 'perseverance_rover.glb'))
 col = bpy.data.collections.new('RF01_Rover')
 bpy.context.scene.collection.children.link(col)
 for o in list(bpy.context.scene.collection.objects):

@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8ghxgr0ubi3r"]
 
 [resource]
 resource_name = "MAT_Wall_Lower"

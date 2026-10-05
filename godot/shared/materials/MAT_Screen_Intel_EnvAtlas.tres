@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cdjjdcevp00v5"]
 
-[ext_resource type="Texture2D" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_EnvAtlas.png" id="1_y0d20"]
+[ext_resource type="Texture2D" uid="uid://c1wlc6aegctsm" path="res://shared/RF_MaterialLibrary_T_Screen_Intel_EnvAtlas.png" id="1_y0d20"]
 
 [resource]
 resource_name = "MAT_Screen_Intel_EnvAtlas"
