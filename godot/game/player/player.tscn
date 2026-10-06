@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://game/player/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://game/interaction/interactor.gd" id="2_interactor"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_body"]
+radius = 0.3
+height = 1.75
+
+[sub_resource type="StandardMaterial3D" id="Mat_suit"]
+albedo_color = Color(0.894, 0.882, 0.855, 1)
+roughness = 0.6
+
+[sub_resource type="CapsuleMesh" id="Mesh_body"]
+material = SubResource("Mat_suit")
+radius = 0.26
+height = 1.7
+
+[sub_resource type="StandardMaterial3D" id="Mat_visor"]
+albedo_color = Color(0.031, 0.067, 0.122, 1)
+roughness = 0.2
+emission_enabled = true
+emission = Color(0.455, 0.714, 1, 1)
+emission_energy_multiplier = 0.6
+
+[sub_resource type="BoxMesh" id="Mesh_visor"]
+material = SubResource("Mat_visor")
+size = Vector3(0.3, 0.12, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_accent"]
+albedo_color = Color(0.761, 0.314, 0.11, 1)
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="Mesh_pack"]
+material = SubResource("Mat_accent")
+size = Vector3(0.34, 0.45, 0.16)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_player")
+
+[node name="Body" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+shape = SubResource("Shape_body")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="Suit" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+mesh = SubResource("Mesh_body")
+
+[node name="Visor" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.22)
+mesh = SubResource("Mesh_visor")
+
+[node name="Pack" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0.3)
+mesh = SubResource("Mesh_pack")
+
+[node name="Interactor" type="Area3D" parent="."]
+script = ExtResource("2_interactor")
+
+[node name="CameraRig" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.2)
+near = 0.05
+current = true

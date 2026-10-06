@@ -38,8 +38,23 @@ blender -b blender/RF_Facility.blend --python scripts/export_gltf.py -- <Room>  
 python scripts/godot_sync.py                                        # import into godot/ with shared materials
 ```
 
-Open `godot/` in Godot 4.7, or use `Open_Hangar_In_Godot.bat` / `Open_Hangar_In_Blender.bat`.
+Open `godot/` in Godot 4.7 and press Play to start the game (`res://game/game.tscn`).
+Game keys: WASD move, Shift run, mouse look, E interact, Esc release the mouse (click to recapture), F3 streaming info.
+`Open_Hangar_In_Godot.bat` opens the facility viewer (`res://viewer/hangar_viewer.tscn`); `Open_Hangar_In_Blender.bat` the Blender file.
 Viewer keys: 1–9 and Tab cameras, 0 / right mouse free fly, L Launch Mode, F quality preset, H help.
+
+## Gameplay (`godot/game/`)
+
+- `mission_state.gd`: the `MissionState` autoload, the single record of a run (progression, build, Digital Twin, Mars, result).
+- `game_config.gd`: every tunable number and mission text. Engineering limits follow Rules and Scoring v1.0.
+- `data/landing_sites.json`: the three candidate sites (PROTOTYPE values from Rules and Scoring v1.0 §3.1, not NASA
+  measurements). Replace this file with the NASA-derived values; read it through `data/landing_sites.gd`.
+- `data/rover_parts.json` (Rules §2.3 part sheet) and `data/rover_build.gd` (§2.2 limits and §3.1 formulas: the only
+  implementation; the Hangar UI, MissionState and later systems all call `evaluate()`).
+- `interaction/`: `INT_*` markers from Blender become `Interactable`s as their room streams in. A marker is usable once
+  a system calls `interactions.register_handler("<id>", ...)`; until then it stays silent.
+- `world/facility_collision.gd`: trimesh collision for each streamed room. The player can't enter a room until its
+  collision is complete.
 
 ## Key systems
 
@@ -61,6 +76,10 @@ Viewer keys: 1–9 and Tab cameras, 0 / right mouse free fly, L Launch Mode, F q
   - The High and Laptop presets are unchanged.
 - **Tests:**
   - `Godot --path godot -- traverse` walks the mission route and logs streaming, memory and performance.
+  - `Godot --path godot -- gameplay_test [full]` plays the opening beat with simulated input (spawn, briefing,
+    objective, landing site, RF-01 build in the Hangar; `full` continues to the launch console). Screenshots in `godot/logs/gameplay/`.
+  - `Godot --headless --path godot --script res://tests/rover_build_test.gd` checks the build formulas against the
+    Rules and Scoring §5 reference runs.
   - `godot/tools/verify_shared.gd` checks that every room uses the shared library.
 
 ## Known issue
