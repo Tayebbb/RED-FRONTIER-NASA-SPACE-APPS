@@ -12,6 +12,7 @@ extends CharacterBody3D
 var position_allowed: Callable
 var controls_enabled := true: set = set_controls_enabled
 var mouse_look := true                    # off for scripted camera (tests, later cutscenes)
+var first_person := false
 
 var _yaw := 0.0
 var _pitch := deg_to_rad(-12.0)
@@ -21,12 +22,14 @@ var _cam_probe := SphereShape3D.new()
 var _gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity", 9.8)
 
 func _ready() -> void:
+	first_person = "fpp" in OS.get_cmdline_user_args()
 	collision_layer = GameConfig.LAYER_PLAYER
 	collision_mask = GameConfig.LAYER_WORLD
 	camera_rig.top_level = true
 	_cam_probe.radius = 0.2
 	camera.fov = GameConfig.CAMERA_FOV
-	camera.h_offset = GameConfig.CAMERA_SHOULDER_OFFSET      # shoulder view without moving the arm's origin into a wall
+	camera.h_offset = 0.0 if first_person else GameConfig.CAMERA_SHOULDER_OFFSET
+	visual.visible = not first_person
 	_snap_camera()
 	capture_mouse(true)
 
@@ -100,6 +103,9 @@ func _process(delta: float) -> void:
 ## Camera distance this frame: pulled in at once by walls (sphere cast) and by the facility edge (an open exterior
 ## door has no wall to hit), eased back out when the view clears.
 func _update_arm(delta: float) -> void:
+	if first_person:
+		camera.position = Vector3.ZERO
+		return
 	var origin := camera_rig.global_position
 	var back := camera_rig.global_basis.z
 	var want := GameConfig.CAMERA_DISTANCE

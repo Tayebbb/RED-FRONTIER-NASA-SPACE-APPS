@@ -380,10 +380,22 @@ func _run() -> void:
 	check("boot: player on the floor", player.is_on_floor())
 	check("boot: landing console inactive before the briefing", not game.interactions._handlers.has("LandingSystem"))
 	check("boot: rooms not streamed in yet are off-limits", game._inside_facility(p0) and not game._inside_facility(Vector3(0, 0, -44)))
-	check("boot: third-person camera active", player.camera.current and player.camera.global_position.distance_to(player.global_position) > 1.5,
-		"cam=%s" % player.camera.global_position)
-	check("boot: camera behind the player at shoulder height", _camera_inside() and player.camera.global_position.z > p0.z + 1.0
-		and player.camera.global_position.y > 1.5 and player.camera.global_position.y < 3.0, "cam=%s" % player.camera.global_position)
+	var camera_position_ok := player.camera.current
+	if player.first_person:
+		camera_position_ok = camera_position_ok and player.camera.global_position.distance_to(
+			player.global_position + Vector3.UP * GameConfig.CAMERA_PIVOT_HEIGHT) < 0.05 and not player.visual.visible
+	else:
+		camera_position_ok = camera_position_ok and player.camera.global_position.distance_to(player.global_position) > 1.5
+	check("boot: camera matches the requested perspective", camera_position_ok, "cam=%s" % player.camera.global_position)
+	var camera_pose_ok: bool
+	if player.first_person:
+		camera_pose_ok = absf(player.camera.position.z) < 0.05 and is_zero_approx(player.camera.h_offset)
+	else:
+		camera_pose_ok = (
+			_camera_inside() and player.camera.global_position.z > p0.z + 1.0
+			and player.camera.global_position.y > 1.5 and player.camera.global_position.y < 3.0
+		)
+	check("boot: camera has the expected eye-level or shoulder pose", camera_pose_ok, "cam=%s" % player.camera.global_position)
 	await shot("01_spawn")
 
 	await hold("move_forward", 0.8)
