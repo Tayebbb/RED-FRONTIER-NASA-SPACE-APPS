@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://game/player/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://game/interaction/interactor.gd" id="2_interactor"]
+[ext_resource type="PackedScene" path="res://game/player/rf01_visual.tscn" id="3_rf01"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_body"]
+radius = 0.3
+height = 1.75
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_player")
+
+[node name="Body" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+shape = SubResource("Shape_body")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="RF01Visual" parent="Visual" instance=ExtResource("3_rf01")]
+
+[node name="Interactor" type="Area3D" parent="."]
+script = ExtResource("2_interactor")
+
+[node name="CameraRig" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.2)
+near = 0.05
+current = true
