@@ -1,0 +1,46 @@
+{
+ "provenance": "PROTOTYPE",
+ "note": "Prototype gameplay values from Red Frontier Rules and Scoring v1.0, section 3.1. NOT NASA measurements. Replace science / solar / terrain_risk with the NASA-derived site values (P1 data files) and record the source per site.",
+ "order": ["jezero", "elysium", "gale"],
+ "sites": {
+  "jezero": {
+   "id": "jezero",
+   "display_name": "JEZERO CRATER",
+   "short_name": "JEZERO",
+   "science": 0.91,
+   "solar": 0.64,
+   "terrain_risk": 0.58,
+   "science_label": "VERY HIGH",
+   "solar_label": "MODERATE",
+   "terrain_label": "MODERATE-HIGH",
+   "mission_profile": "Excellent science potential with meaningful terrain and power-management risk.",
+   "source": "prototype"
+  },
+  "elysium": {
+   "id": "elysium",
+   "display_name": "ELYSIUM PLANITIA",
+   "short_name": "ELYSIUM",
+   "science": 0.62,
+   "solar": 0.86,
+   "terrain_risk": 0.30,
+   "science_label": "MODERATE",
+   "solar_label": "HIGH",
+   "terrain_label": "LOW",
+   "mission_profile": "The safest landing profile with strong solar conditions, but lower science potential.",
+   "source": "prototype"
+  },
+  "gale": {
+   "id": "gale",
+   "display_name": "GALE CRATER",
+   "short_name": "GALE",
+   "science": 0.88,
+   "solar": 0.60,
+   "terrain_risk": 0.78,
+   "science_label": "VERY HIGH",
+   "solar_label": "MODERATE",
+   "terrain_label": "HIGH",
+   "mission_profile": "Excellent science potential, but the most demanding terrain of the three candidates.",
+   "source": "prototype"
+  }
+ }
+}

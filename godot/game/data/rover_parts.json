@@ -1,0 +1,28 @@
+{
+ "source": "Red Frontier Rules and Scoring v1.0, section 2.3 (part sheet). Mass in kg, cost in credits (abstract, no currency).",
+ "categories": {
+  "solar":       {"title": "SOLAR",       "pick": 1, "parts": ["solar_light", "solar_high"]},
+  "battery":     {"title": "BATTERY",     "pick": 1, "parts": ["battery_standard", "battery_extended"]},
+  "shield":      {"title": "SHIELDING",   "pick": 1, "parts": ["shield_minimal", "shield_standard", "shield_heavy"]},
+  "antenna":     {"title": "ANTENNA",     "pick": 1, "parts": ["antenna_standard", "antenna_high_gain"]},
+  "instruments": {"title": "INSTRUMENTS", "pick": 3, "parts": ["spectrometer", "ground_radar", "hires_camera", "soil_analyzer", "weather_sensor", "radiation_detector"]}
+ },
+ "order": ["solar", "battery", "shield", "antenna", "instruments"],
+ "parts": {
+  "solar_light":        {"name": "LIGHT SOLAR ARRAY",       "short": "LIGHT",       "mass": 30, "value": 20, "cost": 40},
+  "solar_high":         {"name": "HIGH-OUTPUT SOLAR ARRAY", "short": "HIGH OUTPUT", "mass": 60, "value": 38, "cost": 85},
+  "battery_standard":   {"name": "STANDARD BATTERY",        "short": "STANDARD",    "mass": 35, "value": 25, "cost": 50, "capacity": 100},
+  "battery_extended":   {"name": "EXTENDED BATTERY",        "short": "EXTENDED",    "mass": 70, "value": 50, "cost": 110, "capacity": 200},
+  "shield_minimal":     {"name": "MINIMAL SHIELDING",       "short": "MINIMAL",     "mass": 10, "value": 8,  "cost": 20},
+  "shield_standard":    {"name": "STANDARD SHIELDING",      "short": "STANDARD",    "mass": 40, "value": 24, "cost": 60},
+  "shield_heavy":       {"name": "HEAVY SHIELDING",         "short": "HEAVY",       "mass": 90, "value": 46, "cost": 130},
+  "antenna_standard":   {"name": "STANDARD ANTENNA",        "short": "STANDARD",    "mass": 20, "cost": 30, "reliability": 0.60, "draw": 3},
+  "antenna_high_gain":  {"name": "HIGH-GAIN ANTENNA",       "short": "HIGH-GAIN",   "mass": 45, "cost": 90, "reliability": 0.95, "draw": 6},
+  "spectrometer":       {"name": "SPECTROMETER",            "mass": 25, "value": 20, "cost": 70, "site": "ancient_delta", "note": "Useful at Ancient Delta"},
+  "ground_radar":       {"name": "GROUND RADAR",            "mass": 30, "value": 16, "cost": 60, "site": "crater",        "note": "Useful at Crater"},
+  "hires_camera":       {"name": "HI-RES CAMERA",           "mass": 15, "value": 12, "cost": 35, "site": "ridge",         "note": "Useful at Ridge"},
+  "soil_analyzer":      {"name": "SOIL ANALYZER",           "mass": 20, "value": 14, "cost": 45, "site": "rock_field",    "note": "Useful at Rock Field"},
+  "weather_sensor":     {"name": "WEATHER SENSOR",          "mass": 10, "value": 6,  "cost": 20, "passive_science": 6, "note": "Passive: extra science on Mars"},
+  "radiation_detector": {"name": "RADIATION DETECTOR",      "mass": 10, "value": 6,  "cost": 20, "passive_science": 6, "storm_damage": -3, "note": "Passive: less storm damage"}
+ }
+}
