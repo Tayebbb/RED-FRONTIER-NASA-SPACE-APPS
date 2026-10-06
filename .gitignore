@@ -27,3 +27,15 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# --- RF-01 character: development sources stay local (Blender sources, review renders, bakes, intermediate exports)
+# The game uses godot/assets/characters/rf01/RF01_Engineer.glb (the one runtime copy). Rebuild: art/character/README.md
+art/character/source/
+art/character/export/
+art/character/textures/game/
+art/character/renders/**
+!art/character/renders/**/
+!art/character/renders/RF01_Hair_BEFORE_AFTER.png
+!art/character/renders/cp1_body/CP1_proportions_sheet.png
+!art/character/renders/cp3_hero/CP3_turntable_sheet.png
+!art/character/renders/game_final/RF01_Game_Character_sheet.png

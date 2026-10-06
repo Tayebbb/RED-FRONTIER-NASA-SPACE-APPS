@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://game/player/rf01_visual.gd" id="1_vis"]
+[ext_resource type="PackedScene" path="res://assets/characters/rf01/RF01_Engineer.glb" id="2_model"]
+
+[node name="RF01Visual" type="Node3D"]
+script = ExtResource("1_vis")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
