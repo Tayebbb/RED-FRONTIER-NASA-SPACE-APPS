@@ -339,9 +339,23 @@ func _build_gi(root: Node3D, room: String, man: Dictionary) -> void:
 		gi.subdiv = {"voxelgi256": VoxelGI.SUBDIV_256, "voxelgi128": VoxelGI.SUBDIV_128}.get(policy.trim_suffix("_static"), VoxelGI.SUBDIV_64)
 		root.add_child(gi)
 		var cache := "res://assets/%s_voxelgi.res" % room.to_lower()
-		if ResourceLoader.exists(cache) and not "rebake" in OS.get_cmdline_user_args():
-			gi.data = load(cache)
+		var cache_file: FileAccess
+		var has_cache := false
+		if ResourceLoader.exists(cache):
+			cache_file = FileAccess.open(cache, FileAccess.READ)
+			has_cache = cache_file != null and cache_file.get_length() > 1024
+			if cache_file != null:
+				cache_file.close()
+		if has_cache and not "rebake" in OS.get_cmdline_user_args():
+			var cached_data = load(cache)
+			if cached_data is VoxelGIData:
+				gi.data = cached_data
+			else:
+				gi.bake(root)
 		else:
+			if DisplayServer.get_name() == "headless":
+				gi.queue_free()
+				return
 			gi.bake(root)                                         # this room's geometry only
 			gi.data.propagation = 0.7
 			gi.data.interior = true

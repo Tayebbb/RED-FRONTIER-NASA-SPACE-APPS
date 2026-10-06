@@ -57,11 +57,14 @@ Rocket cinematics, scientist NPCs, solar and thermal hazard systems, save games,
 - Canonical RF01 rover placed on the Engineering Hangar turntable.
 - Hangar rover manifest and Godot streamer dependency.
 - Rover and facility QA scripts.
+- First-person facility traversal with named input actions.
+- Marker-based interaction prompts for streamed rooms.
+- Persistent mission state with Hangar station selection, Digital Twin check, and configuration lock.
 
 ### Remaining
 
-- Player controller and interaction prompts.
-- Persistent mission state and station configuration.
+- Collision polish for doorways and wall openings.
+- Replace the diagnostic viewer as the default presentation only after the gameplay scene is fully art-directed.
 - Landing-site selection UI.
 - Digital Twin evaluation.
 - Launch lock and scene handoff.
