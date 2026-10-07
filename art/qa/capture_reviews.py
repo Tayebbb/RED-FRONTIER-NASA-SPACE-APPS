@@ -1,4 +1,5 @@
 import bpy
+from pathlib import Path
 from mathutils import Vector
 
 
@@ -71,7 +72,7 @@ def capture_reviews(suffix='before'):
             text.rotation_mode = 'QUATERNION'
             text.rotation_quaternion = rotation
             text.color = (0.95, 0.95, 0.95, 1)
-        scene.render.filepath = 'E:/Nasa Space APps/art/qa/' + group_name + '_' + suffix + '.png'
+        scene.render.filepath = str(Path(__file__).resolve().parent / (group_name + '_' + suffix + '.png'))
         bpy.ops.render.render(write_still=True, scene=scene.name)
         print('CAPTURE', scene.render.filepath)
         temporary_objects = list(scene.objects)

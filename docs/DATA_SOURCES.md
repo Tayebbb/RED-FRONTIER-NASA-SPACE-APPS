@@ -40,17 +40,7 @@ Planet-specific mission archives should drive Mars and Moon simulation values. E
 - [Marsbound: Mission to the Red Planet](https://www.jpl.nasa.gov/edu/resources/lesson-plan/marsbound-mission-to-the-red-planet/) — NASA/JPL educational reference.
 - [Take On Mars](https://store.steampowered.com/app/244030/Take_On_Mars/) — comparative gameplay reference.
 
-## Claude artifact links
+## Attribution and licensing
 
-The source index contained five unique Claude artifact links and one duplicate. Claude returned access-denied responses for the available links in this environment, so their contents cannot be responsibly inferred or renamed by subject. They are retained here with stable identifiers until a team member exports or describes them:
-
-| Catalog name | Link | Status |
-|---|---|---|
-| Claude Artifact A | [UkqfRty8aEYYFHTVZP5fvA](https://claude.ai/artifact/UkqfRty8aEYYFHTVZP5fvA) | Content not retrievable here |
-| Claude Artifact B | [WzD73CuMbSNwaetpXnW7fp](https://claude.ai/artifact/WzD73CuMbSNwaetpXnW7fp) | Content not retrievable here |
-| Claude Artifact C | [PtTHj2nZ8zoJCW6kb4ja17](https://claude.ai/artifact/PtTHj2nZ8zoJCW6kb4ja17) | Content not retrievable here |
-| Claude Artifact D | [Gs7gp6Jg8pNYmvcKPN9u9p](https://claude.ai/artifact/Gs7gp6Jg8pNYmvcKPN9u9p) | Content not retrievable here |
-| Claude Artifact E | [FdVyYJ8RQewcnMEx4WWGWf](https://claude.ai/artifact/FdVyYJ8RQewcnMEx4WWGWf) | Content not retrievable here |
-
-Artifact A appeared twice in the original index; this catalog contains it once.
+This register lists candidate research sources; it does not imply that a source is integrated into the current game or that its data may be redistributed. Verify source-specific terms before shipping copied data or media. NASA/JPL material is credited at its point of use and does not imply NASA endorsement. See the repository's [asset license scope](../LICENSE-ASSETS.md).
 

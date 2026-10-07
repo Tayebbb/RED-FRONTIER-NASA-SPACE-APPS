@@ -16,9 +16,15 @@ rng = np.random.default_rng(7)
 
 # palette (sRGB)
 NAVY_BG, GRID, CYAN, WHITE, ORANGE, AMBER, GRAPHITE = (8, 17, 31), (22, 40, 62), (116, 182, 255), (231, 236, 245), (240, 122, 69), (227, 169, 40), (43, 46, 51)
-FONT = r"C:\Windows\Fonts\bahnschrift.ttf"          # DIN-derived: clean, technical, aerospace
+FONT = next((path for path in (
+    r"C:\Windows\Fonts\bahnschrift.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+) if os.path.isfile(path)), None)
 
 def font(size, style='SemiBold'):
+    if FONT is None:
+        return ImageFont.load_default()
     f = ImageFont.truetype(FONT, size)
     try: f.set_variation_by_name(style)
     except Exception: pass

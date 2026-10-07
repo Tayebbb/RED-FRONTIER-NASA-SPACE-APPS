@@ -1,127 +1,156 @@
-# RED FRONTIER — NASA Space Apps (MISSION: RED FRONTIER)
+# RED FRONTIER
 
-A Mars mission experience: the player designs a rover backwards from its science question, chooses how and where
-it lands, and launches it. This repository holds two parts:
+### A Mars mission-design game by Team AUSThir | NASA Space Apps Challenge 2026
 
-- **The mission facility** (`blender/`, `scripts/`, `godot/`, `docs/`): the 3D environments the mission takes place in,
-  built in Blender and run in Godot 4.7.
-- **Rover modelling** (`art/`): a reference-guided Perseverance build and the preserved modular hybrid baseline.
+Build a rover around a science question, choose where it lands, then find out whether the mission can survive Mars.
 
-> **Canonical rover source.** The facility uses a generated wrapper in `assets/rover/`
-> (`RF01_Rover.blend`, with `RF01_Rover.glb` for Godot) built from the canonical Perseverance export in `art/`.
+<p align="center">
+  <img src="renders/hangar_LOCKED/01_Entrance.png" alt="The Red Frontier Engineering Hangar and Perseverance-inspired rover" width="100%">
+</p>
 
-## Facility environments (complete, locked)
+**Red Frontier** is a mission-design game about making connected engineering and science decisions under uncertainty. The intended experience follows a mission from its first briefing through site selection, rover design, simulation, launch, surface operations, and a final explanation of the outcome.
 
-| Space | Role |
+> This is an independent student project created for NASA Space Apps Challenge 2026. It is not a NASA product and is not endorsed by NASA.
+
+## The Mission
+
+The player starts with a science objective, not a prebuilt rover. Every later decision should serve that objective and respond to Mars conditions.
+
+1. **Understand the mission.** Read the science question, constraints, and success criteria in the Briefing room.
+2. **Choose a landing strategy.** Compare landing systems and candidate sites using terrain, science value, sunlight, and risk. The current site-selection values are prototypes; source-backed values are part of the planned data integration.
+3. **Engineer the rover.** Select power, battery, shielding, communications, mobility, and science instruments. Trade mass, budget, power demand, capability, and risk.
+4. **Test the design.** Run the Digital Twin against the chosen site and mission conditions. Use its prediction to revise the rover before committing.
+5. **Accept the risk and launch.** Review the mission readiness picture and make the launch decision.
+6. **Operate on Mars.** Drive to science targets, manage energy and communications, respond to dust and other hazards, and decide when to preserve the rover versus press on.
+7. **Learn from the outcome.** See what the rover achieved, which decisions mattered, and how the result compares with real mission evidence.
+
+The game is being built in stages. The complete mission above is the project goal; the current playable build is a facility-and-rover-configuration prototype. Planned systems are described as plans, not as completed gameplay.
+
+## Visual Tour
+
+<table>
+  <tr>
+    <td><img src="renders/briefing_review/CAM_Briefing_Hero.png" alt="Mission briefing room" width="100%"></td>
+    <td><img src="renders/mars_intel_review/CAM_MarsIntel_Hero.png" alt="Mars Intelligence and landing-site table" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="renders/hangar_LOCKED/03_Rover.png" alt="Rover in the Engineering Hangar" width="100%"></td>
+    <td><img src="renders/mission_control_review/CAM_MissionControl_Hero.png" alt="Mission Control launch console" width="100%"></td>
+  </tr>
+</table>
+
+## Gameplay Recordings
+
+- [Watch the first-person facility and mission flow](renders/demo/Red_Frontier_Gameplay_FPP.mp4)
+- [Watch the third-person facility and mission flow](renders/demo/Red_Frontier_Gameplay.mp4)
+
+Both recordings show the current prototype, not the complete planned Mars-driving game.
+
+## What Is Playable Now
+
+- Six connected 3D facility spaces, streamed as the player walks: Briefing, Corridor 01, Mars Intelligence, Corridor 02, Engineering Hangar, and Mission Control.
+- First- or third-person facility traversal, interaction prompts, briefing flow, and landing-site selection.
+- A rover configuration panel with live mass, budget, power, safety, and science trade-offs.
+- A reference-guided, Perseverance-inspired rover displayed in the Engineering Hangar.
+- Automated gameplay coverage for the facility route, mission interactions, and rover-build rules.
+
+Landing-site scores and rover configuration values are game prototypes. They are not NASA measurements or engineering specifications. A true Digital Twin evaluation, launch handoff, Mars driving, science collection, hazard play, and results loop remain planned.
+
+## Project Structure
+
+| Path | Purpose |
 |---|---|
-| Briefing | The question, the constraints, the route |
-| Corridor 01 | Briefing → Mars Intelligence |
-| Mars Intelligence | Landing system, then landing site (Jezero relief table) |
-| Corridor 02 | Anticipation before the rover reveal |
-| Engineering Hangar | Mission configuration and the rover stations (science, power, mobility, comms), Digital Twin |
-| Mission Control | Confirmation and ACCEPT RISK & LAUNCH |
+| `godot/` | Playable Godot project, streamed facility, UI, and game systems |
+| `blender/` and `scripts/` | Facility source scenes, procedural builders, exports, and validation |
+| `assets/rover/` | Rover wrapper and Godot runtime asset |
+| `art/` | Rover modeling work, exports, reference credits, and QA reports |
+| `docs/` | Game concept, roadmap, data strategy, visual language, and readiness reports |
+| `renders/` | Facility review images and gameplay recordings |
 
-Design rules: `docs/VISUAL_LANGUAGE.md`. Layout and phases: `docs/PLAN.md`. Runtime results: `docs/GAME_READINESS.md`.
+See the [documentation index](docs/README.md) for the design brief, data provenance, asset integration, and test evidence.
 
-## Pipeline: Blender → GLB → Godot 4.7
+## Run the Prototype
 
-Everything is generated by scripts in `scripts/` from empty files, so rebuilds are repeatable.
+### Requirements
 
+- Godot 4.7
+- Windows, macOS, or Linux with a Vulkan-capable GPU; integrated-GPU quality settings are selected automatically where supported.
+
+Clone the repository, open the `godot/` folder in Godot, and run the project. From a terminal at the repository root:
+
+```sh
+godot --path godot
 ```
-python scripts/gen_textures.py mc | intel | brief | corridor        # procedural textures, screens, decals
-blender -b --factory-startup --python scripts/build_facility.py     # all six spaces -> blender/RF_Facility.blend
-blender -b blender/RF_Facility.blend --python scripts/validate_scene.py
-blender -b blender/RF_Facility.blend --python scripts/export_material_library.py
-blender -b blender/RF_Facility.blend --python scripts/export_gltf.py -- <Room>   # Briefing, Corridor01, MarsIntel,
-                                                                                 # Corridor02, Hangar, MissionControl
-python scripts/godot_sync.py                                        # import into godot/ with shared materials
+
+To start in first person:
+
+```sh
+godot --path godot -- fpp
 ```
 
-Open `godot/` in Godot 4.7 and press Play to start the game (`res://game/game.tscn`).
-Game keys: WASD move, Shift run, mouse look, E interact, Esc release the mouse (click to recapture), F3 streaming info.
-`Open_Hangar_In_Godot.bat` opens the facility viewer (`res://viewer/hangar_viewer.tscn`); `Open_Hangar_In_Blender.bat` the Blender file.
-Viewer keys: 1–9 and Tab cameras, 0 / right mouse free fly, L Launch Mode, F quality preset, H help.
+**Controls:** WASD to move, Shift to run, mouse to look, E to interact, Esc to release the mouse (click to capture again). F3 toggles streaming diagnostics.
 
-## Gameplay (`godot/game/`)
+The standalone facility viewer is available with:
 
-- `mission_state.gd`: the `MissionState` autoload, the single record of a run (progression, build, Digital Twin, Mars, result).
-- `game_config.gd`: every tunable number and mission text. Engineering limits follow Rules and Scoring v1.0.
-- `data/landing_sites.json`: the three candidate sites (PROTOTYPE values from Rules and Scoring v1.0 §3.1, not NASA
-  measurements). Replace this file with the NASA-derived values; read it through `data/landing_sites.gd`.
-- `data/rover_parts.json` (Rules §2.3 part sheet) and `data/rover_build.gd` (§2.2 limits and §3.1 formulas: the only
-  implementation; the Hangar UI, MissionState and later systems all call `evaluate()`).
-- `interaction/`: `INT_*` markers from Blender become `Interactable`s as their room streams in. A marker is usable once
-  a system calls `interactions.register_handler("<id>", ...)`; until then it stays silent.
-- `world/facility_collision.gd`: trimesh collision for each streamed room. The player can't enter a room until its
-  collision is complete.
+```sh
+godot --path godot res://viewer/hangar_viewer.tscn
+```
 
-## Key systems
+On Windows, `Open_Hangar_In_Godot.bat` is a convenience launcher. Set `GODOT_EXE` to a Godot 4.7 executable path if it is not on `PATH`.
 
-- **Modular Blender environment kit:** `scripts/rf_kit.py`, with the catalog in `blender/RF_Kit.blend`. The rooms
-  share one material library, `scripts/rf_materials.py`.
-- **Linked Perseverance rover wrapper:** `assets/rover/RF01_Rover.blend` is linked into the facility and never
-  edited or scaled there.
-- **Godot-compatible rover export:** `assets/rover/RF01_Rover.glb` is an unquantized export, because Godot can't
-  import `KHR_mesh_quantization`.
-- **Shared facility materials:**
-  - Rooms export geometry only.
-  - Every material and texture lives once in `godot/shared/` (119 materials, 75 GPU-compressed textures).
-- **Room streaming with adjacent-room loading** (`godot/facility/facility_streamer.gd`):
-  - Only the current room and its neighbours on the route are resident.
-  - Rooms load on a background thread and enter or leave the scene in stages.
-  - Door impostors keep the forward sightlines.
-- **Integrated-GPU graphics preset** (`godot/facility/quality_presets.gd`):
-  - Chosen automatically on integrated GPUs.
-  - The High and Laptop presets are unchanged.
-- **Tests:**
-  - `Godot --path godot -- traverse` walks the mission route and logs streaming, memory and performance.
-  - `Godot --path godot -- gameplay_test [full]` plays the opening beat with simulated input (spawn, briefing,
-    objective, landing site, RF-01 build in the Hangar; `full` continues to the launch console). Screenshots in `godot/logs/gameplay/`.
-  - `Godot --headless --path godot --script res://tests/rover_build_test.gd` checks the build formulas against the
-    Rules and Scoring §5 reference runs.
-  - `godot/tools/verify_shared.gd` checks that every room uses the shared library.
+## Verify
 
-## Known issue
+Run from the repository root:
 
-Occasional Vulkan device loss has occurred on Intel UHD (driver 31.0.101.4032, Dec 2022) during repeated
-automated traversal and stress testing. Asset imports, geometry, materials and normal gameplay traversal are
-otherwise verified. Shader/material warm-up is disabled by default (opt-in with `-- warmup`); in testing it did not
-measurably change the crash rate.
-Details and reproduction context: `docs/GAME_READINESS.md`.
-
-## Rover modelling (`art/`)
-
-Mars rover modeling project with a preserved modular hybrid baseline and a separate, reference-guided Perseverance build.
-
-### Current Build
-
-- Blender source: [`art/source/rover/perseverance_detailed.blend`](art/source/rover/perseverance_detailed.blend)
-- Assembled GLB: [`art/export/rover/perseverance/perseverance_rover.glb`](art/export/rover/perseverance/perseverance_rover.glb)
-- Reference and fidelity report: [`art/qa/PERSEVERANCE_BUILD_REPORT.md`](art/qa/PERSEVERANCE_BUILD_REPORT.md)
-- Session handoff: [`art/HANDOFF.md`](art/HANDOFF.md)
-
-The Perseverance model is a visual approximation, not an engineering-certified or exact flight-hardware replica. See the build report for source credits, measured details, and limitations.
-
-## Game integration status
-
-The locked facility is on `origin/main` and contains six streamed spaces from Briefing through Mission Control. The canonical playable rover is the detailed Perseverance export from `art/export/rover/perseverance/perseverance_rover.glb`, wrapped at `assets/rover/RF01_Rover.glb` and loaded through `godot/facility/facility_streamer.gd`.
-
-- [Game brief](docs/GAME_BRIEF.md)
-- [Rover integration record](docs/ROVER_INTEGRATION.md)
-- [Production inventory](docs/PRODUCTION_INVENTORY.md)
-- [Data and artifact sources](docs/DATA_SOURCES.md)
-
-### Preserved Hybrid Baseline
-
-The original modular rover and its QA artifacts remain under `art/`. The named pre-QA Blender source is retained as a backup.
-
-### Verification
-
-Run from the repository root with Node.js:
-
-```powershell
+```sh
+godot --path godot -- gameplay_test full
+godot --headless --path godot --script res://tests/rover_build_test.gd
 node art/qa/verify_perseverance_export.cjs
 node art/qa/verify_exports.cjs
 ```
 
-The first command validates the textured Perseverance GLB; the second validates the legacy hybrid exports.
+The gameplay test traverses the full facility route and exercises the current mission UI. The Node.js export checks cover the detailed Perseverance-inspired model and the separate preserved hybrid baseline.
+
+## Build the Facility Assets
+
+The checked-in Godot project can be run without rebuilding the Blender source. To regenerate facility textures and assets, install Python with NumPy and Pillow, Blender, and Godot 4.7, then use the scripts under `scripts/`:
+
+```sh
+python -m pip install numpy Pillow
+python scripts/gen_textures.py
+blender -b --factory-startup --python scripts/build_facility.py
+blender -b blender/RF_Facility.blend --python scripts/validate_scene.py
+blender -b blender/RF_Facility.blend --python scripts/export_material_library.py
+blender -b blender/RF_Facility.blend --python scripts/export_gltf.py -- Hangar
+python scripts/godot_sync.py
+```
+
+Repeat the GLB export command for `Briefing`, `Corridor01`, `MarsIntel`, `Corridor02`, and `MissionControl` as needed. See [the facility plan](docs/PLAN.md) before rebuilding locked environments.
+
+## Mars Data and Evidence
+
+The design goal is to make consequential gameplay decisions traceable to planetary and mission data. The repository contains a research ledger and candidate sources for terrain, weather, dust storms, rover performance, and communications. Researching a dataset does not mean it is already integrated into the game.
+
+- Current landing-site values are marked `PROTOTYPE` in [`landing_sites.json`](godot/game/data/landing_sites.json).
+- The [data ledger](docs/DATA_LEDGER.md) separates the intended data-driven game from current prototype behavior and tracks source checks, licensing, and integration work.
+- The [data-source register](docs/DATA_SOURCES.md) links NASA, JPL, USGS, ESA, and research sources.
+- Rover model references, credits, and fidelity limits are documented in the [Perseverance build report](art/qa/PERSEVERANCE_BUILD_REPORT.md).
+
+## Team AUSThir
+
+- Md Tayeb Ibne Sayed
+- Fairuz Anadi
+- Samprity Haque
+- Syed Mohammed Sazid Ullah
+- Pantha Protick
+- Md. Saidul Islam Shehab
+
+## Credits and Licensing
+
+NASA/JPL source material is credited in the relevant data and rover QA documents. NASA names and imagery do not imply endorsement; third-party media and datasets retain their own terms and are excluded from the project licenses unless explicitly stated otherwise.
+
+- Original source code: [MIT License](LICENSE)
+- Original art, models, documentation, and project media: [Creative Commons Attribution 4.0 International](LICENSE-ASSETS.md)
+- Third-party sources and attribution notes: [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) and `art/qa/`
+
+The rover is a visual approximation inspired by NASA's Perseverance, not an exact or engineering-certified replica. See its [build report](art/qa/PERSEVERANCE_BUILD_REPORT.md) for evidence and limitations.

@@ -12,7 +12,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'textures', 'cp3')
 os.makedirs(OUT, exist_ok=True)
-FONT = r"C:\Windows\Fonts\bahnschrift.ttf"          # facility typeface (DIN family)
+FONT = next((path for path in (
+    r"C:\Windows\Fonts\bahnschrift.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+) if os.path.isfile(path)), None)
 
 NAVY = (20, 28, 42)            # garment navy (matches the jacket dark panels)
 NAVY_UI = (8, 17, 31)          # facility screen background
@@ -25,6 +29,8 @@ GREY = (150, 152, 156)
 
 
 def font(size, style='SemiBold'):
+    if FONT is None:
+        return ImageFont.load_default()
     f = ImageFont.truetype(FONT, size)
     try:
         f.set_variation_by_name(style)

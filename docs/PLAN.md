@@ -1,4 +1,34 @@
-# Mission: Red Frontier — Facility Implementation Plan
+# Red Frontier — Game Plan
+
+This is the whole-game plan for Red Frontier. The complete intended mission is the target; status notes distinguish existing prototype work from future implementation.
+
+## Mission Concept
+
+The player is responsible for a science mission to Mars. They interpret a science objective, choose a landing strategy, engineer a rover to meet the site and mission constraints, test and revise the design, accept the launch risk, operate on Mars, and review the results. The game should make each choice understandable and show how it changes the mission rather than hide the reasoning behind a score.
+
+## Gameplay Roadmap
+
+| Stage | Player experience | Core systems | Status |
+|---|---|---|---|
+| 1. Mission briefing | Understand the science objective, constraints, and success criteria. | Briefing interaction, objectives, mission state. | Playable prototype. |
+| 2. Mars intelligence | Compare landing systems and sites using terrain, science, energy, and risk. | Site-selection UI, planetary data, provenance. | UI exists; site values are prototypes. Source-backed integration remains. |
+| 3. Rover engineering | Choose a payload and subsystems within mass, budget, power, and capability limits. | Configurable rover build, constraint evaluator, visible trade-offs. | Configuration UI and game-balance calculations exist. Engineering source data and mobility choices remain. |
+| 4. Digital Twin | Simulate the proposed mission, inspect predicted outcomes, and iterate on the rover. | Offline mission evaluator, scenario rules, explanation and build signature. | Planned. Current state hooks/test stand-ins are not a simulator. |
+| 5. Launch decision | Choose a launch opportunity, review readiness and communications delay, then accept risk. | Vehicle/date selection, trajectory and light-time data, launch gate. | Planned; Mission Control is currently an environment and route endpoint. |
+| 6. Mars operations | Drive to science targets, use instruments, manage energy, and decide how to respond to dust and communication events. | Surface terrain, rover controller, instruments, hazards, relay timeline. | Planned. |
+| 7. Mission debrief | See what the rover achieved, why, and how player choices affected the result. | Scoring, evidence-based explanation, comparisons, replay/iteration. | Planned. |
+
+## Whole-Game Completion Criteria
+
+- The mission can be played from briefing through a Mars outcome and debrief without editor-only intervention.
+- The selected site, rover configuration, launch decision, and surface actions affect the same mission state and final result.
+- Real-world values have traceable sources and clear units; prototype/balance values are labeled and never presented as NASA measurements.
+- The Digital Twin and outcome screen explain the causes of a result, not just a pass/fail number.
+- The game remains understandable and completable offline, with data assets and third-party permissions documented.
+
+## Facility Production Record
+
+The sections below preserve the detailed environment plan and its implementation history. They cover one foundation of the game, not the entire gameplay roadmap.
 
 Source of truth for gameplay: the Red Frontier rover design brief artifact (Hangar station table,
 "if a part never matters on Mars, cut it from the Hangar").
@@ -18,7 +48,7 @@ Source of truth for gameplay: the Red Frontier rover design brief artifact (Hang
 **Entry point:** `build_facility.py` rebuilds `RF_Facility.blend`: the locked Hangar, every finished
 Phase 5 room (listed in its `ROOMS`), and greybox for the rest.
 
-## 2. Folder structure (`D:\RedFrontier`)
+## 2. Folder structure (repository root)
 
 ```
 scripts/      rf_lib.py (helpers) + one build script per phase; all rebuild from empty

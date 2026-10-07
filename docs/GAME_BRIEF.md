@@ -1,5 +1,7 @@
 # Mission: Red Frontier
 
+This brief describes the complete game we are building. The implementation status near the end distinguishes the current playable prototype from the planned mission systems; it does not narrow the product vision.
+
 ## Current product direction
 
 Red Frontier is a NASA Space Apps mission-design game. The player starts in a NASA-style facility, works backward from a science question, selects a landing site, configures a rover under constraints, evaluates the mission with a Digital Twin, accepts risk, launches, drives on Mars, and receives an outcome explanation.
@@ -46,27 +48,25 @@ The detailed Perseverance model in `art/export/rover/perseverance/perseverance_r
 
 Rocket cinematics, scientist NPCs, solar and thermal hazard systems, save games, tutorial content, real-time API hosting, and high-fidelity terrain are not required to prove the facility-to-Hangar game base.
 
-## Current status
+## Current implementation snapshot
 
-### Complete
+### Playable foundation
 
-- Six facility spaces and their locked visual language.
-- Blender-to-GLB-to-Godot export pipeline.
-- Shared materials and textures.
-- Adjacent-room streaming.
-- Canonical RF01 rover placed on the Engineering Hangar turntable.
-- Hangar rover manifest and Godot streamer dependency.
-- Rover and facility QA scripts.
-- First-person facility traversal with named input actions.
-- Marker-based interaction prompts for streamed rooms.
-- Persistent mission state with Hangar station selection, Digital Twin check, and configuration lock.
+- Six finished and streamed facility spaces with the approved visual language.
+- Blender-to-GLB-to-Godot pipeline, shared materials, collision, and integrated-GPU presets.
+- First- and third-person facility traversal with marker-based prompts.
+- Briefing interaction and landing-site selection UI. The current site scores are explicitly marked prototype values, not NASA measurements.
+- Hangar rover configuration UI with game-balance calculations for mass, budget, power, safety, and science.
+- Canonical Perseverance-inspired rover integrated into the Hangar, with separate source and export QA.
+- Mission-state hooks and a full facility route test through Mission Control.
 
-### Remaining
+### Planned game systems
 
-- Collision polish for doorways and wall openings.
-- Replace the diagnostic viewer as the default presentation only after the gameplay scene is fully art-directed.
-- Landing-site selection UI.
-- Digital Twin evaluation.
-- Launch lock and scene handoff.
-- Mars scene, driving, hazard, scoring, and outcome flow.
+- Source-backed terrain, landing, climate, dust, communications, and rover-performance data in the decisions that use them.
+- A real Digital Twin evaluator that tests a build against the selected site and mission conditions, supports iteration, and explains trade-offs.
+- Launch vehicle/date selection, mission readiness, launch confirmation, and Earth-Mars communications delay.
+- A Mars surface scene with rover driving, science targets, sampling, energy management, and return-to-base play.
+- Dust-storm and communications events with meaningful player choices.
+- A results and debrief loop that explains outcomes and compares decisions with real mission evidence.
+- Updated-driver and alternate-renderer performance validation.
 - Performance retest on an updated driver or alternate renderer.

@@ -1,19 +1,17 @@
-# Red Frontier Data Ledger
+# Red Frontier Data Strategy and Integration Roadmap
 
-*Red Frontier · Data brief · NASA Space Apps 2026*
+*Red Frontier · Data research brief · NASA Space Apps Challenge 2026*
 
-## Real Mars, not dice
+This document maps candidate NASA and partner data to the complete game concept, records source checks, and tracks future integration work. Source research is not proof that a dataset is already used by the playable prototype. Source checks summarized here were reviewed on **5 October 2026**.
 
-This brief covers which NASA and partner data the game uses, where that data enters the game, the ideas that make the game unique, and what we checked. Everything here was verified on **5 October 2026**.
-
-> Every storm, signal delay and photo in Red Frontier is real Mars.
+> Design goal: make mission decisions traceable to planetary and rover evidence. Current landing-site values are explicitly marked as prototypes, not NASA measurements.
 
 | | |
 |---|---|
-| **14** | datasets, 6 of them core |
-| **6** | game steps run on real data |
-| **5** | out-of-the-box uses, 3 to build first |
-| **17** | claims checked, 3 corrected |
+| **14** | candidate datasets inventoried |
+| **6** | priority source groups researched |
+| **5** | proposed data-driven gameplay concepts |
+| **17** | source/value claims reviewed, 3 corrected |
 
 **Contents:** [1 · Big picture](#1--the-big-picture) · [2 · Unique ideas](#2--out-of-the-box) · [3 · Data, drawn](#3--real-numbers-drawn) · [4 · Dataset list](#4--the-dataset-list) · [5 · Checks & next steps](#5--checks--next-steps) · [Sources](#sources)
 
@@ -21,18 +19,18 @@ This brief covers which NASA and partner data the game uses, where that data ent
 
 ## 1 · The big picture
 
-### Where real data enters the game
+### Intended data flow through the complete game
 
-The player's mission runs through six steps. Each step lists the datasets that set its numbers.
+These are target integrations for the full mission, not a claim that all six systems are implemented today.
 
-| Step | What happens | Datasets |
+| Step | Intended gameplay | Candidate datasets | Current implementation |
 |---|---|---|
-| **1. Pick a site** | Compare three real landing sites: science, sunlight, terrain, storm odds and cold. | **MOLA DEM + Jezero HiRISE DTM**: real elevation for the globe and each site<br>**Mars Dust Activity Database**: storm odds per site and season<br>**Mars Climate Database v6.2**: sunlight and temperature per site<br>**Landing ellipses & site studies**: real landing-zone sizes |
-| **2. Build the rover** | Every Hangar part has a real mass, power draw and data value. | **Rover engineering facts**: masses, watts, relay orbiters<br>**Mars Climate Database v6.2**: heater cost at the chosen site<br>**Opportunity solar dust study**: how fast solar panels lose output |
-| **3. Launch** | Pick a rocket and a date. The date sets how far away Mars is. | **Launch vehicles & trajectories**: rocket capacity and dates<br>**JPL Horizons API**: distance and signal delay |
-| **4. Drive on Mars** | Real Jezero terrain, real drive ranges, real panoramas at real stops. | **MOLA DEM + Jezero HiRISE DTM**: drivable Jezero heightmap<br>**Perseverance waypoints & traverse**: drive lengths, slopes, panoramas<br>**MEDA weather archive**: day/night temperature |
-| **5. Storm & blackout** | Storm odds, power loss and blackout length all come from real data. | **Mars Dust Activity Database**: real recorded storms<br>**Mars Climate Database v6.2**: storm-scenario sunlight<br>**JPL Horizons API**: blackout length<br>**Real power-loss cases**: Opportunity's 2018 storm |
-| **6. Results** | The score explains itself and compares your rover with real ones. | **Real power-loss cases**: Opportunity and InSight stories<br>**Perseverance waypoints & traverse**: your distance vs Perseverance<br>**ESA partner data**: compare with Rosalind Franklin |
+| **1. Pick a site** | Compare science opportunity, sunlight, terrain, storms, and temperature. | MOLA/HiRISE terrain, Mars Dust Activity Database, Mars Climate Database, landing-ellipse studies | Landing-site UI exists; its current scores are prototype values, not NASA-derived. |
+| **2. Build the rover** | Balance mass, power, budget, communications, and science capability. | Rover engineering facts, climate data, Opportunity solar-dust study | Configuration UI and game-balance rules exist; source-backed engineering values remain to be integrated and cited. |
+| **3. Launch** | Choose a vehicle and launch date; use mission geometry for cruise and signal delay. | Launch vehicle/trajectory sources, JPL Horizons | Planned; no playable launch or date-driven mission system yet. |
+| **4. Drive on Mars** | Traverse Jezero terrain, visit science targets, and compare against real rover travel. | MOLA/HiRISE terrain, Perseverance waypoints, MEDA | Planned; no Mars driving or source-backed route simulation yet. |
+| **5. Storm and blackout** | Manage solar loss, dust events, and communication delays. | Mars Dust Activity Database, Mars Climate Database, JPL Horizons, Opportunity/InSight records | Planned; these hazards are not currently simulated. |
+| **6. Results** | Explain mission outcomes and compare decisions with real missions. | Opportunity/InSight cases, Perseverance traverse, ESA partner sources | Planned; scoring, outcome explanation, and comparison are not implemented. |
 
 ---
 
@@ -40,18 +38,18 @@ The player's mission runs through six steps. Each step lists the datasets that s
 
 ### Play against real Mars history
 
-Most games use data as a backdrop. These five ideas make the player react to things that really happened, or are happening, on Mars.
+These are proposed differentiators for the full game. They are research-backed design directions, not features in the current playable prototype.
 
-**Build first:** ③ The clock follows real Mars · ② Relive Opportunity's last storm · ① Real panoramas at real places
+**Proposed implementation priority:** ③ The clock follows real Mars · ② Relive Opportunity's last storm · ① Real panoramas at real places
 
-#### 01 · Real panoramas at real places *(build first)*
+#### 01 · Real panoramas at real places *(planned)*
 *Data: Perseverance waypoints*
 
 - **The player** reaches a spot Perseverance really visited and sees the panorama Perseverance took there.
 - **Why it stands out:** The game world turns into real Mars photos. The route file already links a panorama to each stop.
 - ⚠️ **Watch:** Panoramas are large and come from an undocumented feed. Download and shrink 3–4 of them in advance; credit NASA/JPL-Caltech.
 
-#### 02 · Relive Opportunity's last storm *(build first)*
+#### 02 · Relive Opportunity's last storm *(planned)*
 *Data: Real power-loss cases · Opportunity dust study*
 
 | Date | Energy |
@@ -64,7 +62,7 @@ Dust opacity (tau) reached **10.8**; normal is about 0.5.
 - **The player** unlocks a scenario that replays June 2018. Can a different build survive the storm that ended Opportunity?
 - **Why it stands out:** It rewrites real history, and shows exactly why nuclear power matters.
 
-#### 03 · The clock follows real Mars *(build first)*
+#### 03 · The clock follows real Mars *(planned)*
 *Data: JPL Horizons*
 
 - **The player** gets a blackout and cruise time based on the real Earth–Mars distance on the day they play: **11.0 min** during the hackathon, **5.6 min** in Feb 2027, **20.1 min** in May 2028.
@@ -99,17 +97,17 @@ Chart: Earth–Mars one-way light time in minutes, from the JPL Horizons API, sa
 
 ---
 
-## 3 · Real numbers, drawn
+## 3 · Research examples and intended use
 
 ### What the data says
 
-Four views built from values we checked. Under each: what it changes in the game.
+These sourced examples inform future game rules. Their presence in this research document does not mean the corresponding display or simulation is already in the game.
 
 #### Signal delay on your launch date
 
 The page lets you drag to pick a date (default 12 Nov 2026: **11.2 min one way**, 1.341 AU).
 
-- **In the game:** The "SIGNAL LOST" countdown uses this number.
+- **Planned use:** Drive a "SIGNAL LOST" countdown from the mission date.
 - *Source: JPL Horizons API*
 
 #### Energy a rover gets per sol
@@ -124,7 +122,7 @@ Real records, watt-hours per Martian day. Nuclear stays steady; solar collapses 
 | InSight | spring 2022, dusty | 500 |
 | Opportunity | 10 Jun 2018, storm | 22 |
 
-- **In the game:** Sets the Power station options and why a storm can end a solar mission.
+- **Planned use:** Inform power options and show how dust can constrain a solar mission.
 - *Sources: MMRTG fact sheet (110 W × 24.6 h, derived) · Planetary Society · NASA Photojournal*
 
 #### Orbiters that carry data home
@@ -138,7 +136,7 @@ Average data relayed per day, Feb–May 2026.
 | Odyssey (NASA) | 107 |
 | MAVEN (NASA) | **lost** (was ~898 Mb; lost 2025) |
 
-- **In the game:** The Comms station offers only orbiters that still work.
+- **Planned use:** Keep communications choices aligned with current relay availability.
 - *Sources: NASA Mars Relay Network update · MAVEN figure is its share before the loss*
 
 #### How far a real rover drives
@@ -164,7 +162,7 @@ Drive length histogram (546 drive steps):
 | 300–400 | 4 |
 | 400+ | 3 |
 
-- **In the game:** Sets range per sol, so targets 500–800 m away are real multi-sol trips.
+- **Planned use:** Set plausible daily traverse ranges and mission duration.
 - *Source: Perseverance waypoints GeoJSON, 546 drive steps*
 
 ---
@@ -198,6 +196,8 @@ Drive length histogram (546 drive steps):
 | Launch vehicles & trajectories | NASA LSP · Trajectory Browser · JPL | Rocket capacity and launch dates | ! Manual lookup |
 
 ### Dataset details
+
+The verification statuses below describe source checks, not runtime integration or permission to redistribute downloaded data.
 
 #### JPL Horizons API *(core)*
 - **Used in:** Twin Room, Blackout, Launch Pad
@@ -332,18 +332,18 @@ Drive length histogram (546 drive steps):
 | MCD free to use | Science only; commercial needs permission | LMD access page | ! Cite and inform LMD |
 | Instrument masses | Main-unit and total figures mixed | NASA instrument pages | ✕ Use totals |
 
-### How data gets into the game
+### Target data pipeline
 
 1. **Raw sources:** terrain GeoTIFFs, storm database, climate per site, Horizons and route data, NASA fact sheets.
 2. **Offline scripts:** crop terrain to 16-bit heightmaps, count storms per site, compute light time per date, compute drive statistics.
 3. **Small game files:** `site_jezero.json` (plus gale, oxia), `light_time.json`, `parts.json`, `sources.json`.
 4. **Godot reads locally:** no live API calls, works offline for judges, and every number has its source URL.
 
-### Fixed from the earlier plan
+### Research decisions recorded
 
 - **Blackout delay:** use the Horizons value (11.0 min on 14 Nov 2026), not "14 min".
 - **Instrument masses:** use whole-instrument totals everywhere.
-- **Comms:** offer TGO, MRO and Odyssey. MAVEN was declared lost in June 2026.
+- **Comms research:** candidate relay set is TGO, MRO and Odyssey; MAVEN is excluded from future planning following its loss. This does not mean those choices are already offered in-game.
 
 ### Still to do
 
@@ -352,23 +352,9 @@ Drive length histogram (546 drive steps):
 - [ ] Confirm Rosalind Franklin dates on ESA pages.
 - [ ] Cite the Mars Climate Database and tell the LMD team.
 
-### Ready-to-paste text for the "NASA Data" submission field
+### Submission wording: current status
 
-```text
-NASA DATA USED IN RED FRONTIER
-
-Every storm, signal delay and photo in the game is real Mars. Data was prepared offline into small JSON files and heightmaps; the game makes no live API calls.
-
-1. JPL Horizons API (NASA JPL) – real Earth–Mars signal delay for the player's mission date; drives the "signal lost" blackout (11.0 min on 14 Nov 2026).
-2. Mars Dust Activity Database, MRO MARCI (Battalio & Wang, CC BY 4.0) – real recorded dust storms set storm odds per site and season.
-3. Mars Climate Database v6.2 (LMD, funded by ESA/CNES) – sunlight, temperature and dust per site for clear and storm scenarios.
-4. MOLA global DEM and Jezero HiRISE 1 m DTM (USGS Astrogeology) – the Mars globe and the drivable Jezero map.
-5. Perseverance waypoints and traverse (NASA JPL) – real drive lengths, slopes and panoramas at real stops.
-6. NASA rover engineering facts (Perseverance components and instruments, MMRTG fact sheet, Mars Relay Network update) – mass, power and data for every Hangar part and relay orbiter.
-Supporting: Opportunity solar-dust study (NASA NTRS), Opportunity 2018 and InSight power records, MEDA weather archive (PDS), Mars Trek tiles, JPL landing ellipses, ESA HRSC and Rosalind Franklin facts.
-
-Game balance values are labelled as game values. All sources are cited in sources.json and on the in-game Data screen.
-```
+The current playable prototype uses explicitly identified game-balance values for landing-site comparisons and rover configuration. This ledger records candidate authoritative sources and intended mappings for later implementation. Do not describe the planned storm, communications, terrain simulation, or Mars-driving systems as current NASA-data features. Before integrating or redistributing any downloaded dataset, verify its license and cite the exact data product and version.
 
 ---
 

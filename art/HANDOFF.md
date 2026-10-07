@@ -36,14 +36,14 @@
 
 ## Hybrid Archive: Current State
 
-- Workspace: `E:\Nasa Space APps` (Windows). Only create/change project files under `art/`.
+- Workspace paths in this handoff are repository-relative. The Blender source and exports are under `art/`.
 - Blender MCP was reachable during the previous build; reconnect and inspect scene before acting.
-- Working file path: `E:\Nasa Space APps\art\source\rover\red_frontier_rover.blend`. The completed, corrected scene is saved there.
+- Working file path: `art/source/rover/red_frontier_rover.blend`. The completed, corrected scene is saved there.
 - Phase 0–5 were built in the live scene. One representative configuration is visible; alternatives are hidden in viewport only and remain in their own collections.
 - Base collection contains chassis, mast, two rocker-bogie arm assemblies, six wheels, and all nine socket empties.
 - Parts: Solar_Light/Large; Battery_Standard/Extended; Shield_Minimal/Standard/Heavy; Antenna_Std/HighGain; Wheel_Standard/Reinforced; six instruments; optional Power_Nuclear.
 - Seven requested MAT\_\* Principled materials. No image textures.
-- Exported `rover_base.glb` and 18 per-part GLBs to `E:\Nasa Space APps\art\export\rover\`. Each Blender glTF export call returned `FINISHED` using GLB, +Y-up, apply modifiers, selection-only, no cameras/lights/animations.
+- Exported `rover_base.glb` and 18 per-part GLBs to `art/export/rover/`. Each Blender glTF export call returned `FINISHED` using GLB, +Y-up, apply modifiers, selection-only, no cameras/lights/animations.
 
 ## Hybrid Archive: Verified Measurements
 
