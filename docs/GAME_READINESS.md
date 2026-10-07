@@ -106,10 +106,23 @@ The Engineering Hangar already contains the canonical playable rover through the
 
 The detailed Perseverance build under `art/` is now the canonical rover source and is exported through the existing `RF01_Rover.glb` runtime path. See `docs/ROVER_INTEGRATION.md` for the source and placement contract.
 
+## Lighting caches on a fresh checkout
+
+The VoxelGI caches (`godot/assets/*_voxelgi.res`) are gitignored, and `scripts/godot_sync.py` deletes them on every
+sync so they never go stale. The first windowed visit to each room bakes its cache on the main thread and saves it,
+which is a one-time pause, longest in the Hangar. The Hangar cache is about 35 MB; the other three are about 1.5 MB each.
+Headless runs skip GI.
+
+For a release, sync, then bake all four caches in a windowed run, then export. An exported build cannot write `res://`,
+so the caches must be inside the export (see [system design §11](SYSTEM_DESIGN.md#11-reliability)).
+
 ## Next recommended work
 
-1. **Gameplay base:** player traversal, interaction prompts, mission state, Hangar station configuration, and launch lock.
-2. **Mars** (next production phase after the Hangar loop).
-3. Driver update and re-test of the caveat above.
-4. Hangar draw calls: merge per-decal materials into atlases. It's the slowest room (11–21 fps) and the main
-   load-hitch source.
+The gameplay base (traversal, prompts, mission state, landing site, and rover configuration) is now built. Remaining work
+follows the [system design implementation order](SYSTEM_DESIGN.md#13-implementation-order). The facility-specific items are:
+
+1. A Windows export preset that ships the lighting caches, tested on a clean machine.
+2. A driver update and a re-test of the caveat above; also try `--rendering-driver d3d12`.
+3. Hangar: compare VoxelGI 128 or 64 against the approved cameras, and merge per-decal materials into atlases. It's the
+   slowest room (11–21 fps) and the main load-hitch source. A smaller GI grid also shrinks its cache.
+4. Measure the same traversal on a dedicated GPU (only Intel UHD has been measured).

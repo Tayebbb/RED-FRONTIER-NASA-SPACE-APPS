@@ -27,9 +27,9 @@ This inventory covers the complete intended game and separates shipped foundatio
 ### In progress / not yet implemented
 
 - Source-backed site, climate, terrain, dust, communications, and rover-performance values in runtime systems.
-- Digital Twin evaluator; current mission-state fields and test stand-ins are hooks, not a working simulator.
-- Launch selection, date-driven mission timeline, launch decision, and scene handoff.
-- Mars terrain and driving, instrument/science targets, return-to-base loop, and dust/communications hazards.
+- The mission simulation and the Digital Twin stress test. The current mission-state fields and test stand-ins are hooks, not a working simulator.
+- Launch readiness, the launch decision, and the scene handoff. Launch vehicle and date choice are deferred.
+- Mars operations: science targets, event decisions, dust and communications hazards, and a replay scene. Arcade driving is deferred.
 - Mission scoring, debrief, decision explanations, and comparison to real rover evidence.
 
 ## Verification
@@ -47,9 +47,14 @@ Additional facility checks include `scripts/validate_scene.py`, `scripts/godot_s
 
 ## Recommended Delivery Order
 
-1. Integrate and cite approved source-backed planetary and rover data.
-2. Implement and validate the Digital Twin against the rover-build model.
-3. Complete mission setup, launch readiness, and the launch decision.
-4. Build the Mars surface traversal and science-objective loop.
-5. Add hazards, communications decisions, scoring, and the player debrief.
-6. Validate performance and the complete end-to-end mission on supported hardware.
+The authoritative order and reasoning are in [the system design](SYSTEM_DESIGN.md#13-implementation-order). In summary:
+
+1. Keep [the rules](RULES.md) and their tests in sync; move the formula constants into a `rules.json` content file.
+2. Simplify mission state: store facts, derive the phase and objective, and remove the stored copies of derived numbers.
+3. Package a Windows build that ships the lighting caches, and test it on a clean machine.
+4. Build the deterministic mission simulation with golden-run tests.
+5. Add the Digital Twin stress test, scoring, the results screen, and Replay.
+6. Add the launch console, with the signal delay from the baked light-time table.
+7. Replace prototype values with sourced data (sites, storm scenarios, an MMRTG power option) and record each source.
+8. Build the Mars replay scene: the 2D fallback first, then 3D.
+9. Improve Hangar lighting and draw-call performance, and add debug fast travel for demos.

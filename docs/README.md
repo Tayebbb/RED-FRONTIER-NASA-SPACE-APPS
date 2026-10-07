@@ -2,10 +2,15 @@
 
 Red Frontier is planned as a complete Mars mission-design game. This index separates the game vision and production roadmap from research, implementation evidence, and asset QA.
 
+## Architecture and rules (authoritative)
+
+- [System design](SYSTEM_DESIGN.md): architecture, module boundaries, state ownership, simulation and Digital Twin design, determinism, data policy, reliability, implementation order, and the do-not-build list. Where another document disagrees about how the game is built, this one wins.
+- [Rules and Scoring v1.0](RULES.md): build limits, part sheet, score formulas, planned mission-simulation rules, and the tested reference runs.
+
 ## Game and production
 
 - [Game brief](GAME_BRIEF.md): full mission concept, player journey, target MVP, and current implementation boundary.
-- [Production plan](PLAN.md): facility layout, art pipeline, and environment decisions.
+- [Production plan](PLAN.md): facility layout, art pipeline, and environment decisions. Its station-by-station gameplay table records the environment's design intent. Gameplay itself follows the system design.
 - [Production inventory](PRODUCTION_INVENTORY.md): completed foundation and remaining game systems.
 - [Visual language](VISUAL_LANGUAGE.md): locked rules for the six-space facility.
 - [Game readiness](GAME_READINESS.md): performance, streaming, validation, and known runtime caveats.

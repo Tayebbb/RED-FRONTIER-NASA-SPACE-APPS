@@ -13,10 +13,12 @@ The player is responsible for a science mission to Mars. They interpret a scienc
 | 1. Mission briefing  | Understand the science objective, constraints, and success criteria.                                                  | Briefing interaction, objectives, mission state.                            | Playable prototype.                                                                                        |
 | 2. Mars intelligence | Compare landing systems and sites using terrain, science, energy, and risk.                                           | Site-selection UI, planetary data, provenance.                              | UI exists; site values are prototypes. Source-backed integration remains.                                  |
 | 3. Rover engineering | Choose a payload and subsystems within mass, budget, power, and capability limits.                                    | Configurable rover build, constraint evaluator, visible trade-offs.         | Configuration UI and game-balance calculations exist. Engineering source data and mobility choices remain. |
-| 4. Digital Twin      | Simulate the proposed mission, inspect predicted outcomes, and iterate on the rover.                                  | Offline mission evaluator, scenario rules, explanation and build signature. | Planned. Current state hooks/test stand-ins are not a simulator.                                           |
-| 5. Launch decision   | Choose a launch opportunity, review readiness and communications delay, then accept risk.                             | Vehicle/date selection, trajectory and light-time data, launch gate.        | Planned; Mission Control is currently an environment and route endpoint.                                   |
-| 6. Mars operations   | Drive to science targets, use instruments, manage energy, and decide how to respond to dust and communication events. | Surface terrain, rover controller, instruments, hazards, relay timeline.    | Planned.                                                                                                   |
-| 7. Mission debrief   | See what the rover achieved, why, and how player choices affected the result.                                         | Scoring, evidence-based explanation, comparisons, replay/iteration.         | Planned.                                                                                                   |
+| 4. Digital Twin      | Stress-test the proposed mission against named scenarios, inspect the limiting subsystem, and iterate on the rover.   | Shared `MissionSim` run per scenario, build signature for staleness.        | Planned. Current state hooks/test stand-ins are not a simulator.                                           |
+| 5. Launch decision   | Review readiness and the communications delay for the mission date, then accept risk.                                 | Baked light-time table, launch gate (requires a current Twin).              | Planned; Mission Control is currently an environment and route endpoint. Vehicle/date choice deferred.     |
+| 6. Mars operations   | Order the science targets and decide how to respond to dust, power, and communication events.                         | Deterministic sol-by-sol `MissionSim`; replay scene with a 2D fallback.     | Planned. Arcade driving deferred.                                                                          |
+| 7. Mission debrief   | See what the rover achieved, why, and how player choices affected the result.                                         | Scoring, evidence-based explanation, comparisons, Replay.                   | Planned.                                                                                                   |
+
+Architecture, state ownership, and build order for these stages: [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md). Formulas: [RULES.md](RULES.md).
 
 ## Whole-Game Completion Criteria
 
@@ -30,8 +32,13 @@ The player is responsible for a science mission to Mars. They interpret a scienc
 
 The sections below preserve the detailed environment plan and its implementation history. They cover one foundation of the game, not the entire gameplay roadmap.
 
-Source of truth for gameplay: the Red Frontier rover design brief artifact (Hangar station table,
-"if a part never matters on Mars, cut it from the Hangar").
+Source of truth for gameplay: [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) and [RULES.md](RULES.md) (from 2026-10-08). The
+facility was laid out from the earlier rover design brief artifact, and its principle still holds: "if a part never matters on Mars, cut it from the Hangar".
+
+> **Superseded for gameplay:** the "Gameplay placement" table in §4 records why the rooms and stations were built where
+> they are. Its rules (a launch vehicle setting a 900 / 1,100 kg payload, $150M / $250M budgets, four station UIs, a
+> landing-system choice) are **not** the active game. The active rules are 260 kg and 400 credits, edited in one
+> configuration panel; the SCIENCE, POWER and COMMS stations may later open that panel at their category.
 
 ## 1. Implementation plan (phases)
 

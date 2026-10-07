@@ -358,11 +358,16 @@ The verification statuses below describe source checks, not runtime integration 
 3. **Small game files:** `site_jezero.json` (plus gale, oxia), `light_time.json`, `parts.json`, `sources.json`.
 4. **Godot reads locally:** no live API calls, works offline for judges, and every number has its source URL.
 
+This pipeline is now the binding data policy ([system design §8](SYSTEM_DESIGN.md#8-content-and-external-data)). The runtime never makes a network request. Live sources (the Horizons API, the waypoint feed) are used only by offline preparation scripts, and their output is committed with a source row. Values the game uses go into the content JSON with a source id. Game-balance values say so, as described in [the rules](RULES.md).
+
 ### Research decisions recorded
 
 - **Blackout delay:** use the Horizons value (11.0 min on 14 Nov 2026), not "14 min".
 - **Instrument masses:** use whole-instrument totals everywhere.
 - **Comms research:** candidate relay set is TGO, MRO and Odyssey; MAVEN is excluded from future planning following its loss. This does not mean those choices are already offered in-game.
+- **Runtime scope (2026-10-08):** the Curiosity weather feed and Mars Trek tiles are not planned for the runtime, because the feed lags and the tiles need the network. A pre-downloaded Trek image may still be used as artwork, with credit. Mars Climate Database values are deferred until the permission question is settled.
+- **Power realism:** Perseverance and Curiosity run on an MMRTG, but the part sheet offers only solar arrays. Adding an MMRTG option based on the MMRTG fact sheet is recommended. It makes the Opportunity-storm scenario meaningful, because it shows why nuclear power matters.
+- **Source quality:** where a figure comes from a secondary article (for example the Opportunity 645 → 22 Wh figures from The Planetary Society), prefer citing the NASA/JPL primary page in the game's source rows.
 
 ### Still to do
 
@@ -370,6 +375,9 @@ The verification statuses below describe source checks, not runtime integration 
 - [ ] Find a primary source for the Gale landing ellipse.
 - [ ] Confirm Rosalind Franklin dates on ESA pages.
 - [ ] Cite the Mars Climate Database and tell the LMD team.
+- [ ] Bake `light_time.json` from Appendix A, `scenarios.json` from MDAD and the storm cases, and `sources.json` (one row per source id).
+- [ ] Replace the prototype site values (Jezero/Perseverance, Gale/Curiosity, Elysium/InSight) with sourced values, each with its source id.
+- [ ] Snapshot the Perseverance waypoint statistics used in the results screen.
 
 ### Submission wording: current status
 

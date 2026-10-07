@@ -4,17 +4,17 @@ This brief describes the complete game we are building. The implementation statu
 
 ## Current product direction
 
-Red Frontier is a space mission-design game created for NASA Space Apps Challenge 2026. The player starts in a mission facility, works backward from a science question, selects a landing site, configures a rover under constraints, evaluates the mission with a Digital Twin, accepts risk, launches, drives on Mars, and receives an outcome explanation.
+Red Frontier is a space mission-design game created for the Space Mission Design Game Challenge of NASA Space Apps Challenge 2026. The player starts in a mission facility, works backward from a science question, selects a landing site, configures a rover under constraints, evaluates the mission with a Digital Twin, accepts risk, launches, drives on Mars, and receives an outcome explanation.
 
 The first playable milestone is smaller and concrete:
 
 1. Traverse the six-room facility.
 2. Inspect the mission briefing and landing-site information.
 3. Enter the Engineering Hangar and view the rover on its turntable.
-4. Configure the rover through station interactions.
+4. Configure the rover at the Hangar configuration console.
 5. Lock the configuration and hand off to launch.
 
-Mars driving, the full Digital Twin, and the final scoring loop follow after this base loop is stable.
+The Digital Twin, launch, Mars operations, and the scoring loop follow after this base loop is stable, in the order set by [the system design](SYSTEM_DESIGN.md#13-implementation-order).
 
 ## Facility route
 
@@ -35,18 +35,20 @@ The detailed Perseverance model in `art/export/rover/perseverance/perseverance_r
 
 ## Recommended MVP scope
 
+The architecture behind this scope is defined in [the system design](SYSTEM_DESIGN.md), and the numbers in [the rules](RULES.md).
+
 - One shared facility route; no room loading screen.
 - Three landing sites represented as data and UI before adding site-specific terrain.
-- Rover choices for power, battery, shielding, communications, mobility, and payload.
+- Rover choices for solar power, battery, shielding, communications, and three instruments, edited in the single Hangar configuration panel. Mobility choices are deferred.
 - A constrained loadout with visible trade-offs in mass, power, science, and risk.
-- Offline Digital Twin evaluation before adding a server.
-- Arcade Mars driving with two science locations and return-to-base.
+- One offline, deterministic, sol-by-sol mission simulation. The Digital Twin runs it against named stress scenarios (a nominal season, a real recorded dust storm, a degraded relay). The real mission runs it once.
+- Mars operations as decisions: choose the order of the science targets (Ancient Delta, Crater, Ridge, Rock Field), then answer storm, power, and comms events. The Mars scene replays the simulation's log, and a 2D map view is the fallback.
 - Dust storm decision as the first hazard.
-- Outcome screen explaining the score and the consequences of the player's choices.
+- Outcome screen explaining the score and the consequences of the player's choices, built from simulation events and their data sources.
 
 ## Explicit cuts for the first milestone
 
-Rocket cinematics, scientist NPCs, solar and thermal hazard systems, save games, tutorial content, real-time API hosting, and high-fidelity terrain are not required to prove the facility-to-Hangar game base.
+Rocket cinematics, scientist NPCs, save games, tutorial content, real-time API hosting, live NASA data calls, AI or LLM features, a web build, and high-fidelity terrain are not part of the MVP. Arcade driving, landing-system choice, and launch vehicle or date choice are deferred. If arcade driving is added later, it may only send discrete commands, such as arriving at a target, to the simulation.
 
 ## Current implementation snapshot
 
@@ -63,10 +65,9 @@ Rocket cinematics, scientist NPCs, solar and thermal hazard systems, save games,
 ### Planned game systems
 
 - Source-backed terrain, landing, climate, dust, communications, and rover-performance data in the decisions that use them.
-- A real Digital Twin evaluator that tests a build against the selected site and mission conditions, supports iteration, and explains trade-offs.
-- Launch vehicle/date selection, mission readiness, launch confirmation, and Earth-Mars communications delay.
-- A Mars surface scene with rover driving, science targets, sampling, energy management, and return-to-base play.
+- A Digital Twin that stress-tests the build with the shared mission simulation against named scenarios, supports iteration, and explains the limiting subsystem.
+- Mission readiness, launch confirmation, and the Earth–Mars signal delay from the baked light-time table. Launch vehicle and date choice are deferred.
+- A Mars surface scene that replays the mission simulation: science targets, energy management, and event decisions.
 - Dust-storm and communications events with meaningful player choices.
-- A results and debrief loop that explains outcomes and compares decisions with real mission evidence.
-- Updated-driver and alternate-renderer performance validation.
-- Performance retest on an updated driver or alternate renderer.
+- A results and debrief loop that explains outcomes and compares decisions with real mission evidence, plus Replay.
+- A packaged Windows build, and a performance retest on an updated driver or alternate renderer.

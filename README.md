@@ -10,7 +10,7 @@ Build a rover around a science question, choose where it lands, then find out wh
 
 **Red Frontier** is a space mission-design game about making connected engineering and science decisions under uncertainty. Its first mission is to plan and operate a rover expedition to Mars, from the science briefing through site selection, rover design, simulation, launch, surface operations, and a final explanation of the outcome.
 
-> This is an independent student project created for NASA Space Apps Challenge 2026. It is not a NASA product and is not endorsed by NASA.
+> This is an independent student project created for the Space Mission Design Game Challenge of NASA Space Apps Challenge 2026. It is not a NASA product and is not endorsed by NASA.
 
 ## The Mission
 
@@ -18,10 +18,10 @@ The player starts with a science objective, not a prebuilt rover. Every later de
 
 1. **Understand the mission.** Read the science question, constraints, and success criteria in the Briefing room.
 2. **Choose a landing strategy.** Compare landing systems and candidate sites using terrain, science value, sunlight, and risk. The current site-selection values are prototypes; source-backed values are part of the planned data integration.
-3. **Engineer the rover.** Select power, battery, shielding, communications, mobility, and science instruments. Trade mass, budget, power demand, capability, and risk.
-4. **Test the design.** Run the Digital Twin against the chosen site and mission conditions. Use its prediction to revise the rover before committing.
-5. **Accept the risk and launch.** Review the mission readiness picture and make the launch decision.
-6. **Operate on Mars.** Drive to science targets, manage energy and communications, respond to dust and other hazards, and decide when to preserve the rover versus press on.
+3. **Engineer the rover.** Select solar power, battery, shielding, communications, and three science instruments. Trade mass, budget, power demand, capability, and risk. A mobility category is planned for later.
+4. **Test the design.** Run the Digital Twin: the same mission simulation the real mission uses, tested against named scenarios (a normal season, a real recorded dust storm, a degraded relay). Use the results to revise the rover before committing.
+5. **Accept the risk and launch.** Review mission readiness, including the real Earth–Mars signal delay for the mission date, and make the launch decision.
+6. **Operate on Mars.** Choose which science targets to visit and in what order, then make the calls when dust, low power, or communications problems arrive: preserve the rover or press on.
 7. **Learn from the outcome.** See what the rover achieved, which decisions mattered, and how the result compares with real mission evidence.
 
 The game is being built in stages. The complete mission above is the project goal; the current playable build is a facility-and-rover-configuration prototype. Planned systems are described as plans, not as completed gameplay.
@@ -54,7 +54,18 @@ Both recordings show the current prototype, not the complete planned Mars-drivin
 - A reference-guided, Perseverance-inspired rover displayed in the Engineering Hangar.
 - Automated gameplay coverage for the facility route, mission interactions, and rover-build rules.
 
-Landing-site scores and rover configuration values are game prototypes. They are not NASA measurements or engineering specifications. A true Digital Twin evaluation, launch handoff, Mars driving, science collection, hazard play, and results loop remain planned.
+Landing-site scores and rover configuration values are game prototypes. They are not NASA measurements or engineering specifications. The Digital Twin, launch, Mars operations, scoring, and results loop remain planned: the current build ends after the rover configuration is accepted.
+
+## How It Is Built
+
+Red Frontier is a single-player, offline Godot game. It needs no server, network connection, or AI service.
+
+- **Rules** are pure functions with headless tests ([rules](docs/RULES.md)).
+- **One deterministic, sol-by-sol mission simulation** (planned) drives the Digital Twin, the Mars mission, and the debrief. The same setup and seed always produce the same outcome.
+- **Content** is JSON in the repository. Real-world values are prepared offline from NASA and partner data, and each one carries its source.
+- **The 3D facility and Mars scenes** present the results. They never decide them.
+
+The [system design](docs/SYSTEM_DESIGN.md) is the authoritative architecture and implementation plan.
 
 ## Project Structure
 
@@ -89,6 +100,8 @@ godot --path godot -- fpp
 ```
 
 **Controls:** WASD to move, Shift to run, mouse to look, E to interact, Esc to release the mouse (click to capture again). F3 toggles streaming diagnostics.
+
+**First run:** the lighting (VoxelGI) caches are not stored in git. The first windowed visit to each room bakes and saves its cache, so expect a one-time pause, the longest in the Engineering Hangar. Later runs load the caches.
 
 The standalone facility viewer is available with:
 
@@ -131,6 +144,7 @@ Repeat the GLB export command for `Briefing`, `Corridor01`, `MarsIntel`, `Corrid
 
 The design goal is to make consequential gameplay decisions traceable to planetary and mission data. The repository contains a research ledger and candidate sources for terrain, weather, dust storms, rover performance, and communications. Researching a dataset does not mean it is already integrated into the game.
 
+- The game makes no live data calls. Source data is processed ahead of time into small files that ship with the game, so it works offline and every number can be checked.
 - Current landing-site values are marked `PROTOTYPE` in [`landing_sites.json`](godot/game/data/landing_sites.json).
 - The [data ledger](docs/DATA_LEDGER.md) separates the intended data-driven game from current prototype behavior and tracks source checks, licensing, and integration work.
 - The [data-source register](docs/DATA_SOURCES.md) links NASA, JPL, USGS, ESA, and research sources.
