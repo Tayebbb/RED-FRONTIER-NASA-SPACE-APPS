@@ -58,14 +58,14 @@ Landing-site scores and rover configuration values are game prototypes. They are
 
 ## Project Structure
 
-| Path | Purpose |
-|---|---|
-| `godot/` | Playable Godot project, streamed facility, UI, and game systems |
-| `blender/` and `scripts/` | Facility source scenes, procedural builders, exports, and validation |
-| `assets/rover/` | Rover wrapper and Godot runtime asset |
-| `art/` | Rover modeling work, exports, reference credits, and QA reports |
-| `docs/` | Game concept, roadmap, data strategy, visual language, and readiness reports |
-| `renders/` | Facility review images and gameplay recordings |
+| Path                      | Purpose                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| `godot/`                  | Playable Godot project, streamed facility, UI, and game systems              |
+| `blender/` and `scripts/` | Facility source scenes, procedural builders, exports, and validation         |
+| `assets/rover/`           | Rover wrapper and Godot runtime asset                                        |
+| `art/`                    | Rover modeling work, exports, reference credits, and QA reports              |
+| `docs/`                   | Game concept, roadmap, data strategy, visual language, and readiness reports |
+| `renders/`                | Facility review images and gameplay recordings                               |
 
 See the [documentation index](docs/README.md) for the design brief, data provenance, asset integration, and test evidence.
 

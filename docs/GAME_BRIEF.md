@@ -18,14 +18,14 @@ Mars driving, the full Digital Twin, and the final scoring loop follow after thi
 
 ## Facility route
 
-| Order | Room | Player purpose |
-|---|---|---|
-| 1 | Briefing | Mission question, constraints, and objective |
-| 2 | Corridor 01 | Transition |
-| 3 | Mars Intelligence | Landing-system and site selection |
-| 4 | Corridor 02 | Build-up to the rover reveal |
-| 5 | Engineering Hangar | Rover configuration, stations, and Digital Twin |
-| 6 | Mission Control | Confirmation and `ACCEPT RISK & LAUNCH` |
+| Order | Room               | Player purpose                                  |
+| ----- | ------------------ | ----------------------------------------------- |
+| 1     | Briefing           | Mission question, constraints, and objective    |
+| 2     | Corridor 01        | Transition                                      |
+| 3     | Mars Intelligence  | Landing-system and site selection               |
+| 4     | Corridor 02        | Build-up to the rover reveal                    |
+| 5     | Engineering Hangar | Rover configuration, stations, and Digital Twin |
+| 6     | Mission Control    | Confirmation and `ACCEPT RISK & LAUNCH`         |
 
 The room geometry is locked and streamed as a route. The Hangar is the main rover gameplay space.
 
