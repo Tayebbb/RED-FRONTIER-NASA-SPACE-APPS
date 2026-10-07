@@ -1,6 +1,6 @@
 # RED FRONTIER
 
-### A Mars mission-design game by Team AUSThir | NASA Space Apps Challenge 2026
+### A Space Mission Design Game by Team AUSThir | NASA Space Apps Challenge 2026
 
 Build a rover around a science question, choose where it lands, then find out whether the mission can survive Mars.
 
@@ -8,7 +8,7 @@ Build a rover around a science question, choose where it lands, then find out wh
   <img src="renders/hangar_LOCKED/01_Entrance.png" alt="The Red Frontier Engineering Hangar and Perseverance-inspired rover" width="100%">
 </p>
 
-**Red Frontier** is a mission-design game about making connected engineering and science decisions under uncertainty. The intended experience follows a mission from its first briefing through site selection, rover design, simulation, launch, surface operations, and a final explanation of the outcome.
+**Red Frontier** is a space mission-design game about making connected engineering and science decisions under uncertainty. Its first mission is to plan and operate a rover expedition to Mars, from the science briefing through site selection, rover design, simulation, launch, surface operations, and a final explanation of the outcome.
 
 > This is an independent student project created for NASA Space Apps Challenge 2026. It is not a NASA product and is not endorsed by NASA.
 

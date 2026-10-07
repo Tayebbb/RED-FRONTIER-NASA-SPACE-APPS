@@ -4,7 +4,7 @@ This brief describes the complete game we are building. The implementation statu
 
 ## Current product direction
 
-Red Frontier is a NASA Space Apps mission-design game. The player starts in a NASA-style facility, works backward from a science question, selects a landing site, configures a rover under constraints, evaluates the mission with a Digital Twin, accepts risk, launches, drives on Mars, and receives an outcome explanation.
+Red Frontier is a space mission-design game created for NASA Space Apps Challenge 2026. The player starts in a mission facility, works backward from a science question, selects a landing site, configures a rover under constraints, evaluates the mission with a Digital Twin, accepts risk, launches, drives on Mars, and receives an outcome explanation.
 
 The first playable milestone is smaller and concrete:
 
