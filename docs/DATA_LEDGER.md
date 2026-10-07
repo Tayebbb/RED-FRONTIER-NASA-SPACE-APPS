@@ -202,7 +202,7 @@ Drive length histogram (546 drive steps):
 
 ### Dataset details
 
-The verification statuses below describe source checks, not runtime integration or permission to redistribute downloaded data.
+The verification statuses below describe source checks, not runtime integration or permission to redistribute downloaded data. In the entries, **Used in** means the planned target system in the complete game, not a claim that the feature is implemented in the current prototype.
 
 #### JPL Horizons API _(core)_
 
