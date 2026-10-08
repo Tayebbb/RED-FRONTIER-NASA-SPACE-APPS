@@ -12,7 +12,7 @@ Architecture and ownership are defined in [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md). 
 |---|---|---|
 | §2 | Building RF-01 | Implemented |
 | §3 | Build scores | Implemented |
-| §4 | Mission simulation and mission score | Planned; structure fixed, numbers not yet set |
+| §4 | Mission simulation v1 | Implemented; scoring remains planned |
 | §5 | Reference runs | Implemented as tests |
 
 ## 2. Building RF-01
@@ -97,19 +97,20 @@ The landing sites below are **prototype** values (`landing_sites.json`, `provena
 
 [SYSTEM_DESIGN.md §12](SYSTEM_DESIGN.md) plans to move the constants (12, 7, 0.6, 0.8, 0.5, 1.8, 46, 45, 35, 20, 45, 0.55, 0.45) into a `rules.json` content file. The values must stay as listed here.
 
-## 4. Mission simulation (planned)
+## 4. Mission simulation v1
 
-This section fixes **what** the simulation computes. Its constants are added here, with source ids where real data calibrates them, as they're implemented. Until then no mission outcome is defined, and nothing in the game may show one.
+`MissionSim.run(setup, targets, decisions, scenario_id)` is implemented as a pure, deterministic GDScript module. `setup` contains a locked site id, a legal accepted build, and a seed; targets are ordered instrument-site ids; decisions are `{sol, event, choice}` rows. It returns a stable per-sol log, final state, ending, cause, and `log_hash`. It does not read `MissionState`, scene state, frame time, or the network.
 
-- **Step:** one sol. The mission has a fixed length in sols.
-- **Energy:** solar input scales with the solar part, `site.solar` and dust opacity (tau). Battery capacity bounds the stored energy. Draw comes from a base load, the instruments, the antenna and driving. Calibration cases are Opportunity's June 2018 storm and InSight's dust loss ([DATA_LEDGER.md](DATA_LEDGER.md)).
-- **Science:** an instrument earns its value at its matching science target (§2.3). Passive instruments add `passive_science` per sol of operation. `site.science` scales the result.
-- **Hazards:** dust storms come from the scenario. Terrain damage on drive sols scales with `site.terrain_risk` and is reduced by shielding. The radiation detector's `storm_damage` lowers storm damage.
-- **Comms:** the data returned per sol depends on antenna reliability and the relay capacity in the scenario. MAVEN is not a relay.
-- **Decisions:** the target order, then discrete event choices recorded as `(sol, choice)`.
-- **Outcomes:** returned with science, partial, or lost, with the sol and the cause.
-- **Mission score:** science, engineering (§3.2), safety and efficiency components, a final score, and an ending type. These replace the empty `science_score`, `safety_score`, `efficiency_score`, `final_score` and `ending_type` fields.
-- **Digital Twin:** the same simulation under the named stress scenarios in [SYSTEM_DESIGN.md §6](SYSTEM_DESIGN.md).
+- **Step:** 100 sols. The authoritative constants and source rows are in `game/data/rules.json`.
+- **Energy:** `solar.value × (0.6 + site.solar × 0.8) × 2 / (1 + tau)` is stored in battery capacity units. Each sol spends base, antenna, instrument, and action draw. A run creates one seeded random generator; it applies ±0.05 tau variation only on scenario baseline sols. Explicit historical storm tau values are never varied. The `solar_scale`, demand values, and battery units are game-balance values.
+- **Science:** driving reaches one ordered target per sol. Matching instruments earn `instrument.value × site.science × 10`; passive instruments add `passive_science × 0.1` on active sols. Science enters a buffer before it is relayed.
+- **Hazards:** terrain drive damage is reduced by shielding. A storm warning occurs at tau ≥ 3; continuing through it adds dust damage, reduced by the radiation detector. A depleted battery or health ends the run.
+- **Comms:** a sol returns up to `20 × antenna.reliability × scenario relay multiplier` game data units. The nominal relay anchor is TGO, MRO, and Odyssey; MAVEN is excluded.
+- **Decisions:** `storm_warning` accepts `hibernate` or `press_on`; `low_power` accepts `rest` or `drive`. At most one decision may be supplied for a sol. Missing choices use the conservative policy: hibernate during a storm and rest on low power.
+- **Outcomes:** completing all 100 sols is `returned`; an early end after any data was returned is `partial`; an early end before data return is `lost`. The result carries the terminal sol and cause (`power_depleted` or `rover_damage`).
+- **Scenarios:** `nominal`, `opportunity_2018`, and `relay_degraded` are bundled in `game/data/mission_scenarios.json`. Opportunity's tau 10.5 / 21 Wh observation, InSight's 5,000 / 500 Wh observations, current NASA relay volumes, and MDAD provenance are recorded in the rules file. They anchor scenario scale; RF-01 remains a game model, not an engineering prediction.
+
+Digital Twin, scoring, results, and Mars presentation consume this core in later work.
 
 ## 5. Reference runs
 

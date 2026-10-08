@@ -1,0 +1,27 @@
+{
+  "order": ["nominal", "opportunity_2018", "relay_degraded"],
+  "scenarios": {
+    "nominal": {
+      "id": "nominal",
+      "title": "NOMINAL SEASON",
+      "source_ids": ["insight_dust", "mars_relay"],
+      "default_tau": 0.5,
+      "relay_multiplier": 1.0
+    },
+    "opportunity_2018": {
+      "id": "opportunity_2018",
+      "title": "OPPORTUNITY 2018 STORM",
+      "source_ids": ["opportunity_tau", "mdad", "mars_relay"],
+      "default_tau": 0.5,
+      "tau_overrides": {"6": 3.0, "7": 5.5, "8": 8.0, "9": 10.5, "10": 10.5, "11": 8.0, "12": 5.5, "13": 3.0},
+      "relay_multiplier": 1.0
+    },
+    "relay_degraded": {
+      "id": "relay_degraded",
+      "title": "RELAY DEGRADED",
+      "source_ids": ["mars_relay"],
+      "default_tau": 0.5,
+      "relay_multiplier": 0.034
+    }
+  }
+}

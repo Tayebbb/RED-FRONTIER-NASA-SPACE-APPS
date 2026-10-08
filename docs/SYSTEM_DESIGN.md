@@ -14,7 +14,7 @@ This design comes from a full audit of the repository on 2026-10-08. Each claim 
 Red Frontier is a **single-player, offline Godot 4.7 game**. There is no backend, no network access, no LLM, no save system and no randomness anywhere in the runtime [R]. That is the right shape for the product, and it stays that way.
 
 - **Strong today:** the six-room streamed facility, the shared material pipeline, and a pure, tested build evaluator (`game/data/rover_build.gd`).
-- **Missing today:** everything after **ACCEPT BUILD**. The Digital Twin, launch, Mars, scoring, results and replay exist only as `MissionState` fields and comments [R]. The playable loop dead-ends at the "Run the Digital Twin" objective.
+- **Missing today:** the Digital Twin presentation, launch, Mars, scoring, results and replay. `MissionSim` v1 now exists as a pure core with headless test coverage; the playable loop still dead-ends at the "Run the Digital Twin" objective.
 
 The plan is to finish the loop with the fewest moving parts possible:
 

@@ -1,0 +1,47 @@
+{
+  "version": "mission_sim_v1",
+  "mission": {
+    "sols": 100,
+    "base_draw": 12.0,
+    "instrument_draw": 3.0,
+    "drive_draw": 15.0,
+    "rest_draw": 8.0,
+    "hibernate_draw": 4.0,
+    "solar_scale": 2.0,
+    "tau_seed_jitter": 0.05,
+    "storm_warning_tau": 3.0,
+    "low_power_fraction": 0.25,
+    "terrain_damage": 5.0,
+    "storm_damage": 4.0,
+    "target_science_scale": 10.0,
+    "passive_science_per_sol": 0.1,
+    "relay_game_units_per_sol": 20.0
+  },
+  "sources": {
+    "opportunity_tau": {
+      "label": "Opportunity June 2018 optical depth and energy",
+      "url": "https://science.nasa.gov/resource/on-mars-light-is-energy/",
+      "observed_tau": 10.5,
+      "observed_wh": 21
+    },
+    "insight_dust": {
+      "label": "InSight solar production after landing and in spring 2022",
+      "url": "https://science.nasa.gov/resource/insights-power-generation-after-landing-and-spring-2022/",
+      "clean_wh_per_sol": 5000,
+      "dusty_wh_per_sol": 500
+    },
+    "mars_relay": {
+      "label": "NASA Mars Relay Network, Feb-May 2026 average daily volume",
+      "url": "https://science.nasa.gov/mars/mars-relay-network/",
+      "tgo_mb_per_day": 2228.1,
+      "mro_mb_per_day": 850.6,
+      "odyssey_mb_per_day": 107.3
+    },
+    "mdad": {
+      "label": "Mars Dust Activity Database v1.1",
+      "url": "https://zenodo.org/records/7480334",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "note": "Mission mechanics are game-balance values. The listed observations anchor scenario scale only and do not make RF-01 an engineering model."
+}

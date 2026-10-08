@@ -27,7 +27,7 @@ This inventory covers the complete intended game and separates shipped foundatio
 ### In progress / not yet implemented
 
 - Source-backed site, climate, terrain, dust, communications, and rover-performance values in runtime systems.
-- The mission simulation and the Digital Twin stress test. The current mission-state fields and test stand-ins are hooks, not a working simulator.
+- The Digital Twin stress test. MissionSim v1 now models power, dust, driving, science targets, communications, terrain damage, and conservative operations defaults; its console and player presentation remain to be built.
 - Launch readiness, the launch decision, and the scene handoff. Launch vehicle and date choice are deferred.
 - Mars operations: science targets, event decisions, dust and communications hazards, and a replay scene. Arcade driving is deferred.
 - Mission scoring, debrief, decision explanations, and comparison to real rover evidence.
